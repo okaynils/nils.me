@@ -20,7 +20,7 @@
     "gray-matter": "^4.0.3",
     "katex": "^0.16.10",
     "markdown-it": "^13.0.1",
-    "md2html": "github:chengpengzhao/md2html",
+    "md2html": "^0.0.1",
     "next": "^13.0.4",
     "next-seo": "^5.14.1",
     "next-themes": "^0.2.1",
