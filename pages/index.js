@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import Link from "next/link";
 import { ArrowSquareOut, SpotifyLogo } from "phosphor-react";
 import { BlogList } from "components";
@@ -25,6 +24,11 @@ export default function Home({ allPosts, allProjects, post }) {
             <br />
             I am very passionate about machine learning and the math behind it.
           </div>
+          <div className="flex items-center my-4">
+                <div>
+                    For my last year of undergraduate studies, I am looking for opportunities to work in the field of machine learning. If you are interested or know someone, <Link className="border-b" href="mailto:hi@nils.me">let's talk!</Link>
+                </div>
+            </div>
         </div>
         <div className="pt-6 pb-2">
           <h2 className="text-xl font-medium text-black dark:text-white mb-4">
@@ -103,10 +107,10 @@ export default function Home({ allPosts, allProjects, post }) {
         <div className="pt-8 pb-2">
           <div className="flex items-center gap-3 pb-3">
             <h2 className=" text-xl font-medium text-black dark:text-white">
-              Blog
+              Thoughts & Writings
             </h2>
             <Button variant="secondary" className="text-sm" href="/blog" as="a">
-              View all blog posts →
+              View all writings →
             </Button>
           </div>
           <BlogList data={allPosts?.slice(0, 12)} activeSlug={post?.slug} />
@@ -128,6 +132,9 @@ export default function Home({ allPosts, allProjects, post }) {
           </div>
 
           <div className="mt-2 mb-8">
+            <p>
+              I think music says a lot about someone and it's a great way to connect with people, so here are my top five artists of the last 30 days.
+            </p>
             <MusicList />
           </div>
         </div>

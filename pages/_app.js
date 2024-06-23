@@ -25,7 +25,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider defaultTheme="system" attribute="class" enableSystem={true}>
-      <>
         <DefaultSeo
           title="Nils Fahrni"
           description="I am a dedicated Data Science undergraduate in the fourth semester at University of Applied Sciences Northwestern Switzerland."
@@ -72,7 +71,6 @@ function MyApp({ Component, pageProps }) {
         <MainLayout>
           <Component {...pageProps} />
         </MainLayout>
-      </>
     </ThemeProvider>
   );
 }

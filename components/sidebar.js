@@ -72,12 +72,12 @@ export default function Sidebar() {
       icon: <BracketsCurly size={16} />,
       active: pathname.includes("/projects"),
     },
-    {
-      title: "Travel Map",
-      url: "/map",
-      icon: <Compass size={16} />,
-      active: pathname === "/map",
-    },
+    //{
+    //  title: "Travel Map",
+    //  url: "/map",
+    //  icon: <Compass size={16} />,
+    //  active: pathname === "/map",
+    //},
     {
       title: "Resume",
       url: "https://drive.google.com/file/d/1StFJqO0ozhyzG94KIQrz71vFs3Ku73F5",
