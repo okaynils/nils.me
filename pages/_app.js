@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const canonicalUrl = (
-    `https://rishimohan.me` + (router.asPath === "/" ? "" : router.asPath)
+    `https://nils.me` + (router.asPath === "/" ? "" : router.asPath)
   ).split("?")[0];
 
   useEffect(() => {
@@ -27,26 +27,26 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider defaultTheme="system" attribute="class" enableSystem={true}>
       <>
         <DefaultSeo
-          title="Hi, I'm Rishi Mohan!"
-          description="I'm a designer and front-end engineer by profession. I build SaaS apps, like to travel, take photos and binge try Cafes and Restaurants."
+          title="Nils Fahrni"
+          description="I am a dedicated Data Science undergraduate in the fourth semester at University of Applied Sciences Northwestern Switzerland."
           canonical={canonicalUrl}
           openGraph={{
-            site_name: "Hi, I'm Rishi Mohan!",
-            title: "Hi, I'm Rishi Mohan!",
+            site_name: "Nils Fahrni",
+            title: "Nils Fahrni",
             description:
-              "I'm a designer and front-end engineer by profession. I build SaaS apps, like to travel, take photos and binge try Cafes and Restaurants.",
+              "I am a dedicated Data Science undergraduate in the fourth semester at University of Applied Sciences Northwestern Switzerland.",
             images: [
               {
-                url: "https://rishimohan.me/images/site/meta.jpg",
+                url: "https://nils.me/images/site/meta.jpg",
                 width: 800,
                 height: 600,
-                alt: "Rishi Mohan",
+                alt: "Nils Fahrni",
               },
             ],
           }}
           twitter={{
-            handle: "@thelifeofrishi",
-            site: "@thelifeofrishi",
+            handle: "@okaynils",
+            site: "@okaynils",
             cardType: "summary_large_image",
           }}
           additionalLinkTags={[

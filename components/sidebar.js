@@ -9,15 +9,12 @@ import {
   BracketsCurly,
   Compass,
   ArrowSquareOut,
-  At,
   TwitterLogo,
   InstagramLogo,
   LinkedinLogo,
   GithubLogo,
-  Coffee,
   X,
   CaretUp,
-  Envelope,
 } from "phosphor-react";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
@@ -30,28 +27,23 @@ export default function Sidebar() {
 
   const SOCIAL_LINKS = [
     {
-      title: "Email",
-      url: "mailto:hi@rishimohan.me",
-      icon: <Envelope />,
-    },
-    {
-      title: "Twitter",
-      url: "https://twitter.com/thelifeofrishi",
+      title: "X",
+      url: "https://x.com/okaynils",
       icon: <TwitterLogo />,
     },
     {
       title: "Instagram",
-      url: "https://instagram.com/thelifeofrishi",
+      url: "https://instagram.com/okaynils",
       icon: <InstagramLogo />,
     },
     {
       title: "LinkedIn",
-      url: "https://linkedin.com/in/qaplen",
+      url: "https://linkedin.com/in/nilsfahrni/",
       icon: <LinkedinLogo />,
     },
     {
-      title: "Github",
-      url: "https://github.com/rishimohan",
+      title: "GitHub",
+      url: "https://github.com/okaynils",
       icon: <GithubLogo />,
     },
   ];
@@ -69,7 +61,7 @@ export default function Sidebar() {
       active: pathname === "/",
     },
     {
-      title: "Blog",
+      title: "Writings",
       url: "/blog",
       icon: <Note size={16} />,
       active: pathname.includes("/blog"),
@@ -80,28 +72,15 @@ export default function Sidebar() {
       icon: <BracketsCurly size={16} />,
       active: pathname.includes("/projects"),
     },
-    // {
-    //   title: "Experiments",
-    //   url: "/experiments",
-    //   icon: <Flask size={16} />,
-    //   active: pathname.includes("/experiments"),
-    // },
     {
       title: "Travel Map",
       url: "/map",
       icon: <Compass size={16} />,
       active: pathname === "/map",
     },
-    // {
-    //   title: "Newsletter",
-    //   url: "https://thelifeofrishi.substack.com",
-    //   icon: <Newspaper size={16} />,
-    //   active: false,
-    //   external: true,
-    // },
     {
       title: "Resume",
-      url: "https://peerlist.io/rishimohan",
+      url: "https://drive.google.com/file/d/1StFJqO0ozhyzG94KIQrz71vFs3Ku73F5",
       icon: <IdentificationCard size={16} />,
       active: false,
       external: true,
@@ -111,7 +90,7 @@ export default function Sidebar() {
   const SOCIAL = [
     {
       title: "Github",
-      url: `https://github.com/rishimohan`,
+      url: `https://github.com/okaynils`,
       icon: <GithubLogo size={16} />,
       external: true,
     },
@@ -127,26 +106,14 @@ export default function Sidebar() {
       icon: <InstagramLogo size={16} />,
       external: true,
     },
-    // {
-    //   title: "Buy me a Coffee",
-    //   url: `https://www.buymeacoffee.com/thelifeofrishi`,
-    //   icon: <Coffee size={16} />,
-    //   external: true,
-    // },
-    {
-      title: "hi@rishimohan.me",
-      url: `mailto:hi@rishimohan.me`,
-      icon: <At size={16} />,
-      external: false,
-    },
   ];
 
   const RenderLinks = ({ sectionTitle, sectionItems }) => {
     return (
       <>
         <div className="flex md:flex-row flex-col space-y-2 my-2 md:my-0 px-2 md:px-0 md:space-y-0 text-base md:text-sm">
-          {sectionItems.map((link) => (
-            <div className="px-1" key={link.title}>
+          {sectionItems.map((link, index) => (
+            <div className="px-1" key={index}>
               <Link
                 href={link.url}
                 target={link.external ? "_blank" : ""}
@@ -202,11 +169,12 @@ export default function Sidebar() {
           {/* <RenderLinks sectionItems={SOCIAL} sectionTitle="Elsewhere" /> */}
           {/* {renderPrefs()} */}
           <div className="flex gap-3 items-center ml-auto">
-            {SOCIAL_LINKS?.map((item) => (
+            {SOCIAL_LINKS?.map((item, index) => (
               <Link
                 className="text-lg opacity-50 hover:opacity-80"
                 href={item?.url}
                 target="_blank"
+                key={index}
               >
                 {item?.icon}
               </Link>

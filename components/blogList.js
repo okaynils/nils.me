@@ -42,13 +42,9 @@ export default function BlogList({ data, activeSlug }) {
                     "md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40"
                   )}
                 >
-                  {new Date(
-                    post?.date.split(" ").slice(0, -1).join(" ")
-                  ).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
+                  {
+                    post?.date
+                  }
                 </div>
               </article>
             </Link>

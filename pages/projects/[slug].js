@@ -15,19 +15,19 @@ export default function Post({ allPosts, post }) {
   return (
     <div className="flex w-full md:pt-5">
       <NextSeo
-        title={`${post.title} - Rishi Mohan`}
+        title={`${post.title} - Nils Fahrni`}
         description={
           post.content.slice(0, 200)?.replace(/<[^>]*>?/gm, "") || ""
         }
         openGraph={{
-          site_name: `${post.title} - Rishi Mohan`,
-          title: `${post.title} - Rishi Mohan`,
+          site_name: `${post.title} - Nils Fahrni`,
+          title: `${post.title} - Nils Fahrni`,
           description:
             post.content.slice(0, 200)?.replace(/<[^>]*>?/gm, "") || "",
         }}
         twitter={{
-          handle: "@thelifeofrishi",
-          site: "@thelifeofrishi",
+          handle: "@okaynils",
+          site: "@okaynils",
           cardType: "summary_large_image",
         }}
       />

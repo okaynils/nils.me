@@ -7,17 +7,17 @@ export default function Blog({ allPosts }) {
   return (
     <>
       <NextSeo
-        title="Blog - Rishi Mohan"
-        description="I'm a designer and front-end engineer by profession. I like to travel, take photos and binge try Cafes and Restaurants."
+        title="Blog - Nils Fahrni"
+        description="I am a dedicated Data Science undergraduate in the fourth semester at University of Applied Sciences Northwestern Switzerland."
         openGraph={{
-          site_name: "Blog - Rishi Mohan",
-          title: "Blog - Rishi Mohan",
+          site_name: "Blog - Nils Fahrni",
+          title: "Blog - Nils Fahrni",
           description:
-            "I'm a designer and front-end engineer by profession. I like to travel, take photos and binge try Cafes and Restaurants.",
+            "I am a dedicated Data Science undergraduate in the fourth semester at University of Applied Sciences Northwestern Switzerland.",
         }}
         twitter={{
-          handle: "@thelifeofrishi",
-          site: "@thelifeofrishi",
+          handle: "@okaynils",
+          site: "@okaynils",
           cardType: "summary_large_image",
         }}
       />

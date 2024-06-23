@@ -1,114 +1,11 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { ArrowSquareOut, InstagramLogo } from "phosphor-react";
+import { ArrowSquareOut, SpotifyLogo } from "phosphor-react";
 import { BlogList } from "components";
+import { MusicList } from "components";
 import { getAllPosts } from "pages/api/blog";
 import { getAllProjects } from "pages/api/projects";
 import { ContentWrapper, Button } from "ui";
-
-const TIMELINE = [
-  {
-    date: "May 03 to May 22, 2023",
-    title: "Turned 29, did a 3 week long birthday trip!",
-    description:
-      "Travelled 4 different cities in 4 different European countries. Made great memories :)",
-    // link: "https://twitter.com/thelifeofrishi/status/1635590849475096577?s=20",
-  },
-  {
-    date: "Mar 12, 2023",
-    title: "Moved to Berlin",
-    description: "Always wanted to travel in the west :)",
-    link: "https://twitter.com/thelifeofrishi/status/1635590849475096577?s=20",
-  },
-  {
-    date: "Mar 10, 2023",
-    title: "Pika crossed $2,000 MRR",
-    description: "9 months for the first $1K MRR, ~4 months for the next :D",
-    link: "https://twitter.com/thelifeofrishi/status/1633760970823827456?s=20",
-  },
-  {
-    date: "Dec 01, 2022",
-    title: "Joined Hive.one",
-    description:
-      "Joined Hive team as frontend engineer to build a new way to explore Twitter",
-    link: "https://twitter.com/thelifeofrishi/status/1598692245401501696",
-  },
-  {
-    date: "Nov 12, 2022",
-    title: "Pika crossed $1K in monthly recurring revenue",
-    description:
-      "9 months into building Pika, it is my first side-project to cross such big milestone",
-  },
-  {
-    date: "Jan 02, 2022",
-    title: "Launched Pika.style as an open-source project",
-    description:
-      "Built this small tool to save my time designing better screenshots",
-  },
-];
-
-const IMAGES = [
-  {
-    src: "/images/pages/home/rishi-rome-1.jpeg",
-    place: "Rome, Italy",
-    className: "md:rotate-[-2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-nice.jpg",
-    place: "Nice, France",
-    className: "md:rotate-[-2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-nice-1.jpg",
-    place: "Nice, France",
-    className: "md:rotate-[2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-rome.jpeg",
-    place: "Rome, Italy",
-    className: "md:rotate-[-2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-nice-2.jpg",
-    place: "Nice, France",
-    className: "md:rotate-[2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-luxembourg.jpg",
-    place: "Luxembourg",
-    className: "md:rotate-[2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-berlin.jpeg",
-    place: "Berlin, Germany",
-    className: "md:rotate-[-2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-berlin-1.jpeg",
-    place: "Berlin, Germany",
-    className: "md:rotate-[2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-goa-yellow.jpg",
-    place: "Goa, India",
-    className: "md:rotate-[-2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-holi-rishikesh.jpg",
-    place: "Rishikesh, India",
-    className: "md:rotate-[2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-triund.jpg",
-    place: "Triund, India",
-    className: "md:rotate-[-2deg]",
-  },
-  {
-    src: "/images/pages/home/rishi-goa.jpg",
-    place: "Goa, India",
-    className: "md:rotate-[2deg]",
-  },
-];
 
 export default function Home({ allPosts, allProjects, post }) {
   return (
@@ -119,64 +16,14 @@ export default function Home({ allPosts, allProjects, post }) {
       >
         <div className="">
           <h2 className="mb-3 md:mb-4 text-3xl">
-            <span className="opacity-70">Hi 👋, I'm </span>
             <span className="font-bold text-black dark:text-white">
-              Rishi Mohan!
+              Nils Fahrni
             </span>
           </h2>
           <div>
-            <ul className="!mb-0 list-disc pl-4 dark:text-gray-300/80 space-y-1 md:space-y-[6px]">
-              <li>Design engineer, entrepreneur based in Berlin</li>
-              <li>
-                Building{" "}
-                <Link
-                  className="border-b border-gray-300 hover:border-gray-400 dark:text-gray-200"
-                  href="https://pika.style"
-                >
-                  Pika
-                </Link>{" "}
-                (screenshot editor and image generation API)
-              </li>
-              <li>
-                Working with{" "}
-                <Link
-                  className="border-b border-gray-300 hover:border-gray-400 dark:text-gray-200"
-                  href="https://hive.one"
-                  target="_blank"
-                >
-                  Hive
-                </Link>
-                , previously at{" "}
-                <Link
-                  className="border-b border-gray-300 hover:border-gray-400 dark:text-gray-200"
-                  href="https://bigbinary.com"
-                  target="_blank"
-                >
-                  BigBinary
-                </Link>
-                ,{" "}
-                <Link
-                  className="border-b border-gray-300 hover:border-gray-400 dark:text-gray-200"
-                  href="https://instahyre.com"
-                  target="_blank"
-                >
-                  Instahyre
-                </Link>
-              </li>
-
-              <li>
-                Kinda active on Twitter{" "}
-                <Link
-                  className="border-b border-gray-300 hover:border-gray-400 dark:text-gray-200"
-                  href="https://twitter.com/thelifeofrishi"
-                  target="_blank"
-                >
-                  @thelifeofrishi
-                </Link>
-              </li>
-
-              <li>Love to travel, explore and capture life</li>
-            </ul>
+            I am a dedicated Data Science undergraduate in the fourth semester at <Link className="border-b" href="https://fhnw.ch/en/" target="_blank">FHNW</Link>.
+            <br />
+            I am very passionate about machine learning and the math behind it.
           </div>
         </div>
         <div className="pt-6 pb-2">
@@ -264,106 +111,27 @@ export default function Home({ allPosts, allProjects, post }) {
           </div>
           <BlogList data={allPosts?.slice(0, 12)} activeSlug={post?.slug} />
         </div>
-        {/* <div>
-          <div className="mt-12 mb-4">
-            <h2 className="text-base flex items-center">
-              <Star size={20} className="mr-2 opacity-40" />
-              Connecting dots backwards
-            </h2>
-          </div>
-
-          <div className="">
-            <div className="relative pl-8">
-              <div className="h-full w-[1px] bg-gray-200 dark:bg-gray-800 left-[10px] top-[5px] absolute"></div>
-              {TIMELINE?.map((item, index) => (
-                <div key={item.title + index} className="mb-10 relative">
-                  <div className="w-3 h-3 rounded-full absolute left-[-30px] top-[16px]">
-                    <ArrowCircleRight
-                      size={24}
-                      className="bg-white text-gray-400 dark:text-gray-400 dark:bg-gray-900 rounded-full"
-                    />
-                  </div>
-                  <p className="opacity-40 text-xs">{item.date}</p>
-
-                  <h3 className="leading-tight mb-1 font-medium text-sm md:text-base inline-block">
-                    <span className="">{item.title}</span>
-                    {item?.link ? (
-                      <Link href={item.link} target="_blank">
-                        <span className="inline-block ml-1 opacity-80">
-                          <ArrowSquareOut size={12} />
-                        </span>
-                      </Link>
-                    ) : (
-                      ""
-                    )}
-                  </h3>
-
-                  <p className="opacity-60 text-sm">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div> */}
 
         <div>
           <div className="flex items-center mt-10 gap-3">
             <h2 className=" text-xl font-medium text-black dark:text-white">
-              Photos
+              Music
             </h2>
             <Link
               className="bg-transparent border-gray-200 dark:border-gray-700/70 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
-              href="https://instagram.com/thelifeofrishi"
+              href="https://open.spotify.com/user/tofusandwich4"
               target="_blank"
             >
-              <InstagramLogo /> Instagram
+              <SpotifyLogo /> Spotify
               <ArrowSquareOut />
             </Link>
           </div>
 
           <div className="mt-2 mb-8">
-            <p>
-              I love to travel and take photos. I also have been maintaining a
-              map of all the places I've been to, you can{" "}
-              <Link className="border-b" href="/map">
-                check it here
-              </Link>
-            </p>
-          </div>
-
-          <div className=" mt-5 mb-12 justify-center relative group">
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-5 md:gap-6">
-              {IMAGES?.slice(0, 8)?.map((item) => (
-                <div
-                  key={item.src}
-                  className={clsx(
-                    // item?.className,
-                    "relative bg-gray-100  hover:bg-gray-900 duration-100 ease-in-out rounded-[12px] dark:border-gray-700 hover:shadow-xl md:hover:scale-[1.1]"
-                  )}
-                >
-                  <img
-                    src={item?.src}
-                    alt={item?.place}
-                    className="rounded-[9px] object-cover w-full h-full"
-                    loading="lazy"
-                  />
-                  {/* <div className="font-mono text-xs absolute bottom-[4%] left-[4%] inline-flex bg-white/90 backdrop-blur rounded-[10px] px-2 py-px items-center dark:text-black">
-                  <MapPin size={14} className="mr-1" />
-                  {item?.place}
-                </div> */}
-                </div>
-              ))}
-            </div>
+            <MusicList />
           </div>
         </div>
       </ContentWrapper>
-
-      {/* <div className="w-full">
-        <iframe
-          // src="http://localhost:3000/templates/beautify-screenshots"
-          src="https://embed.pika.style/templates/beautify-screenshots?use=https://ez4cast.s3.eu-west-1.amazonaws.com/userUpload/o6ZJ1fRuT&theme=dark"
-          className="w-full h-[800px]"
-        />
-      </div> */}
     </div>
   );
 }

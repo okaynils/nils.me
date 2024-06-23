@@ -23,20 +23,25 @@ export function getPostBySlug(slug, fields = []) {
     if (field === "content") {
       items[field] = content;
     }
-
     if (typeof data[field] !== "undefined") {
       items[field] = data[field];
     }
+    if (field === "date") {
+      // set the date to be month (abbreviated) day year
+      items[field] = data[field].toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+    }
   });
-
   return items;
 }
 
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
+  const posts = slugs.map((slug) => getPostBySlug(slug, fields))
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+
   return posts;
 }

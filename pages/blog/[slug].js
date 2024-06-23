@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { getPostBySlug, getAllPosts } from "pages/api/blog";
-import md2html from "lib/md2html";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import 'katex/dist/katex.min.css';
 import { BlogList, PostContent } from "components";
 import { NextSeo } from "next-seo";
 import { ContentWrapper } from "ui";
@@ -23,12 +27,12 @@ export default function Post({ allPosts, post }) {
   return (
     <div className="flex w-full md:pt-5">
       <NextSeo
-        title={`${post.title} - Rishi Mohan`}
+        title={`${post.title} - Nils Fahrni`}
         description={
           post.excerpt.slice(0, 120) || post.content.slice(0, 120) || ""
         }
         openGraph={{
-          site_name: `${post.title} - Rishi Mohan`,
+          site_name: `${post.title} - Nils Fahrni`,
           images: [
             {
               url:
@@ -44,13 +48,20 @@ export default function Post({ allPosts, post }) {
           ],
         }}
         twitter={{
-          handle: "@thelifeofrishi",
-          site: "@thelifeofrishi",
+          handle: "@okaynils",
+          site: "@okaynils",
           cardType: "summary_large_image",
         }}
       />
       <ContentWrapper width="620px">
-        <PostContent post={post} />
+        <PostContent post={post}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm, remarkMath]}
+            rehypePlugins={[rehypeKatex]}
+          >
+            {post.content}
+          </ReactMarkdown>
+        </PostContent>
         <div className="border-t border-gray-200 dark:border-gray-800">
           <h2 className="mb-2 mt-10 text-xl font-medium text-black dark:text-white">
             More blog posts
@@ -62,7 +73,6 @@ export default function Post({ allPosts, post }) {
             .slice(0, 10)}
         />
       </ContentWrapper>
-      {/* <TwitterScript /> */}
     </div>
   );
 }
@@ -91,40 +101,23 @@ export async function getStaticProps({ params }) {
     "ogImage",
   ]);
 
-  const content = await md2html(post.content || post.excerpt || "");
-
   return {
     props: {
       allPosts,
-      post: {
-        ...post,
-        content,
-      },
+      post,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "image",
-    "excerpt",
-    "content",
-    "ogImage",
-  ]);
   const posts = getAllPosts(["slug"]);
 
   return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          allPosts,
-          slug: post.slug,
-        },
-      };
-    }),
+    paths: posts.map((post) => ({
+      params: {
+        slug: post.slug,
+      },
+    })),
     fallback: false,
   };
 }
