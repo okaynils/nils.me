@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Check, X } from "phosphor-react";
+import { Check, X } from "@phosphor-icons/react"
 import * as RadixSwitch from "@radix-ui/react-switch";
 
 const Switch = ({

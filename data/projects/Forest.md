@@ -4,9 +4,9 @@ title: "Forest"
 slug: forest
 tech: ["Obsidian", "Digital Garden"]
 web: http://forest.nils.me/
-icon: /images/work/show/maazi-icon.png
-active: true
-tagline: Journaling app for iOS and Web
+icon: /images/work/show/forest_tree_icon.png
+active: false
+tagline: Digital Garden (🚧 Coming Soon)
 ---
 
 

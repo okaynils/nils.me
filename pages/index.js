@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowSquareOut, SpotifyLogo } from "phosphor-react";
+import { ArrowSquareOut, SpotifyLogo } from "@phosphor-icons/react"
 import { BlogList } from "components";
 import { MusicList } from "components";
 import { getAllPosts } from "pages/api/blog";
@@ -25,10 +25,10 @@ export default function Home({ allPosts, allProjects, post }) {
             I am very passionate about machine learning and the math behind it.
           </div>
           <div className="flex items-center my-4">
-                <div>
-                    For my last year of undergraduate studies, I am looking for opportunities to work in the field of machine learning. If you are interested or know someone, <Link className="border-b" href="mailto:hi@nils.me">let's talk!</Link>
-                </div>
+            <div>
+              For my last year of undergraduate studies, I am looking for opportunities to work in the field of machine learning. If you are interested or know someone, <Link className="border-b" href="mailto:hi@nils.me">let's talk!</Link>
             </div>
+          </div>
         </div>
         <div className="pt-6 pb-2">
           <h2 className="text-xl font-medium text-black dark:text-white mb-4">

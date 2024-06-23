@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://rishimohan.me/sitemap.xml
+Sitemap: https://nils.me/sitemap.xml

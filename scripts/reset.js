@@ -47,7 +47,7 @@ for (const FILE of FILES_TO_DELETE) {
 // Fill dummy data
 fs.writeFileSync(
   "./data/blog/setting-blog.md",
-  "---\n\nlayout: post\ntitle: Setting up this template\ndate: 2021-11-14 13:00:00 +0530\ncategories: guide\nexcerpt: This excerpt will show up in blog list\n\n---\nSetting up your blog with this template is easy peasy.\n- Clone the [repo](https://github.com/rishimohan/rishimohan.me)\n- Run `yarn install` and then `node ./scripts/clean` to start fresh\n- Edit this blog post in `./data/blog`\n- To add a new blog post, create a `.md` file in `./data/blog` with the following format:\n\n```---\nlayout: post\ntitle: Setting up this template\ndate: 2021-11-14 13:00:00 +0530\ncategories: guide\nexcerpt: This excerpt will show up in blog list\n\n---\nContent```"
+  "---\n\nlayout: post\ntitle: Setting up this template\ndate: 2021-11-14 13:00:00 +0530\ncategories: guide\nexcerpt: This excerpt will show up in blog list\n\n---\nSetting up your blog with this template is easy peasy.\n- Clone the [repo](https://github.com/okaynils/nils.me)\n- Run `yarn install` and then `node ./scripts/clean` to start fresh\n- Edit this blog post in `./data/blog`\n- To add a new blog post, create a `.md` file in `./data/blog` with the following format:\n\n```---\nlayout: post\ntitle: Setting up this template\ndate: 2021-11-14 13:00:00 +0530\ncategories: guide\nexcerpt: This excerpt will show up in blog list\n\n---\nContent```"
 );
 
 fs.writeFileSync(

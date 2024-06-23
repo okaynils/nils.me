@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { getArtists } from '../pages/api/music';
 import Link from "next/link";
 import clsx from "clsx";
-import { ArrowRight, MicrophoneStage, PianoKeys, MusicNote } from "phosphor-react";
+import { ArrowRight, Guitar, MicrophoneStage, PianoKeys, MusicNote, VinylRecord } from "@phosphor-icons/react";
 
-const icons = [MicrophoneStage, PianoKeys, MusicNote];
+const icons = [Guitar, MicrophoneStage, PianoKeys, MusicNote, VinylRecord];
 
 export default function MusicList() {
     const [artists, setArtists] = useState([]);

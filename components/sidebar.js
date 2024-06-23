@@ -14,8 +14,9 @@ import {
   LinkedinLogo,
   GithubLogo,
   X,
+  XLogo,
   CaretUp,
-} from "phosphor-react";
+} from "@phosphor-icons/react"
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
@@ -29,7 +30,7 @@ export default function Sidebar() {
     {
       title: "X",
       url: "https://x.com/okaynils",
-      icon: <TwitterLogo />,
+      icon: <XLogo />,
     },
     {
       title: "Instagram",
@@ -80,7 +81,7 @@ export default function Sidebar() {
     //},
     {
       title: "Resume",
-      url: "https://drive.google.com/file/d/1StFJqO0ozhyzG94KIQrz71vFs3Ku73F5",
+      url: "https://drive.google.com/file/d/1NfSnIGHWlv_rA0XkSeKOYPvOLNtplc3c",
       icon: <IdentificationCard size={16} />,
       active: false,
       external: true,
