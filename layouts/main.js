@@ -14,7 +14,7 @@ export default function MainLayout({ children }) {
       <footer className="w-full mt-auto pt-12">
         <ContentWrapper
           width="620px"
-          className="border-t border-gray-500/10 py-3 flex justify-between items-center"
+          className="border-t border-gray-500/10 py-3 px-5 flex justify-between items-center"
         >
           <div className="flex items-center">
             <span className="text-sm opacity-60">Theme →</span>

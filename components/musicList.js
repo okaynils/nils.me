@@ -33,7 +33,7 @@ export default function MusicList() {
                         <Link href={artist.url} target="_blank" key={artist.name}>
                             <article
                                 className={clsx(
-                                    "flex font-medium w-full py-3 md:py-[8px] dark:text-white flex-col md:flex-row items-center",
+                                    "flex font-medium w-full py-3 md:py-[8px] dark:text-white items-center justify-between",
                                     "transition duration-300 ease-in-out group"
                                 )}
                             >
@@ -44,7 +44,7 @@ export default function MusicList() {
                                         className="ml-2 transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:translate-x-1" 
                                     />
                                 </h2>
-                                <div className="md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40">
+                                <div className="font-normal opacity-60 dark:opacity-40">
                                     {artist.playcount} plays
                                 </div>
                             </article>
