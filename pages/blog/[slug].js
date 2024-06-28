@@ -24,6 +24,8 @@ export default function Post({ allPosts, post }) {
     return <div>Error</div>;
   }
 
+  const otherPosts = allPosts.filter((p) => !router.asPath.includes(p.slug));
+
   return (
     <div className="flex w-full md:pt-5">
       <NextSeo
@@ -62,16 +64,14 @@ export default function Post({ allPosts, post }) {
             {post.content}
           </ReactMarkdown>
         </PostContent>
-        <div className="border-t border-gray-200 dark:border-gray-800">
-          <h2 className="mb-2 mt-10 text-xl font-medium text-black dark:text-white">
-            More blog posts
-          </h2>
-        </div>
-        <BlogList
-          data={allPosts
-            .filter((p) => !router.asPath.includes(p.slug))
-            .slice(0, 10)}
-        />
+        {otherPosts.length > 0 && (
+          <div className="border-t border-gray-200 dark:border-gray-800">
+            <h2 className="mb-2 mt-10 text-xl font-medium text-black dark:text-white">
+              More blog posts
+            </h2>
+          </div>
+        )}
+        <BlogList data={otherPosts.slice(0, 10)} />
       </ContentWrapper>
     </div>
   );

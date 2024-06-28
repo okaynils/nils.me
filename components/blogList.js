@@ -28,13 +28,6 @@ export default function BlogList({ data, activeSlug }) {
                   )}
                 >
                   <span>{post?.title}</span>
-                  {/* {post?.link ? (
-                      <span className="inline-flex ml-auto text-gray-400 dark:text-gray-600">
-                        <ArrowSquareOut size={14} />
-                      </span>
-                    ) : (
-                      ""
-                    )} */}
                 </h2>
                 <div
                   className={clsx(

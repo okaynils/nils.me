@@ -23,9 +23,12 @@ export default function PostContent({ post }) {
           day: "numeric",
         })}
       </div>
-      <h1 className="text-3xl mb-10 font-black md:text-4xl text-center max-w-[620px] mx-auto dark:text-white">
+      <h1 className="text-3xl font-black md:text-4xl text-center max-w-[620px] mx-auto dark:text-white">
         {post.title}
       </h1>
+      <div className="text-center mb-10 text-gray-400 dark:text-gray-400 text-sm">
+        {post.readtime} min read
+      </div>
       <div className="inline-block mx-auto post-content max-w-[620px]">
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}

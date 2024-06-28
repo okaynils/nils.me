@@ -15,7 +15,6 @@ export function getPostBySlug(slug, fields = []) {
   const { data, content } = matter(fileContents);
   const items = {};
 
-  // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === "slug") {
       items[field] = realSlug;
@@ -27,7 +26,6 @@ export function getPostBySlug(slug, fields = []) {
       items[field] = data[field];
     }
     if (field === "date") {
-      // set the date to be month (abbreviated) day year
       items[field] = data[field].toLocaleDateString("en-US", {
         year: "numeric",
         month: "short",
@@ -35,6 +33,9 @@ export function getPostBySlug(slug, fields = []) {
       });
     }
   });
+
+  items["readtime"] = Math.ceil(content.split(" ").length / 265);
+
   return items;
 }
 
