@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 // Media query sizes
 $linkColor: #d4a52f;
 $phone: "screen and (max-width: 767px)"; /* Only phone */
@@ -5,7 +7,15 @@ $tablet: "screen and (max-width: 991px)"; /* Phone and tablet */
 $laptop: "screen and (min-width: 992px)"; /* Laptop and desktop */
 $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
 
+.post-title {
+  font-family: 'Crimson Pro', serif;
+}
+
 .post-content {
+  h1, h2, h3 {
+    font-family: 'Crimson Pro', serif;
+  }
+
   a {
     position: relative;
   }
@@ -15,11 +25,11 @@ $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
   }
 
   h1 {
-    @apply text-2xl md:text-3xl;
+    @apply text-3xl md:text-3xl;
   }
 
   h2 {
-    @apply text-xl md:text-2xl;
+    @apply text-2xl md:text-2xl;
   }
 
   h3 {
