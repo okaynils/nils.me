@@ -3,7 +3,7 @@ date: 2024-06-22
 title: Some Notes on Productivity
 layout: post
 categories: 
-excerpt: jwgehgliuwergh
+excerpt: This is my collection of personal takes on optimizing productivity.
 ---
 
 
