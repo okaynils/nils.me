@@ -13,7 +13,6 @@ export default function MusicList() {
     useEffect(() => {
         getArtists().then((artists) => {
             setArtists(artists);
-            console.log(artists);
         });
 
         const iconInterval = setInterval(() => {
@@ -27,7 +26,7 @@ export default function MusicList() {
 
     return (
         <div>
-            {artists.length > 0 ? (
+            {artists?.length > 0 ? (
                 <div>
                     {artists.map((artist) => (
                         <Link href={artist.url} target="_blank" key={artist.name}>
@@ -52,7 +51,7 @@ export default function MusicList() {
                     ))}
                 </div>
             ) : (
-                <div className="flex items-center">
+                <div className="flex items-center my-3 text-gray-500">
                     <LoadingIcon size={18} className="mr-2" />
                     <p>Artists are loading<span className="animate-pulse">...</span></p>
                 </div>

@@ -8,7 +8,7 @@ export function getArtists() {
         .then(res => res.json())
         .then(
             (data) => {
-                return data.topartists.artist;
+                return data.topartists?.artist;
             },
             (error) => {
                 return [];
