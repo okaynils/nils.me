@@ -27,11 +27,11 @@ export default function Sidebar() {
   const { theme, setTheme } = useTheme();
 
   const SOCIAL_LINKS = [
-    {
-      title: "X",
-      url: "https://x.com/okaynils",
-      icon: <XLogo />,
-    },
+    //{
+    //  title: "X",
+    //  url: "https://x.com/okaynils",
+    //  icon: <XLogo />,
+    //},
     {
       title: "Instagram",
       url: "https://instagram.com/okaynils",
@@ -95,12 +95,12 @@ export default function Sidebar() {
       icon: <GithubLogo size={16} />,
       external: true,
     },
-    {
-      title: "Twitter",
-      url: `https://twitter.com/${process.env.twitter}`,
-      icon: <TwitterLogo size={16} />,
-      external: true,
-    },
+    //{
+    //  title: "Twitter",
+    //  url: `https://twitter.com/${process.env.twitter}`,
+    //  icon: <TwitterLogo size={16} />,
+    //  external: true,
+    //},
     {
       title: "Instagram",
       url: `https://instagram.com/${process.env.instagram}`,
