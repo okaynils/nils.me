@@ -27,13 +27,13 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider defaultTheme="system" attribute="class" enableSystem={true}>
         <DefaultSeo
           title="Nils Fahrni"
-          description="I am a dedicated Data Science undergraduate in the fourth semester at University of Applied Sciences Northwestern Switzerland."
+          description="I am a dedicated Data Science undergraduate at the University of Applied Sciences Northwestern Switzerland."
           canonical={canonicalUrl}
           openGraph={{
             site_name: "Nils Fahrni",
             title: "Nils Fahrni",
             description:
-              "I am a dedicated Data Science undergraduate in the fourth semester at University of Applied Sciences Northwestern Switzerland.",
+              "I am a dedicated Data Science undergraduate at University of Applied Sciences Northwestern Switzerland.",
             images: [
               {
                 url: "https://nils.me/images/site/meta.jpg",

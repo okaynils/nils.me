@@ -19,7 +19,7 @@ export default function BlogList({ data, activeSlug }) {
                   activeSlug == post.slug ? "text-black" : "text-gray-800 "
                 )}
               >
-                <h2
+                <p
                   className={clsx(
                     "inline-flex",
                     activeSlug === post.slug
@@ -28,7 +28,7 @@ export default function BlogList({ data, activeSlug }) {
                   )}
                 >
                   <span>{post?.title}</span>
-                </h2>
+                </p>
                 <div
                   className={clsx(
                     "md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40"

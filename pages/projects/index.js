@@ -21,7 +21,7 @@ export default function Home({ allProjects }) {
           cardType: "summary_large_image",
         }}
       />
-      <ContentWrapper width="620px">
+      <ContentWrapper width="500px">
         <WorkList allPosts={allProjects} />
       </ContentWrapper>
     </>

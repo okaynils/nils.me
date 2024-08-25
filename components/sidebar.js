@@ -62,7 +62,7 @@ export default function Sidebar() {
       active: pathname === "/",
     },
     {
-      title: "Writings",
+      title: "Notes",
       url: "/blog",
       icon: <Note size={16} />,
       active: pathname.includes("/blog"),
@@ -121,7 +121,7 @@ export default function Sidebar() {
                 className={clsx(
                   "flex items-center w-full py-[6px] md:py-[3px] px-[8px] transition-all duration-150 ease-in-out rounded-lg ",
                   link?.active
-                    ? "bg-gray-200 dark:bg-gray-700 backdrop-blur-md"
+                    ? "outline outline-1 outline-gray-200 dark:outline-gray-700"
                     : "text-gray-800 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-800"
                 )}
               >
@@ -146,10 +146,10 @@ export default function Sidebar() {
     return (
       <div>
         <h4 className="px-4 mt-4 mb-2 text-gray-500">Theme</h4>
-        <div className="mx-4 bg-white dark:bg-[#111] border border-gray-200 rounded-lg cursor-pointer dark:border-gray-800 hover:border-gray-800 dark:hover:border-gray-300">
+        <div className="mx-4 dark:bg-[#111] border border-gray-200 rounded-lg cursor-pointer dark:border-gray-800 hover:border-gray-800 dark:hover:border-gray-300">
           <select
             onChange={(e) => setTheme(e.target.value)}
-            className="w-full bg-white dark:bg-[#111] outline-none appearance-none cursor-pointer py-1 px-2 rounded-lg"
+            className="w-full dark:bg-[#111] outline-none appearance-none cursor-pointer py-1 px-2 rounded-lg"
             defaultValue={theme}
             placeholder="Select theme"
           >
@@ -163,9 +163,9 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="fixed w-full top-0 left-0 z-20 flex items-center justify-center bg-gradient-to-b from-white via-white dark:from-gray-900 dark:via-gray-900 -mx-2">
-      <div className="max-w-[620px] w-full hidden md:flex">
-        <aside className="sticky top-[30px] overflow-auto flex text-sm px-4 py-2 rounded-[12px] mt-2 w-full">
+    <div className="fixed w-full top-0 left-0 z-20 flex items-center justify-center backdrop-blur-sm bg-cream/50 dark:bg-gray-900/50 -mx-2">
+      <div className="max-w-[500px] w-full hidden md:flex">
+        <aside className="sticky top-[30px] overflow-auto flex text-sm px-4 py-2 rounded-[12px] my-1 w-full">
           <RenderLinks sectionItems={LINKS} />
           {/* <RenderLinks sectionItems={SOCIAL} sectionTitle="Elsewhere" /> */}
           {/* {renderPrefs()} */}

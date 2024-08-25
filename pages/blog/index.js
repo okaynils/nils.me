@@ -8,12 +8,12 @@ export default function Blog({ allPosts }) {
     <>
       <NextSeo
         title="Blog - Nils Fahrni"
-        description="I am a dedicated Data Science undergraduate in the fourth semester at University of Applied Sciences Northwestern Switzerland."
+        description="I am a dedicated Data Science undergraduate at the University of Applied Sciences Northwestern Switzerland."
         openGraph={{
           site_name: "Blog - Nils Fahrni",
           title: "Blog - Nils Fahrni",
           description:
-            "I am a dedicated Data Science undergraduate in the fourth semester at University of Applied Sciences Northwestern Switzerland.",
+            "I am a dedicated Data Science undergraduate at the University of Applied Sciences Northwestern Switzerland.",
         }}
         twitter={{
           handle: "@okaynils",
@@ -22,8 +22,8 @@ export default function Blog({ allPosts }) {
         }}
       />
 
-      <ContentWrapper width="620px">
-        <h2 className="font-medium text-black text-2xl mb-4 mt-4">Writings</h2>
+      <ContentWrapper width="500px">
+        <h2 className="font-medium text-black text-2xl mb-4 mt-4">Notes</h2>
         <BlogList data={allPosts} />
       </ContentWrapper>
     </>

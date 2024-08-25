@@ -27,22 +27,22 @@ export default function MusicList() {
     return (
         <div>
             {artists?.length > 0 ? (
-                <div>
+                <div className="mt-2">
                     {artists.map((artist) => (
                         <Link href={artist.url} target="_blank" key={artist.name}>
                             <article
                                 className={clsx(
-                                    "flex font-medium w-full py-3 md:py-[8px] dark:text-white items-center justify-between",
+                                    "text-sm flex font-medium w-full py-3 md:py-[8px] dark:text-white items-center justify-between",
                                     "transition duration-300 ease-in-out group"
                                 )}
                             >
-                                <h2 className="inline-flex items-center">
+                                <p className="inline-flex items-center">
                                     <span>{artist.name}</span>
                                     <ArrowRight 
                                         size={16} 
                                         className="ml-2 transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:translate-x-1" 
                                     />
-                                </h2>
+                                </p>
                                 <div className="font-normal opacity-60 dark:opacity-40">
                                     {artist.playcount} plays
                                 </div>

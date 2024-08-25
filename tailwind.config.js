@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         gray: colors.neutral,
+        cream: "#ededed",
       },
     },
   },

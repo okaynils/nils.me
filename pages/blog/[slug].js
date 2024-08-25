@@ -55,7 +55,7 @@ export default function Post({ allPosts, post }) {
           cardType: "summary_large_image",
         }}
       />
-      <ContentWrapper width="620px">
+      <ContentWrapper width="500px">
         <PostContent post={post}>
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
