@@ -1,5 +1,5 @@
 ---
-date: 2020-04-23 21:11:00 +0530
+date: 2024-04-23 21:11:00 +0530
 title: "lofi.study"
 slug: lofi-study
 tech: ["Productivity App", "Music"]

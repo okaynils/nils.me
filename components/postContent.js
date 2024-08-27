@@ -6,18 +6,20 @@ import rehypeKatex from "rehype-katex";
 import 'katex/dist/katex.min.css';
 
 export default function PostContent({ post }) {
+  console.log(post?.date)
+
   return (
     <div
       key={post.title}
       className="inline-flex flex-col items-center justify-start w-full"
     >
       {post?.link && post?.image ? (
-        <div className="max-w-[620px] mx-auto">
+        <div className="max-w-[500px] mx-auto">
           <img src={post.image} className="mb-4 rounded-lg" alt={post.title} />
         </div>
       ) : null}
       <div className="text-center text-gray-400 dark:text-gray-400 text-sm">
-        {new Date(post?.date.slice(0, 10)).toLocaleDateString("en-US", {
+        {new Date(post?.date).toLocaleDateString("en-US", {
           year: "numeric",
           month: "long",
           day: "numeric",
