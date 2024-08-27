@@ -27,11 +27,11 @@ export default function Sidebar() {
   const { theme, setTheme } = useTheme();
 
   const SOCIAL_LINKS = [
-    //{
-    //  title: "X",
-    //  url: "https://x.com/okaynils",
-    //  icon: <XLogo />,
-    //},
+    {
+      title: "X",
+      url: "https://x.com/okaynils",
+      icon: <XLogo />,
+    },
     {
       title: "Instagram",
       url: "https://instagram.com/okaynils",
@@ -95,12 +95,12 @@ export default function Sidebar() {
       icon: <GithubLogo size={16} />,
       external: true,
     },
-    //{
-    //  title: "Twitter",
-    //  url: `https://twitter.com/${process.env.twitter}`,
-    //  icon: <TwitterLogo size={16} />,
-    //  external: true,
-    //},
+    {
+      title: "X",
+      url: `https://x.com/${process.env.twitter}`,
+      icon: <XLogo size={16} />,
+      external: true,
+    },
     {
       title: "Instagram",
       url: `https://instagram.com/${process.env.instagram}`,
@@ -122,10 +122,9 @@ export default function Sidebar() {
                   "flex items-center w-full py-[6px] md:py-[3px] px-[8px] transition-all duration-150 ease-in-out rounded-lg ",
                   link?.active
                     ? "outline outline-1 outline-gray-200 dark:outline-gray-700"
-                    : "text-gray-800 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-800"
+                    : "text-gray-800 hover:bg-gray-200 hover:bg-opacity-50 dark:text-gray-400 dark:hover:bg-gray-800"
                 )}
               >
-                {/* <span className="mr-[3px] opacity-80">{link?.icon}</span> */}
                 <span>{link?.title}</span>
                 {link?.external ? (
                   <span className="ml-1 text-gray-400 dark:text-gray-600">
@@ -167,8 +166,6 @@ export default function Sidebar() {
       <div className="max-w-[500px] w-full hidden md:flex">
         <aside className="sticky top-[30px] overflow-auto flex text-sm px-4 py-2 rounded-[12px] my-1 w-full">
           <RenderLinks sectionItems={LINKS} />
-          {/* <RenderLinks sectionItems={SOCIAL} sectionTitle="Elsewhere" /> */}
-          {/* {renderPrefs()} */}
           <div className="flex gap-3 items-center ml-auto">
             {SOCIAL_LINKS?.map((item, index) => (
               <Link
