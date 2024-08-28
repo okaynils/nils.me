@@ -6,8 +6,6 @@ import rehypeKatex from "rehype-katex";
 import 'katex/dist/katex.min.css';
 
 export default function PostContent({ post }) {
-  console.log(post?.date)
-
   return (
     <div
       key={post.title}
@@ -19,11 +17,24 @@ export default function PostContent({ post }) {
         </div>
       ) : null}
       <div className="text-center text-gray-400 dark:text-gray-400 text-sm">
-        {new Date(post?.date).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
+        {post?.evergreen ? (
+          `Last updated: ${post?.date instanceof Date
+            ? new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+            : post?.date
+          }`
+        ) : (
+          post?.date instanceof Date
+            ? new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+            : post?.date
+        )}
       </div>
       <h1 className="text-4xl font-black md:text-4xl text-center max-w-[620px] mx-auto dark:text-white">
         {post.title}

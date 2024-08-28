@@ -134,6 +134,8 @@ export async function getStaticProps() {
     "image",
     "excerpt",
     "external",
+    "pinned",
+    "evergreen"
   ]);
 
   const allProjects = getAllProjects([

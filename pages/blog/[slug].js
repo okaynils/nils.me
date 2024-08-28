@@ -67,7 +67,7 @@ export default function Post({ allPosts, post }) {
         {otherPosts.length > 0 && (
           <div className="border-t border-gray-200 dark:border-gray-800">
             <h2 className="mb-2 mt-10 text-xl font-medium text-black dark:text-white">
-              More blog posts
+              More notes
             </h2>
           </div>
         )}
@@ -93,6 +93,7 @@ export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     "title",
     "date",
+    "evergreen",
     "slug",
     "image",
     "content",

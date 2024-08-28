@@ -39,6 +39,8 @@ export async function getStaticProps() {
     "image",
     "excerpt",
     "external",
+    "pinned",
+    "evergreen"
   ]);
 
   return {
