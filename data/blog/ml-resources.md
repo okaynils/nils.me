@@ -8,7 +8,7 @@ excerpt: "Some resources I've gathered and found to be useful."
 pinned: True
 ---
 
-Over the course of my Data Science studies, I've come across some really valuable resources. I thought I'd share my list with other people who are interested in becoming ML engineers or students who are also enrolled in the Data Science program at FHNW.
+Over the course of my Data Science studies, I've come across some really valuable resources I believe have high SNR. I thought I'd share my list with other people who are interested in becoming ML engineers or students who are also enrolled in the Data Science program at FHNW.
 
 Also, this list will stay updated so I'll add new things I find helpful over time.
 
