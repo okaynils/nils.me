@@ -23,8 +23,8 @@ export default function BlogList({ data, activeSlug }) {
             <Link href={`/blog/${post.slug}`}>
               <article
                 className={clsx(
-                  "flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col md:flex-row",
-                  activeSlug == post.slug ? "text-black" : "text-gray-800 "
+                  "flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 dark:border-gray-700 flex-col md:flex-row transition-colors duration-300 ease-in-out hover:border-gray-400 dark:hover:border-gray-500",
+                  activeSlug == post.slug ? "text-black" : "text-gray-800"
                 )}
               >
                 <p
@@ -48,22 +48,21 @@ export default function BlogList({ data, activeSlug }) {
                   )}
                 >
                   {post?.evergreen ? (
-                    `Last updated: ${
-                      post?.date instanceof Date
-                        ? new Date(post.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })
-                        : post?.date
+                    `Last updated: ${post?.date instanceof Date
+                      ? new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })
+                      : post?.date
                     }`
                   ) : (
                     post?.date instanceof Date
                       ? new Date(post.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })
                       : post?.date
                   )}
                 </div>
