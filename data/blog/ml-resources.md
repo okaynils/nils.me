@@ -18,10 +18,10 @@ Also, this list will stay updated so I'll add new things I find helpful over tim
 - [Data Driven Science & Engineering](https://databookuw.com/databook.pdf): A book going over the most important principles of Algebra and Calculus for ML/DS.
 - [An Introduction to Statistical Learning](https://www.statlearning.com/): The holy grail of Statistical Learning. This book is really good for beginners since it covers almost all the basics that more complex types of models later build upon.
     - [Stanford STATS202](https://web.stanford.edu/class/stats202/intro.html): Accompanying to the book, this syllabus covers the main topics with quick notes on how each algorithm works. Used this heavily when revising for the Statistical Learning class final.
+- [Foundations of Machine Learning](https://www.hlevkin.com/hlevkin/45MachineDeepLearning/ML/Foundations_of_Machine_Learning.pdf): A lot of alpha in this one. Fairly similar to [ISLP](https://www.statlearning.com/). If you understand the concepts in here you can follow and understand **every ML paper**. Not kidding.
 - [Andrej Karpathy on YouTube](https://www.youtube.com/andrejkarpathy): You probably already know this one but I can't stress it enough; Karpathy & Chill is what gets you straight A's.
 - [MIT 18.06 Linear Algebra](https://www.youtube.com/watch?v=J7DzL2_Na80&list=PL221E2BBF13BECF6C&index=3): This playlist is a gem for anyone who's new to  university level algebra. The videos are a bit older but Gilbert Strang's way of explaining concepts is second to none.
 - [Cornell CS4780 ML](https://www.youtube.com/watch?v=MrLPzBxG95I&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS): This playlist also covers the same subjects as [An Introduction to Statistical Learning](https://www.statlearning.com/). I found Kilian Weinberger's lectures really good; he often brings a different perspective to some of the algorithms.
-- [Foundations of Machine Learning](https://www.hlevkin.com/hlevkin/45MachineDeepLearning/ML/Foundations_of_Machine_Learning.pdf): A lot of alpha in this one. If you understand the concepts in here you can follow and understand **every ML paper**. Not kidding.
 
 ## More in-depth
 
@@ -29,5 +29,7 @@ Also, this list will stay updated so I'll add new things I find helpful over tim
 - [An even more annotated Transformer](https://pi-tau.github.io/posts/transformer/): Amazing post on how Transformer Architectures work.
 - [LLM Visualization](https://bbycroft.net/llm): An amazing 3D map of the GPT architectures, its subcomponents and how everything is connected together.
 - [The Novice's LLM Training Guide](https://rentry.co/llm-training): Contains everything you need to know to train an LLM.
+- [Yannic Kilcher](https://www.youtube.com/@YannicKilcher): Yannic Kilcher posts videos on some larger and hot SOTA papers around every 2 weeks and it's a joy watching those to stay up to date.
+- [Deep Learning: An MIT Press book](https://www.deeplearningbook.org/): This is also an MIT release which goes in depth on the math used in deep learning. I really like this one because it tries to be straightforward and on point, little to no noise.
 
 > Finally, just looking at these resources won't be enough. Build stuff, break things and learn.
