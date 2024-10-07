@@ -31,7 +31,7 @@ export default function Home({ allPosts, allProjects, post }) {
             </span>
           </h2>
           <div>
-            Exploring machine learning and building things.
+            Exploring machine intelligence and building things.
           </div>
         </div>
         <div className="pt-6 pb-2">
