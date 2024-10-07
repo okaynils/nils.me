@@ -63,9 +63,9 @@ export default function Sidebar() {
     },
     {
       title: "Notes",
-      url: "/blog",
+      url: "/notes",
       icon: <Note size={16} />,
-      active: pathname.includes("/blog"),
+      active: pathname.includes("/notes"),
     },
     {
       title: "Projects",

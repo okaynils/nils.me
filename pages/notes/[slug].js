@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { getPostBySlug, getAllPosts } from "pages/api/blog";
+import { getPostBySlug, getAllPosts } from "pages/api/notes";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";

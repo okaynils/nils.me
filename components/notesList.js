@@ -20,7 +20,7 @@ export default function BlogList({ data, activeSlug }) {
       <div className="last:!border-b-0">
         {sortedData?.map((post) => (
           <div key={post.slug} className="">
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={`/notes/${post.slug}`}>
               <article
                 className={clsx(
                   "flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 dark:border-gray-700 flex-col md:flex-row transition-colors duration-300 ease-in-out hover:border-gray-400 dark:hover:border-gray-500",

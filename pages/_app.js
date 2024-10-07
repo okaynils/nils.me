@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import "styles/app.scss";
-import "styles/blog.scss";
+import "styles/notes.scss";
 import MainLayout from "layouts/main";
 import { DefaultSeo } from "next-seo";
 import Script from "next/script";

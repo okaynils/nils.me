@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowSquareOut, SpotifyLogo } from "@phosphor-icons/react"
 import { BlogList } from "components";
 import { MusicList } from "components";
-import { getAllPosts } from "pages/api/blog";
+import { getAllPosts } from "pages/api/notes";
 import { getAllProjects } from "pages/api/projects";
 import { ContentWrapper, Button } from "ui";
 
@@ -14,12 +14,12 @@ export default function Home({ allPosts, allProjects, post }) {
         className="divide-y divide-gray-200 dark:divide-gray-800 space-y-4"
       >
         <div className="">
-          <div class="relative group">
+          <div className="relative group">
             <img src="/images\pages\home\moras.jpg"
               alt="Walter Moras — Im Spreewald"
               className="rounded-md mb-5 shadow-sm select-none user-select-none pointer-events-auto"
               draggable="false" />
-            <div class="text-xs absolute top-full left-1/2 transform -translate-x-1/2 mt-0.5 opacity-0 group-hover:opacity-75 group-hover:translate-y-1 transition-all duration-300 px-2 py-1 bg-gray-700/60 backdrop-blur-md text-white rounded-md shadow-lg">
+            <div className="text-xs absolute top-full left-1/2 transform -translate-x-1/2 mt-0.5 opacity-0 group-hover:opacity-75 group-hover:translate-y-1 transition-all duration-300 px-2 py-1 bg-gray-700/60 backdrop-blur-md text-white rounded-md shadow-lg">
               <a href="https://www.wikiwand.com/en/articles/Walter_Moras#/media/File:Walter_Moras_-_Im_Spreewald.jpg" target="_blank">
                 Walter Moras — Im Spreewald
               </a>
@@ -97,7 +97,7 @@ export default function Home({ allPosts, allProjects, post }) {
             </h2>
             <Link
               className="bg-transparent border-gray-200 dark:border-gray-700/70 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
-              href="/blog"
+              href="/notes"
             >
               View all notes →
             </Link>

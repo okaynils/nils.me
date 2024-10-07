@@ -1,5 +1,5 @@
 import { BlogList } from "components";
-import { getAllPosts } from "pages/api/blog";
+import { getAllPosts } from "pages/api/notes";
 import { NextSeo } from "next-seo";
 import { ContentWrapper } from "ui";
 

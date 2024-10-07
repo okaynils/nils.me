@@ -8,7 +8,7 @@ excerpt: This is my collection of personal takes on optimizing productivity.
 
 
 This is my collection of personal takes on optimizing productivity. There are a lot of people with productivity notes on their personal websites - one of my favorite is that of 
-[Sam Altman](https://blog.samaltman.com/productivity).
+[Sam Altman](https://notes.samaltman.com/productivity).
 
 The term **productivity** has, over the years, morphed into a buzzword that's alluring and paradoxically misleading. As we've witnessed a surge in "lifestyle gurus" championing 
 the cause of productivity, the essence of what it means to be genuinely productive has become muddled. I aim to peel back these layers, and share some straightforward, no-nonsense 
