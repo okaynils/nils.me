@@ -5,6 +5,7 @@ import { MusicList } from "components";
 import { getAllPosts } from "pages/api/notes";
 import { getAllProjects } from "pages/api/projects";
 import { ContentWrapper, Button } from "ui";
+import { ExperienceList } from "components/experienceList";
 
 export default function Home({ allPosts, allProjects, post }) {
   return (
@@ -15,7 +16,7 @@ export default function Home({ allPosts, allProjects, post }) {
       >
         <div className="">
           <div className="relative group">
-            <img src="/images\pages\home\moras.jpg"
+            <img src="/images/pages/home/moras.jpg"
               alt="Walter Moras — Im Spreewald"
               className="rounded-md mb-5 shadow-sm select-none user-select-none pointer-events-auto"
               draggable="false" />
@@ -103,6 +104,15 @@ export default function Home({ allPosts, allProjects, post }) {
             </Link>
           </div>
           <BlogList data={allPosts?.slice(0, 12)} activeSlug={post?.slug} />
+        </div>
+
+        <div className="pt-8 pb-2">
+          <div className="flex items-center gap-3 pb-3">
+            <h2 className=" text-xl font-medium text-black dark:text-white">
+              Professional Experience & Education 
+            </h2>
+          </div>
+          <ExperienceList />
         </div>
 
         <div>
