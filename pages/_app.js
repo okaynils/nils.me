@@ -56,14 +56,16 @@ function MyApp({ Component, pageProps }) {
           ]}
         />
 
-        {process.env.NODE_ENV == "production" ? (
-          // Analytics Script
-          <Script
-            src="https://api.pirsch.io/pirsch.js"
-            id="pirschjs"
-            data-code={process.env.NEXT_PUBLIC_PIRSCH_KEY}
-            strategy="afterInteractive"
-          />
+        {process.env.NODE_ENV == "production" ? (<>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-GS66FXN45D"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-GS66FXN45D');
+          </script>
+          </>
         ) : (
           ""
         )}
