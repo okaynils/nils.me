@@ -25,54 +25,56 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider defaultTheme="system" attribute="class" enableSystem={true}>
-        <DefaultSeo
-          title="Nils Fahrni"
-          description="I am a dedicated Data Science undergraduate at the University of Applied Sciences Northwestern Switzerland."
-          canonical={canonicalUrl}
-          openGraph={{
-            site_name: "Nils Fahrni",
-            title: "Nils Fahrni",
-            description:
-              "I am a dedicated Data Science undergraduate at University of Applied Sciences Northwestern Switzerland.",
-            images: [
-              {
-                url: "https://nils.me/images/site/meta.jpg",
-                width: 800,
-                height: 600,
-                alt: "Nils Fahrni",
-              },
-            ],
-          }}
-          twitter={{
-            handle: "@okaynils",
-            site: "@okaynils",
-            cardType: "summary_large_image",
-          }}
-          additionalLinkTags={[
+      <DefaultSeo
+        title="Nils Fahrni"
+        description="I am a dedicated Data Science undergraduate at the University of Applied Sciences Northwestern Switzerland."
+        canonical={canonicalUrl}
+        openGraph={{
+          site_name: "Nils Fahrni",
+          title: "Nils Fahrni",
+          description:
+            "I am a dedicated Data Science undergraduate at University of Applied Sciences Northwestern Switzerland.",
+          images: [
             {
-              rel: "apple-touch-icon",
-              href: "/touch-icons/main-icon.png",
+              url: "https://nils.me/images/site/meta.jpg",
+              width: 800,
+              height: 600,
+              alt: "Nils Fahrni",
             },
-          ]}
-        />
+          ],
+        }}
+        twitter={{
+          handle: "@okaynils",
+          site: "@okaynils",
+          cardType: "summary_large_image",
+        }}
+        additionalLinkTags={[
+          {
+            rel: "apple-touch-icon",
+            href: "/touch-icons/main-icon.png",
+          },
+        ]}
+      />
 
-        {process.env.NODE_ENV == "production" ? (<>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-GS66FXN45D"></script>
-          <script>
+      {process.env.NODE_ENV == "production" ? (<>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GS66FXN45D" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments)}
             gtag('js', new Date());
-          
+ 
             gtag('config', 'G-GS66FXN45D');
-          </script>
-          </>
-        ) : (
-          ""
-        )}
+        `}
+        </Script>
+      </>
+      ) : (
+        ""
+      )}
 
-        <MainLayout>
-          <Component {...pageProps} />
-        </MainLayout>
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
     </ThemeProvider>
   );
 }
