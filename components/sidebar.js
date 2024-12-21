@@ -32,11 +32,11 @@ export default function Sidebar() {
       url: "https://x.com/okaynils",
       icon: <XLogo />,
     },
-    {
+    /* {
       title: "Instagram",
       url: "https://instagram.com/okaynils",
       icon: <InstagramLogo />,
-    },
+    }, */
     {
       title: "LinkedIn",
       url: "https://linkedin.com/in/nilsfahrni/",
@@ -101,12 +101,12 @@ export default function Sidebar() {
       icon: <XLogo size={16} />,
       external: true,
     },
-    {
+    /* {
       title: "Instagram",
       url: `https://instagram.com/${process.env.instagram}`,
       icon: <InstagramLogo size={16} />,
       external: true,
-    },
+    }, */
   ];
 
   const RenderLinks = ({ sectionTitle, sectionItems }) => {
@@ -144,7 +144,7 @@ export default function Sidebar() {
   const renderPrefs = () => {
     return (
       <div>
-        <h4 className="px-4 mt-4 mb-2 text-gray-500">Theme</h4>
+        <h4 className="mt-4 mb-2 text-gray-500">Theme</h4>
         <div className="mx-4 dark:bg-[#111] border border-gray-200 rounded-lg cursor-pointer dark:border-gray-800 hover:border-gray-800 dark:hover:border-gray-300">
           <select
             onChange={(e) => setTheme(e.target.value)}
@@ -162,9 +162,9 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="fixed w-full top-0 left-0 z-20 flex items-center justify-center backdrop-blur-sm bg-cream/50 dark:bg-gray-900/50 -mx-2">
+    <div className="fixed w-full top-0 left-0 z-20 flex items-center justify-center backdrop-blur-sm bg-cream/50 dark:bg-gray-900/50">
       <div className="max-w-[500px] w-full hidden md:flex">
-        <aside className="sticky top-[30px] overflow-auto flex text-sm px-4 py-2 rounded-[12px] my-1 w-full">
+        <aside className="sticky top-[30px] overflow-auto flex text-sm py-2 rounded-[12px] my-1 w-full">
           <RenderLinks sectionItems={LINKS} />
           <div className="flex gap-3 items-center ml-auto">
             {SOCIAL_LINKS?.map((item, index) => (

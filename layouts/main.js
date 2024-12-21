@@ -11,10 +11,10 @@ export default function MainLayout({ children }) {
     <section className="flex items-start pt-[32px] md:pt-[56px] flex-col min-h-screen">
       <Sidebar />
       <main className="relative w-full">{children}</main>
-      <footer className="w-full mt-auto pt-12">
+      <footer className="w-full mt-auto">
         <ContentWrapper
           width="500px"
-          className="border-t border-gray-500/10 py-3 px-5 flex justify-between items-center"
+          className="border-t border-gray-500/10 py-3 flex justify-between items-center"
         >
           <div className="flex items-center">
             <span className="text-sm opacity-60">Theme →</span>
@@ -31,8 +31,17 @@ export default function MainLayout({ children }) {
               </select>
             </div>
           </div>
+          {/* Add your icon here */}
+          <div className="flex items-center">
+            <img
+              src="/touch-icons/main-icon.png"
+              alt="Icon"
+              className="w-4 h-4"
+            />
+          </div>
         </ContentWrapper>
       </footer>
+
     </section>
   );
 }

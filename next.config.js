@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    instagram: "okaynils",
+    //instagram: "okaynils",
     twitter: "okaynils",
   },
   optimizeFonts: false,

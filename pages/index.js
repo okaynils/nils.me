@@ -5,7 +5,6 @@ import { MusicList } from "components";
 import { getAllPosts } from "pages/api/notes";
 import { getAllProjects } from "pages/api/projects";
 import { ContentWrapper, Button } from "ui";
-import { ExperienceList } from "components/experienceList";
 
 export default function Home({ allPosts, allProjects, post }) {
   return (
@@ -16,15 +15,15 @@ export default function Home({ allPosts, allProjects, post }) {
       >
         <div className="">
           <div className="relative group">
-            <img src="/images/pages/home/moras.jpg"
-              alt="Walter Moras — Im Spreewald"
+            <img src="/images/pages/home/arborelius.jpg"
+              alt="Olof Arborelius — Lake view at Engelsberg, Västmanland (1893)"
               className="rounded-md mb-5 shadow-sm select-none user-select-none pointer-events-auto"
               draggable="false" />
-            <div className="text-xs absolute top-full left-1/2 transform -translate-x-1/2 mt-0.5 opacity-0 group-hover:opacity-75 group-hover:translate-y-1 transition-all duration-300 px-2 py-1 bg-gray-700/60 backdrop-blur-md text-white rounded-md shadow-lg">
-              <a href="https://www.wikiwand.com/en/articles/Walter_Moras#/media/File:Walter_Moras_-_Im_Spreewald.jpg" target="_blank">
-                Walter Moras — Im Spreewald
+            {/* <div className="text-xs absolute top-full left-1/2 transform -translate-x-1/2 mt-0.5 opacity-0 group-hover:opacity-75 group-hover:translate-y-1 transition-all duration-300 px-2 py-1 bg-gray-700/60 backdrop-blur-md text-white rounded-md shadow-lg">
+              <a href="https://commons.wikimedia.org/wiki/File:Arborelius_-_Lake_View.jpg" target="_blank">
+                Olof Arborelius — Lake view at Engelsberg, Västmanland (1893)
               </a>
-            </div>
+            </div> */}
           </div>
           <h2 className="mb-3 md:mb-4 text-4xl">
             <span className="font-bold text-black dark:text-white">
@@ -32,7 +31,7 @@ export default function Home({ allPosts, allProjects, post }) {
             </span>
           </h2>
           <div>
-            Exploring machine intelligence and building things.
+            Exploring machine intelligence, computer vision and robotics.
           </div>
         </div>
         <div className="pt-6 pb-2">
@@ -106,15 +105,6 @@ export default function Home({ allPosts, allProjects, post }) {
           <BlogList data={allPosts?.slice(0, 12)} activeSlug={post?.slug} />
         </div>
 
-        <div className="pt-8 pb-2">
-          <div className="flex items-center gap-3 pb-3">
-            <h2 className=" text-xl font-medium text-black dark:text-white">
-              Professional Experience & Education 
-            </h2>
-          </div>
-          <ExperienceList />
-        </div>
-
         <div>
           <div className="flex items-center mt-10 gap-3">
             <h2 className=" text-xl font-medium text-black dark:text-white">
@@ -132,7 +122,7 @@ export default function Home({ allPosts, allProjects, post }) {
 
           <div className="mt-2 mb-8">
             <p>
-              I think music says a lot about someone and it's a great way to connect with people, so here are my top five artists of the last 30 days.
+              Here are my top five artists of the last 30 days.
             </p>
             <MusicList />
           </div>
