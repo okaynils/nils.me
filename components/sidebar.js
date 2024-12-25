@@ -111,35 +111,33 @@ export default function Sidebar() {
 
   const RenderLinks = ({ sectionTitle, sectionItems }) => {
     return (
-      <>
-        <div className="flex md:flex-row flex-col space-y-2 my-2 md:my-0 px-2 md:px-0 md:space-y-0 text-base md:text-sm">
-          {sectionItems.map((link, index) => (
-            <div className="px-1" key={index}>
-              <Link
-                href={link.url}
-                target={link.external ? "_blank" : ""}
-                className={clsx(
-                  "flex items-center w-full py-[6px] md:py-[3px] px-[8px] transition-all duration-150 ease-in-out rounded-lg ",
-                  link?.active
-                    ? "outline outline-1 outline-gray-200 dark:outline-gray-700"
-                    : "text-gray-800 hover:bg-gray-200 hover:bg-opacity-50 dark:text-gray-400 dark:hover:bg-gray-800"
-                )}
-              >
-                <span>{link?.title}</span>
-                {link?.external ? (
-                  <span className="ml-1 text-gray-400 dark:text-gray-600">
-                    <ArrowSquareOut size={14} />
-                  </span>
-                ) : (
-                  ""
-                )}
-              </Link>
-            </div>
-          ))}
-        </div>
-      </>
+      <div className="flex md:flex-row flex-col space-y-2 md:space-y-0 md:space-x-2 my-2 md:my-0 px-2 md:px-0 text-base md:text-sm">
+        {sectionItems.map((link, index) => (
+          <Link
+            key={index}
+            href={link.url}
+            target={link.external ? "_blank" : ""}
+            className={clsx(
+              "flex items-center py-[6px] md:py-[3px] px-[8px] transition-all duration-150 ease-in-out rounded-lg box-border",
+              "first:ml-px",
+              link?.active
+                ? "outline outline-1 outline-gray-200 dark:outline-gray-700"
+                : "text-gray-800 hover:bg-gray-200 hover:bg-opacity-50 dark:text-gray-400 dark:hover:bg-gray-800"
+            )}
+          >
+            <span>{link?.title}</span>
+            {link?.external && (
+              <span className="ml-1 text-gray-400 dark:text-gray-600">
+                <ArrowSquareOut size={14} />
+              </span>
+            )}
+          </Link>
+        ))}
+      </div>
     );
   };
+
+  
 
   const renderPrefs = () => {
     return (
@@ -164,7 +162,7 @@ export default function Sidebar() {
   return (
     <div className="fixed w-full top-0 left-0 z-20 flex items-center justify-center backdrop-blur-sm bg-cream/50 dark:bg-gray-900/50">
       <div className="max-w-[500px] w-full hidden md:flex">
-        <aside className="sticky top-[30px] overflow-auto flex text-sm py-2 rounded-[12px] my-1 w-full">
+        <aside className="sticky top-[30px] overflow-hidden flex text-sm py-2 rounded-[12px] my-1 w-full">
           <RenderLinks sectionItems={LINKS} />
           <div className="flex gap-3 items-center ml-auto">
             {SOCIAL_LINKS?.map((item, index) => (
