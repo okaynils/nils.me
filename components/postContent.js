@@ -58,7 +58,7 @@ export default function PostContent({ post }) {
                   <figure className="highlight mb-10">
                     <img src={src} alt={alt} className="rounded-lg mb-4" />
                     {alt && (
-                      <figcaption className="text-center text-xs italic text-gray-300 dark:text-gray-400">
+                      <figcaption className="text-center text-xs italic text-gray-500 dark:text-gray-400">
                         {alt}
                       </figcaption>
                     )}
