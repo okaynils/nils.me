@@ -1,11 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { getPostBySlug, getAllPosts } from "pages/api/notes";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
-import 'katex/dist/katex.min.css';
 import { BlogList, PostContent } from "components";
 import { NextSeo } from "next-seo";
 import { ContentWrapper } from "ui";
@@ -24,7 +19,7 @@ export default function Post({ allPosts, post }) {
     return <div>Error</div>;
   }
 
-  const otherPosts = allPosts.filter((p) => !router.asPath.includes(p.slug));
+  const otherPosts = allPosts.filter((p) => p.slug !== post.slug);
 
   return (
     <div className="flex w-full md:pt-5">
@@ -56,14 +51,7 @@ export default function Post({ allPosts, post }) {
         }}
       />
       <ContentWrapper width="500px">
-        <PostContent post={post}>
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm, remarkMath]}
-            rehypePlugins={[rehypeKatex]}
-          >
-            {post.content}
-          </ReactMarkdown>
-        </PostContent>
+        <PostContent post={post} />
         {otherPosts.length > 0 && (
           <div className="border-t border-gray-200 dark:border-gray-800">
             <h2 className="mb-2 mt-10 text-xl font-medium text-black dark:text-white">

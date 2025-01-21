@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import 'katex/dist/katex.min.css';
+import React from 'react';
 
 export default function PostContent({ post }) {
   return (
@@ -20,19 +21,19 @@ export default function PostContent({ post }) {
         {post?.evergreen ? (
           `Last updated: ${post?.date instanceof Date
             ? new Date(post.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
             : post?.date
           }`
         ) : (
           post?.date instanceof Date
             ? new Date(post.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
             : post?.date
         )}
       </div>
@@ -42,10 +43,35 @@ export default function PostContent({ post }) {
       <div className="text-center mb-10 text-gray-400 dark:text-gray-400 text-sm">
         {post.readtime} min read
       </div>
-      <div className="inline-block mx-auto post-content max-w-[620px]">
+      <div className="inline-block mx-auto post-content max-w-[620px] text-justify mb-10">
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex]}
+          components={{
+            p: ({ node, children }) => {
+              if (
+                node.children.length === 1 &&
+                node.children[0].tagName === 'img'
+              ) {
+                const { src, alt } = node.children[0].properties;
+                return (
+                  <figure className="highlight mb-10">
+                    <img src={src} alt={alt} className="rounded-lg mb-4" />
+                    {alt && (
+                      <figcaption className="text-center text-xs italic text-gray-300 dark:text-gray-400">
+                        {alt}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              }
+
+              return <p>{children}</p>;
+            },
+            img: ({ src, alt }) => (
+              <img src={src} alt={alt} className="rounded-lg" />
+            ),
+          }}
         >
           {post.content}
         </ReactMarkdown>
