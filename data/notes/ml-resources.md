@@ -1,7 +1,7 @@
 ---
-date: 2024-10-08
+date: 2025-01-21
 evergreen: True
-title: Valuable ML Resources
+title: valuable ML resources
 layout: post
 categories: ml
 excerpt: "Some resources I've gathered and found to be useful."
@@ -31,5 +31,6 @@ Also, this list will stay updated so I'll add new things I find helpful over tim
 - [The Novice's LLM Training Guide](https://rentry.co/llm-training): Contains everything you need to know to train an LLM.
 - [Yannic Kilcher](https://www.youtube.com/@YannicKilcher): Yannic Kilcher posts videos on some larger and hot SOTA papers around every 2 weeks and it's a joy watching those to stay up to date.
 - [Deep Learning: An MIT Press book](https://www.deeplearningbook.org/): This is also an MIT release which goes in depth on the math used in deep learning. I really like this one because it tries to be straightforward and on point, little to no noise.
+- [Understanding Deep Learning Book](https://udlbook.github.io/udlbook/): A buddy of mine recently told me about this. I love the way it illustrates the different principles and it really covers everything, from old Deep Learning principles to SOTA models. It gets updated frequently and is free. 
 
 > Finally, just looking at these resources won't be enough. Build stuff, break things and learn.

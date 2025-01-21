@@ -1,6 +1,6 @@
 ---
 date: 2024-07-05
-title: You can learn anything
+title: you can learn anything
 layout: post
 categories: 
 excerpt: "Yes, literally anything."

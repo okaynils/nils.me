@@ -1,6 +1,6 @@
 ---
 date: 2024-06-22
-title: Some Notes on Productivity
+title: some notes on productivity
 layout: post
 categories: 
 excerpt: This is my collection of personal takes on optimizing productivity.
