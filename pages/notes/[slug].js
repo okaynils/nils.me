@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { getPostBySlug, getAllPosts } from "pages/api/notes";
 import { BlogList, PostContent } from "components";
-import { NextSeo } from "next-seo";
 import { ContentWrapper } from "ui";
 
 export default function Post({ allPosts, post }) {
@@ -23,33 +22,6 @@ export default function Post({ allPosts, post }) {
 
   return (
     <div className="flex w-full md:pt-5">
-      <NextSeo
-        title={`${post.title} - Nils Fahrni`}
-        description={
-          post.excerpt.slice(0, 120) || post.content.slice(0, 120) || ""
-        }
-        openGraph={{
-          site_name: `${post.title} - Nils Fahrni`,
-          images: [
-            {
-              url:
-                post.ogImage ??
-                `${process.env.NEXT_PUBLIC_APP_URL}/api/og?title=${
-                  post.title
-                }&description=${
-                  post.excerpt.slice(0, 100) || post.content.slice(0, 100) || ""
-                }...`,
-              width: 800,
-              height: 600,
-            },
-          ],
-        }}
-        twitter={{
-          handle: "@okaynils",
-          site: "@okaynils",
-          cardType: "summary_large_image",
-        }}
-      />
       <ContentWrapper width="500px">
         <PostContent post={post} />
         {otherPosts.length > 0 && (

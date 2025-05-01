@@ -81,7 +81,7 @@ export default function Sidebar() {
     //},
     {
       title: "Resume",
-      url: "https://drive.google.com/file/d/1NfSnIGHWlv_rA0XkSeKOYPvOLNtplc3c",
+      url: "https://okaynils.github.io/resume/main.pdf",
       icon: <IdentificationCard size={16} />,
       active: false,
       external: true,

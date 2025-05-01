@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { WorkList, WorkContent } from "components";
-import { NextSeo } from "next-seo";
 import { getAllProjects, getPostBySlug } from "pages/api/projects";
 import md2html from "lib/md2html";
 import { ContentWrapper } from "ui";
@@ -14,23 +13,6 @@ export default function Post({ allPosts, post }) {
 
   return (
     <div className="flex w-full md:pt-5">
-      <NextSeo
-        title={`${post.title} - Nils Fahrni`}
-        description={
-          post.content.slice(0, 200)?.replace(/<[^>]*>?/gm, "") || ""
-        }
-        openGraph={{
-          site_name: `${post.title} - Nils Fahrni`,
-          title: `${post.title} - Nils Fahrni`,
-          description:
-            post.content.slice(0, 200)?.replace(/<[^>]*>?/gm, "") || "",
-        }}
-        twitter={{
-          handle: "@okaynils",
-          site: "@okaynils",
-          cardType: "summary_large_image",
-        }}
-      />
       <ContentWrapper width="500px">
         <WorkContent post={post} />
       </ContentWrapper>
