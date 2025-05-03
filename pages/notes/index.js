@@ -6,7 +6,10 @@ export default function Blog({ allPosts }) {
   return (
     <>
       <ContentWrapper width="500px">
-        <h2 className="font-medium text-black text-2xl mb-4 mt-4">Notes</h2>
+        <h2 className="font-medium text-black text-2xl mt-4">Notes</h2>
+        <p className="mb-4">
+          A home for my sparsely researched ideas and thoughts.
+        </p>
         <BlogList data={allPosts} />
       </ContentWrapper>
     </>

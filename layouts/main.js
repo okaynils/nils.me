@@ -8,7 +8,7 @@ export default function MainLayout({ children }) {
   const { theme, setTheme } = useTheme();
 
   return (
-    <section className="flex items-start pt-[32px] md:pt-[50px] mx-4 flex-col min-h-screen">
+    <section className="flex items-start pt-[50px] mx-4 flex-col min-h-screen">
       <Sidebar />
       <main className="relative w-full">{children}</main>
       <footer className="w-full mt-auto">
