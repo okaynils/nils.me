@@ -5,9 +5,15 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import 'katex/dist/katex.min.css';
 import React from 'react';
+import Head from "next/head";
 
 export default function PostContent({ post }) {
   return (
+    <div>
+    <Head>
+      <meta name="robots" content="noindex, nofollow" />
+      <meta name="googlebot" content="noindex, nofollow" />
+    </Head>
     <div
       key={post.title}
       className="inline-flex flex-col items-center justify-start w-full"
@@ -43,7 +49,7 @@ export default function PostContent({ post }) {
       <div className="text-center mb-10 text-gray-400 text-sm">
         {post.readtime} min read
       </div>
-      <div className="inline-block mx-auto post-content max-w-[620px] text-justify mb-10">
+      <div className="inline-block mx-auto post-content max-w-[620px] text-justify mb-10 leading-[1.4] font-serif">
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex]}
@@ -87,6 +93,7 @@ export default function PostContent({ post }) {
           <span>Visit Link</span>
         </a>
       ) : null}
+    </div>
     </div>
   );
 }

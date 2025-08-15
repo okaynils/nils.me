@@ -1,2 +1,2 @@
-User-agent: *
-Sitemap: https://nils.me/sitemap.xml
+User-Agent: *
+Disallow: /notes/

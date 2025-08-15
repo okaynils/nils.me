@@ -15,6 +15,9 @@ module.exports = {
         gray: colors.neutral,
         cream: "#f4f3ef",
       },
+      fontFamily: {
+        serif: ['"Lora"', 'serif']
+      },
     },
   },
   variants: {
