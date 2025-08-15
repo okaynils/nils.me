@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-  @apply text-gray-700 dark:text-gray-300 dark:bg-gray-900 antialiased leading-[1.7];
+  @apply text-gray-700 antialiased leading-[1.7];
   font-family: 'Hanken Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #f4f3ef;
 }
@@ -13,10 +13,10 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Crimson Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #042f2e;
-  @apply text-black dark:text-gray-200;
+  @apply text-black;
 }
 
 .twitter-tweet {
-  max-width: 500px !important;
+  max-width: 440px !important;
   margin: 32px 0 !important;
 }

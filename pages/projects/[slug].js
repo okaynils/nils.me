@@ -13,7 +13,7 @@ export default function Post({ allPosts, post }) {
 
   return (
     <div className="flex w-full md:pt-5">
-      <ContentWrapper width="500px">
+      <ContentWrapper width="440px">
         <WorkContent post={post} />
       </ContentWrapper>
     </div>

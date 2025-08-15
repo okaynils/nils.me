@@ -15,24 +15,24 @@ const Switch = ({
       checked={value || false}
       onCheckedChange={onChange}
       className={clsx(
-        "w-[40px] dark:bg-gray-800 dark:border-gray-700 rounded-full border border-gray-300 h-[24px] p-[3px] group",
+        "w-[40px] rounded-full border border-gray-300 h-[24px] p-[3px] group",
         value === false
-          ? "bg-gray-200 dark:bg-gray-700"
-          : "bg-white dark:bg-gray-800"
+          ? "bg-gray-200"
+          : "bg-white"
       )}
     >
       <RadixSwitch.Thumb
         className={clsx(
-          " rounded-full bg-gradient-to-br from-gray-500 to-gray-800 ring-1 ring-gray-800 dark:from-gray-200 dark:to-gray-400 dark:ring-gray-200 h-full group-hover:scale-[0.9] aspect-square flex duration-[100ms] ease-in-out items-center justify-center",
+          "rounded-full bg-gradient-to-br from-gray-500 to-gray-800 ring-1 ring-gray-800 h-full group-hover:scale-[0.9] aspect-square flex duration-[100ms] ease-in-out items-center justify-center",
           value === false ? "opacity-40" : "translate-x-[100%] bg-white"
         )}
       >
         {value === false ? (
-          <X size={12} className="text-white dark:text-black" weight="bold" />
+          <X size={12} className="text-white" weight="bold" />
         ) : (
           <Check
             size={12}
-            className="text-white dark:text-black"
+            className="text-white"
             weight="bold"
           />
         )}
@@ -42,7 +42,7 @@ const Switch = ({
       {label && (
         <h4
           className={clsx(
-            "text-sm font-semibold dark:text-gray-200",
+            "text-sm font-semibold",
             labelClass
           )}
         >
@@ -50,7 +50,7 @@ const Switch = ({
         </h4>
       )}
       {info && (
-        <p className="leading-tight font-normal text-gray-500 dark:text-gray-400">
+        <p className="leading-tight font-normal text-gray-500">
           {info}
         </p>
       )}

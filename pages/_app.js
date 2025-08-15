@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ThemeProvider } from "next-themes";
+// ThemeProvider removed - app is light mode only
 import "styles/app.scss";
 import "styles/notes.scss";
 import MainLayout from "layouts/main";
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <ThemeProvider defaultTheme="system" attribute="class" enableSystem={true}>
+    <>
       {process.env.NODE_ENV == "production" ? (<>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-GS66FXN45D" />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
       <MainLayout>
         <Component {...pageProps} />
       </MainLayout>
-    </ThemeProvider>
+    </>
   );
 }
 

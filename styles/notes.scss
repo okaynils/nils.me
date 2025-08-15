@@ -105,7 +105,7 @@ $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
   }
 
   pre {
-    @apply bg-gray-100 dark:bg-gray-800 dark:border-gray-700 p-5 w-full break-words rounded-lg border border-gray-200 overflow-auto mb-10 text-sm;
+    @apply bg-gray-100 p-5 w-full break-words rounded-lg border border-gray-200 overflow-auto mb-10 text-sm;
 
     & > code {
       @apply whitespace-pre-wrap;
@@ -113,7 +113,7 @@ $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
   }
 
   hr {
-    @apply mb-10 dark:border-gray-700;
+    @apply mb-10;
   }
 
   & > figure.highlight {
@@ -189,18 +189,18 @@ $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
   }
 
   strong {
-    @apply font-semibold text-black dark:text-gray-200;
+    @apply font-semibold text-black;
   }
 
   p {
     @apply text-[1rem] md:text-[1.05rem] mb-8;
 
     code {
-      @apply font-mono text-sm border border-gray-200 dark:border-gray-800 px-1 py-px rounded-md text-gray-600 dark:text-gray-300 dark:bg-gray-700  shadow-[0_1px_2px_rgba(0,0,0,0.08)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.3)];
+      @apply font-mono text-sm border border-gray-200 px-1 py-px rounded-md text-gray-600 shadow-[0_1px_2px_rgba(0,0,0,0.08)];
     }
 
     a {
-      @apply text-black dark:text-gray-200 underline-offset-[4px] decoration-[1px] underline hover:text-blue-700 dark:hover:text-blue-700;
+      @apply text-black underline-offset-[4px] decoration-[1px] underline hover:text-blue-700;
     }
 
     img {
@@ -249,11 +249,11 @@ $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
       @apply text-[1rem] md:text-[1.05rem] list-disc list-outside ml-5 mb-2;
 
       code {
-        @apply font-mono text-sm border border-gray-200 dark:border-gray-800 px-1 py-px rounded-md text-gray-600 dark:text-gray-400 shadow-[0_1px_2px_rgba(0,0,0,0.08)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.3)];
+        @apply font-mono text-sm border border-gray-200 px-1 py-px rounded-md text-gray-600 shadow-[0_1px_2px_rgba(0,0,0,0.08)];
       }
 
       a {
-        @apply text-black dark:text-gray-200 underline-offset-[4px] decoration-[1px] underline hover:text-blue-700 dark:hover:text-blue-700;
+        @apply text-black underline-offset-[4px] decoration-[1px] underline hover:text-blue-700;
       }
     }
   }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useTheme } from "next-themes";
 import clsx from "clsx";
 import {
   House,
@@ -16,7 +15,6 @@ import {
 
 export default function Sidebar() {
   const { pathname } = useRouter();
-  const { theme, setTheme } = useTheme();
 
   const SOCIAL_LINKS = [
     { title: "X", url: "https://x.com/okaynils", icon: <XLogo size={16} /> },
@@ -26,22 +24,17 @@ export default function Sidebar() {
 
   const LINKS = [
     {
-      title: <House size={16} />,
+      title: "home",
       url: "/",
       active: pathname === "/",
     },
     {
-      title: "Notes",
+      title: "notes",
       url: "/notes",
       active: pathname.includes("/notes"),
     },
     {
-      title: "Projects",
-      url: "/projects",
-      active: pathname.includes("/projects"),
-    },
-    {
-      title: "Resume",
+      title: "resume",
       url: "https://okaynils.github.io/resume/main.pdf",
       active: false,
       external: true,
@@ -49,24 +42,24 @@ export default function Sidebar() {
   ];
 
   const RenderLinks = ({ items }) => (
-    <div className="flex flex-row space-x-2 my-0 px-0 text-sm">
+    <div className="flex flex-row space-x-2 my-0 gap-2 text-sm">
       {items.map((link, idx) => (
         <Link
           key={idx}
           href={link.url}
           target={link.external ? "_blank" : undefined}
           className={clsx(
-            "flex items-center py-[3px] px-[8px] transition-all duration-150 ease-in-out rounded-lg box-border",
+            "flex items-center py-[3px] transition-all duration-150 ease-in-out",
             link.active
-              ? "outline outline-1 outline-gray-200 dark:outline-gray-700"
-              : "text-gray-800 hover:bg-gray-200 hover:bg-opacity-50 dark:text-gray-400 dark:hover:bg-gray-800"
+              ? "font-bold text-black"
+              : "text-gray-400 hover:text-black",
           )}
         >
           <span className="flex items-center">
             {typeof link.title === 'string' ? link.title : link.title}
           </span>
           {link.external && (
-            <ArrowSquareOut size={14} className="ml-1 text-gray-400 dark:text-gray-600" />
+            <ArrowSquareOut size={14} className="ml-1 text-gray-400" />
           )}
         </Link>
       ))}
@@ -74,13 +67,13 @@ export default function Sidebar() {
   );
 
   return (
-    <div className="fixed w-full top-0 left-0 z-20 flex items-center justify-center backdrop-blur-sm bg-cream/50 dark:bg-gray-900/50">
-      <div className="max-w-[500px] w-full">
-        <aside className="sticky top-[30px] overflow-hidden flex text-sm py-2 rounded-[12px] my-1 pl-[1px] w-full">
+    <div className="fixed top-0 z-20 w-full backdrop-blur-sm bg-cream/50">
+      <div className="max-w-[440px] w-full">
+        <aside className="sticky top-[30px] overflow-hidden flex justify-between items-center text-sm py-2 rounded-[12px] my-1 w-full relative">
           <RenderLinks items={LINKS} />
-          <div className="flex gap-3 items-center ml-auto">
+          <div className="flex items-center absolute right-0 gap-2">
             {SOCIAL_LINKS.map((item, idx) => (
-              <Link key={idx} href={item.url} target="_blank" className="text-lg opacity-50 hover:opacity-80">
+              <Link key={idx} href={item.url} target="_blank" className="flex items-center py-[3px] text-lg opacity-50 hover:opacity-80 transition-all duration-150 ease-in-out rounded-lg">
                 {item.icon}
               </Link>
             ))}

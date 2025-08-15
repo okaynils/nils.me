@@ -23,7 +23,7 @@ export default function BlogList({ data, activeSlug }) {
             <Link href={`/notes/${post.slug}`}>
               <article
                 className={clsx(
-                  "flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 dark:border-gray-700 flex-col md:flex-row transition-colors duration-300 ease-in-out hover:border-gray-400 dark:hover:border-gray-500",
+                  "flex border-dashed font-medium w-full py-3 md:py-[8px] border-b border-gray-200 flex-col md:flex-row transition-colors duration-300 ease-in-out hover:border-gray-400",
                   activeSlug == post.slug ? "text-black" : "text-gray-800"
                 )}
               >
@@ -31,8 +31,8 @@ export default function BlogList({ data, activeSlug }) {
                   className={clsx(
                     "inline-flex items-center",
                     activeSlug === post.slug
-                      ? "text-black dark:text-white"
-                      : "text-gray-600 dark:text-gray-400"
+                      ? "text-black"
+                      : "text-gray-600"
                   )}
                 >
                   {post.pinned && (
@@ -44,7 +44,7 @@ export default function BlogList({ data, activeSlug }) {
                 </p>
                 <div
                   className={clsx(
-                    "md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40"
+                    "md:pl-2 md:ml-auto font-normal opacity-60"
                   )}
                 >
                   {post?.evergreen ? (

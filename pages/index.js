@@ -10,23 +10,18 @@ export default function Home({ allPosts, allProjects, post }) {
   return (
     <div className="grid md:grid-cols-1 mt-0">
       <ContentWrapper
-        width="500px"
-        className="divide-y divide-gray-200 dark:divide-gray-800 space-y-4"
+        width="440px"
+        className="divide-y divide-gray-200 space-y-4"
       >
         <div className="">
           <div className="relative group">
             <img src="/images/pages/home/arborelius.jpg"
               alt="Olof Arborelius — Lake view at Engelsberg, Västmanland (1893)"
-              className="rounded-md mb-5 shadow-sm select-none user-select-none pointer-events-auto"
+              className="rounded-sm mb-5 select-none user-select-none pointer-events-auto"
               draggable="false" />
-            {/* <div className="text-xs absolute top-full left-1/2 transform -translate-x-1/2 mt-0.5 opacity-0 group-hover:opacity-75 group-hover:translate-y-1 transition-all duration-300 px-2 py-1 bg-gray-700/60 backdrop-blur-md text-white rounded-md shadow-lg">
-              <a href="https://commons.wikimedia.org/wiki/File:Arborelius_-_Lake_View.jpg" target="_blank">
-                Olof Arborelius — Lake view at Engelsberg, Västmanland (1893)
-              </a>
-            </div> */}
           </div>
           <h2 className="mb-3 md:mb-4 text-4xl">
-            <span className="font-bold text-black dark:text-white">
+            <span className="font-bold text-black">
               nils fahrni
             </span>
           </h2>
@@ -35,12 +30,12 @@ export default function Home({ allPosts, allProjects, post }) {
           </div>
         </div>
         <div className="pt-6 pb-2">
-          <h2 className="text-xl font-medium text-black dark:text-white mb-4">
+          <h2 className="text-xl font-medium text-black mb-4">
             Personal Projects
           </h2>
           <ul className="mt-4 space-y-4">
             {allProjects?.map((project) => (
-              <li key={project?.title} className="relative border border-gray-200 dark:border-gray-700/70 rounded-lg hover:bg-gray-100 dark:bg-gray-800/70 dark:hover:bg-gray-800 dark:hover:border-gray-700 transition-colors duration-300 ease-in-out">
+              <li key={project?.title} className="relative border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors duration-300 ease-in-out">
                 <Link
                   href={`/projects/${project?.slug}` || "/"}
                   className="flex items-center justify-between px-4 py-3 w-full h-full"
@@ -54,7 +49,7 @@ export default function Home({ allPosts, allProjects, post }) {
                           alt={project?.title}
                         />
                       ) : (
-                        <div className="flex items-center justify-center w-[42px] h-[42px] text-lg font-medium text-white bg-black border border-gray-100 rounded-full dark:border-gray-800">
+                        <div className="flex items-center justify-center w-[42px] h-[42px] text-lg font-medium text-white bg-black border border-gray-100 rounded-full">
                           {project?.title?.slice(0, 1)}
                         </div>
                       )}
@@ -92,11 +87,11 @@ export default function Home({ allPosts, allProjects, post }) {
         </div>
         <div className="pt-8 pb-2">
           <div className="flex items-center gap-3 pb-3">
-            <h2 className=" text-xl font-medium text-black dark:text-white">
+            <h2 className=" text-xl font-medium text-black">
               Notes
             </h2>
             <Link
-              className="bg-transparent border-gray-200 dark:border-gray-700/70 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
+              className="bg-transparent border-gray-200 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
               href="/notes"
             >
               View all notes →
@@ -107,11 +102,11 @@ export default function Home({ allPosts, allProjects, post }) {
 
         <div>
           <div className="flex items-center mt-10 gap-3">
-            <h2 className=" text-xl font-medium text-black dark:text-white">
+            <h2 className=" text-xl font-medium text-black">
               Music
             </h2>
             <Link
-              className="bg-transparent border-gray-200 dark:border-gray-700/70 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
+              className="bg-transparent border-gray-200 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
               href="https://open.spotify.com/user/tofusandwich4"
               target="_blank"
             >

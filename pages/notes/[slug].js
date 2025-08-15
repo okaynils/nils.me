@@ -22,11 +22,11 @@ export default function Post({ allPosts, post }) {
 
   return (
     <div className="flex w-full md:pt-5">
-      <ContentWrapper width="500px">
+      <ContentWrapper width="440px">
         <PostContent post={post} />
         {otherPosts.length > 0 && (
-          <div className="border-t border-gray-200 dark:border-gray-800">
-            <h2 className="mb-2 mt-10 text-xl font-medium text-black dark:text-white">
+          <div className="border-t border-gray-200">
+            <h2 className="mb-2 mt-10 text-xl font-medium text-black">
               More notes
             </h2>
           </div>
