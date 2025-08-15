@@ -67,9 +67,9 @@ export default function Sidebar() {
   );
 
   return (
-    <div className="fixed top-0 z-20 w-full backdrop-blur-sm bg-cream/50">
+    <div className="w-full backdrop-blur-sm bg-cream/50">
       <div className="max-w-[440px] w-full">
-        <aside className="sticky top-[30px] overflow-hidden flex justify-between items-center text-sm py-2 rounded-[12px] my-1 w-full relative">
+        <aside className="flex justify-between items-center text-sm py-2 rounded-[12px] my-1 w-full relative">
           <RenderLinks items={LINKS} />
           <div className="flex items-center absolute right-0 gap-2">
             {SOCIAL_LINKS.map((item, idx) => (

@@ -3,7 +3,7 @@ import { ContentWrapper } from "ui";
 
 export default function MainLayout({ children }) {
   return (
-    <section className="flex items-start pt-[50px] mx-4 px-4 flex-col min-h-screen">
+    <section className="flex items-start mx-4 px-4 flex-col min-h-screen">
       <Sidebar />
       <main>
         {children}
