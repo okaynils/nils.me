@@ -8,7 +8,6 @@ module.exports = {
             'layouts/*.js', 
             './pages/**/*.{js,ts,jsx,tsx}',
             './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // Explicitly disable dark mode - app stays in light mode only
   theme: {
     extend: {
       colors: {

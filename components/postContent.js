@@ -49,7 +49,7 @@ export default function PostContent({ post }) {
       <div className="text-center mb-10 text-gray-400 text-sm">
         {post.readtime} min read
       </div>
-      <div className="inline-block mx-auto post-content max-w-[620px] text-justify mb-10 leading-[1.4] font-serif">
+      <div className="inline-block mx-auto post-content max-w-[620px] mb-10 leading-[1.4]">
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex]}
@@ -72,7 +72,7 @@ export default function PostContent({ post }) {
                 );
               }
 
-              return <p>{children}</p>;
+              return <p className="text-sm">{children}</p>;
             },
             img: ({ src, alt }) => (
               <img src={src} alt={alt} className="rounded-lg" />
