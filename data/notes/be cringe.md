@@ -6,7 +6,7 @@ categories:
 excerpt: "Be cringe."
 ---
 
-![Verschneite Waldlandschaft - Walter Moras](/images/posts/verschneite_waldlandschaft.jpg)
+![The Monk by the Sea - Caspar David Friedrich](/images/posts/monk-by-the-sea.jpg)
 
 I have this innate fear of being seen when it comes to the things I create. Be it the next instagram post with pictures of myself or the next note here on my website. Is it cringe to do that? It feels like it is. 
 
