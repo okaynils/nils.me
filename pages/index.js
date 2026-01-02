@@ -26,7 +26,7 @@ export default function Home({ allPosts, allProjects, post }) {
             </span>
           </h2>
           <div>
-            I study Statistics and Machine Learning at <a href="https://liu.se/en" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">Linköping University</a>. I am part of the driverless team at <a href="https://liuformulastudent.se/" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">LiU Formula Student</a> where I work on SLAM for this year's autonomous race car.
+            I study Statistics and Machine Learning at <a href="https://liu.se/en" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">Linköping University</a>. I am part of the driverless team at <a href="https://liuformulastudent.se/" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">LiU Formula Student</a> where I work on <a href="https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping" target="_blank" className="hover:cursor-help">SLAM</a> for the autonomous race car.
           </div>
         </div>
         <div className="pt-6 pb-2">

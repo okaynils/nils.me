@@ -23,7 +23,7 @@ export default function BlogList({ data, activeSlug }) {
             <Link href={`/notes/${post.slug}`}>
               <article
                 className={clsx(
-                  "flex border-dashed font-medium w-full py-3 md:py-[8px] border-b border-gray-200 flex-col md:flex-row transition-colors duration-300 ease-in-out hover:border-gray-400",
+                  "flex border-dashed font-medium w-full py-3 md:py-[8px] border-b border-gray-200 flex-col md:flex-row hover:border-gray-400",
                   activeSlug == post.slug ? "text-black" : "text-gray-800"
                 )}
               >
