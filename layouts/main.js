@@ -1,28 +1,13 @@
-import { Sidebar } from "components";
-import { ContentWrapper } from "ui";
+import { Sidebar, Footer } from "components";
 
 export default function MainLayout({ children }) {
   return (
-    <section className="flex items-start mx-4 px-4 flex-col min-h-screen">
+    <section className="flex flex-col items-center min-h-screen mx-4 px-4">
       <Sidebar />
       <main>
         {children}
       </main>
-      <footer className="w-full mt-auto">
-        <ContentWrapper
-          width="440px"
-          className="border-t border-gray-500/10 py-3 "
-        >
-          <div className="">
-            <img
-              src="/touch-icons/main-icon.png"
-              alt="Icon"
-              className="w-4 h-4"
-            />
-          </div>
-        </ContentWrapper>
-      </footer>
-
+      <Footer />
     </section>
   );
 }

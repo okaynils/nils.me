@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { ArrowSquareOut, SpotifyLogo } from "@phosphor-icons/react"
 import { BlogList } from "components";
 import { MusicList } from "components";
@@ -21,70 +22,82 @@ export default function Home({ allPosts, allProjects, post }) {
               draggable="false" />
           </div>
           <h2 className="mb-3 md:mb-4 text-4xl">
-            <span className="font-bold text-black">
-              nils fahrni
+            <span className="font-bold text-black inline-flex items-start gap-1">
+              <span>nils fahrni</span>
+              <a href="/media/switzerland.mp4" target="_blank" title="Switzerland">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/919px-Flag_of_Switzerland_%28Pantone%29.svg.png"
+                  alt="Swiss flag"
+                  className="w-3 h-3 mt-[4px]"
+                />
+              </a>
             </span>
           </h2>
-          <div>
-            I study Statistics and Machine Learning at <a href="https://liu.se/en" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">Linköping University</a>. I am part of the driverless team at <a href="https://liuformulastudent.se/" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">LiU Formula Student</a> where I work on <a href="https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping" target="_blank" className="hover:cursor-help">SLAM</a> for the autonomous race car.
+          <div className="text-sm">
+            I study Statistics and Machine Learning at <a href="https://liu.se/en" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">Linköping University</a>. I am part of the driverless team at <a href="https://liuformulastudent.se/" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">LiU Formula Student</a> where I work on <a href="https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping" target="_blank" className="hover:cursor-help">SLAM</a> and computer vision for the autonomous race car.
           </div>
         </div>
-        <div className="pt-6 pb-2">
-          <h2 className="text-xl font-medium text-black mb-4">
-            Personal Projects
-          </h2>
-          <ul className="mt-4 space-y-4">
-            {allProjects?.map((project) => (
-              <li key={project?.title} className="relative border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors duration-300 ease-in-out">
-                <Link
-                  href={`/projects/${project?.slug}` || "/"}
-                  className="flex items-center justify-between px-4 py-3 w-full h-full"
-                >
-                  <div className="flex items-center space-x-4">
-                    <div className="flex-shrink-0">
-                      {project?.icon ? (
-                        <img
-                          className="w-[40px]"
-                          src={project?.icon}
-                          alt={project?.title}
-                        />
-                      ) : (
-                        <div className="flex items-center justify-center w-[42px] h-[42px] text-lg font-medium text-white bg-black border border-gray-100 rounded-full">
-                          {project?.title?.slice(0, 1)}
-                        </div>
-                      )}
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-[6px]">
-                        <h3 className="font-medium text-base">{project?.title}</h3>
-                        {project?.active && (
-                          <div
-                            className="w-[8px] h-[8px] rounded-full bg-green-500"
-                            title="Active"
+
+        {/* Personal Projects */}
+        {allProjects && allProjects.length > 0 && ( 
+          <div className="pt-6 pb-2">
+            <h2 className="text-xl font-medium text-black mb-4">
+              Personal Projects
+            </h2>
+            <ul className="mt-4 space-y-4">
+              {allProjects.map((project) => (
+                <li key={project?.title} className="relative border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors duration-300 ease-in-out">
+                  <Link
+                    href={`/projects/${project?.slug}` || "/"}
+                    className="flex items-center justify-between px-4 py-3 w-full h-full"
+                  >
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0">
+                        {project?.icon ? (
+                          <img
+                            className="w-[40px]"
+                            src={project?.icon}
+                            alt={project?.title}
                           />
+                        ) : (
+                          <div className="flex items-center justify-center w-[42px] h-[42px] text-lg font-medium text-white bg-black border border-gray-100 rounded-full">
+                            {project?.title?.slice(0, 1)}
+                          </div>
                         )}
                       </div>
-                      {project?.tagline && (
-                        <p className="text-sm opacity-80">{project?.tagline}</p>
-                      )}
+                      <div>
+                        <div className="flex items-center gap-[6px]">
+                          <h3 className="font-medium text-base">{project?.title}</h3>
+                          {project?.active && (
+                            <div
+                              className="w-[8px] h-[8px] rounded-full bg-green-500"
+                              title="Active"
+                            />
+                          )}
+                        </div>
+                        {project?.tagline && (
+                          <p className="text-sm opacity-80">{project?.tagline}</p>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </Link>
-                {(project?.ios || project?.web) && (
-                  <Link
-                    href={project?.ios || project?.web}
-                    target="_blank"
-                    title={project?.title}
-                    className="absolute top-1/2 right-4 -translate-y-1/2 z-10 opacity-50 hover:opacity-100 hover:scale-[1.1] duration-100"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <ArrowSquareOut className="text-base" />
                   </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
+                  {(project?.ios || project?.web) && (
+                    <Link
+                      href={project?.ios || project?.web}
+                      target="_blank"
+                      title={project?.title}
+                      className="absolute top-1/2 right-4 -translate-y-1/2 z-10 opacity-50 hover:opacity-100 hover:scale-[1.1] duration-100"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ArrowSquareOut className="text-base" />
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <div className="pt-8 pb-2">
           <div className="flex items-center gap-3 pb-3">
             <h2 className=" text-xl font-medium text-black">
@@ -97,7 +110,7 @@ export default function Home({ allPosts, allProjects, post }) {
               View all notes →
             </Link>
           </div>
-          <BlogList data={allPosts?.slice(0, 12)} activeSlug={post?.slug} />
+          <BlogList data={allPosts?.slice(0, 6)} activeSlug={post?.slug} />
         </div>
 
         <div>
