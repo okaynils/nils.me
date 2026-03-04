@@ -3,7 +3,7 @@ import clsx from "clsx";
 const ContentWrapper = ({ children, className, width }) => (
   <div
     style={{ maxWidth: `${width || "100%"}` }}
-    className={clsx(" relative", className)}
+    className={clsx("w-full relative", className)}
   >
     {children}
   </div>

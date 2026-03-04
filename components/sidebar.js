@@ -67,7 +67,7 @@ export default function Sidebar() {
   );
 
   return (
-    <div className="w-full mt-auto flex justify-center backdrop-blur-sm bg-cream/50">
+    <div className="w-full flex justify-center backdrop-blur-sm bg-cream/50">
       <div className="max-w-[440px] w-full">
         <aside className="flex justify-between items-center text-sm py-2 rounded-[12px] my-1 w-full relative">
           <RenderLinks items={LINKS} />

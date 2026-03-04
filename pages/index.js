@@ -26,7 +26,7 @@ export default function Home({ allPosts, allProjects, post }) {
               <span>nils fahrni</span>
               <a href="/media/switzerland.mp4" target="_blank" title="Switzerland">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/919px-Flag_of_Switzerland_%28Pantone%29.svg.png"
+                  src="/images/pages/home/switzerland.png"
                   alt="Swiss flag"
                   className="w-3 h-3 mt-[4px]"
                 />
