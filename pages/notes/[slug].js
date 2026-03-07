@@ -21,7 +21,7 @@ export default function Post({ allPosts, post }) {
   const otherPosts = allPosts.filter((p) => p.slug !== post.slug);
 
   return (
-    <div className="flex w-full md:pt-5">
+    <div className="flex w-full md:pt-5 justify-center">
       <ContentWrapper width="440px">
         <PostContent post={post} />
         {otherPosts.length > 0 && (
@@ -31,7 +31,9 @@ export default function Post({ allPosts, post }) {
             </h2>
           </div>
         )}
-        <BlogList data={otherPosts.slice(0, 10)} />
+        <div className="mb-10">
+          <BlogList data={otherPosts.slice(0, 5)} />
+        </div>
       </ContentWrapper>
     </div>
   );
