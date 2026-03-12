@@ -43,6 +43,7 @@ export async function getStaticProps({ params }) {
   const allPosts = getAllPosts([
     "title",
     "date",
+    "dateRaw",
     "slug",
     "author",
     "image",
@@ -55,6 +56,7 @@ export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     "title",
     "date",
+    "dateRaw",
     "evergreen",
     "slug",
     "image",

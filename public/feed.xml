@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nils Fahrni Notes</title>
+    <link>https://nils.me/notes</link>
+    <description>A home for sparsely researched ideas and thoughts.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Mar 2026 09:36:21 GMT</lastBuildDate>
+    <atom:link href="https://nils.me/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>the modern world requires old skills</title>
+      <link>https://nils.me/notes/the%20modern%20world%20requires%20old%20skills</link>
+      <guid>https://nils.me/notes/the%20modern%20world%20requires%20old%20skills</guid>
+      <pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[The modern world requires old skills.]]></description>
+      <content:encoded><![CDATA[<p><img src="https://nils.me/images/posts/two-men-contemplating-the-moon.jpg" alt="Two Men Contemplating the Moon - Caspar David Friedrich"></p>
+<p>Increasingly underrated skills to learn these days are reading well and explaining well.</p>
+<p>The computer interface of the near future seems to be communication. Whether through text or speech, we will largely communicate with computers through language. Interfaces may narrow down to chat-like systems with fewer explicit controls. You will not need to press buttons as often if you can express your intent to an LLM precisely.</p>
+<p>Reading is one of the best ways to learn precise language. It improves your vocabulary, shows you how to structure ideas, and teaches you how to express the same thought in different ways. That matters when you want a human or a machine to understand exactly what you mean.</p>
+<p>But reading is only one half of the loop. A book gives ideas to you. It is your turn to give ideas to others. If language is becoming the interface, then explaining clearly becomes just as important as understanding deeply.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>be cringe</title>
+      <link>https://nils.me/notes/be%20cringe</link>
+      <guid>https://nils.me/notes/be%20cringe</guid>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Be cringe.]]></description>
+      <content:encoded><![CDATA[<p><img src="https://nils.me/images/posts/monk-by-the-sea.jpg" alt="The Monk by the Sea - Caspar David Friedrich"></p>
+<p>I have this innate fear of being seen when it comes to the things I create. Be it the next instagram post with pictures of myself or the next note here on my website. Is it cringe to do that? It feels like it is.</p>
+<p>I publish my thoughts for everyone to read here on my website. I try to be unfiltered but I am fearful of coming across arrogant, or as a “know-it-all”, two things that are definitely cringe.</p>
+<p>When I like the pictures I’ve captured or words I’ve written down, I feel ready to show them to my followers. But before I hit the post button, a second thought arises. That fear I mentioned, of how others will perceive it, pops up.</p>
+<p>But is it really cringe to publish something that you like yourself? Something that makes you <em>you</em>?</p>
+<p>We often want to create relatable things because we strive to resonate with others. But it’s often the things that are unique to ourselves, the parts that feel a little too raw or a little too specific, that make us interesting and vulnerable. Those are the parts that actually stick.</p>
+<p>Perhaps cringe is just the biological alarm system that goes off when we’re being dangerously honest. If so, I want to set that alarm off more often. So, here is to being seen, being misunderstood, and being “cringe.” It’s a small price to pay for being real.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>delusional confidence</title>
+      <link>https://nils.me/notes/delusional%20confidence</link>
+      <guid>https://nils.me/notes/delusional%20confidence</guid>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Be delusional.]]></description>
+      <content:encoded><![CDATA[<p><img src="https://nils.me/images/posts/verschneite_waldlandschaft.jpg" alt="Verschneite Waldlandschaft - Walter Moras"></p>
+<p>Be a bit delusional. I aced most exams until now because I think that I can learn anything and achieve anything I want. But deep down, I know, that’s a lie. And I know I would never do all of this if I was too realistic in my own self belief.</p>
+<p>I am so delusional that I am managing grad school, formula student, building a startup, hanging out with friends, partying, the list goes on, at the same time. I never say no. Realistically, I can’t fit all these into my calendar. Realistically, I am not putting in the time and effort needed for the results I get but I am delusional enough for it to work out. I am not going into an exam <em>knowing</em> I have not studied enough. I am going into the exam knowing that I can ace that thing if I want to. Realism limits me. Realism does not allow creativity. Realism lies to you.</p>
+<p>Be a bit delusional and you will be surprised by what more you can achieve. You can build a damn rocket.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>information is not the bottleneck</title>
+      <link>https://nils.me/notes/information%20is%20not%20the%20bottleneck</link>
+      <guid>https://nils.me/notes/information%20is%20not%20the%20bottleneck</guid>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Thoughts while studying for my upcoming final.]]></description>
+      <content:encoded><![CDATA[<p><img src="https://nils.me/images/posts/lena-thynell.jpg" alt="Sunrise Over the Swedish West Coast - Lena Thynell"></p>
+<p>As I am writing this I am studying day and night for my first statistics final in my masters, coming up in five days. I do not have the heavy math background needed to ace this course. I am pondering about what I need to achieve a first principles understanding. I believe I can still manage to build such an understanding in this short amount of time but I need to figure out what the key to understanding really is.</p>
+<p>I am not gaining much from reading the course book, it just makes me internalize what the book says and believe that its words are ground truth. Similarly, I am not gaining much from prompting an LLM, it will just rephrase what a book says in a more convenient way, according to my prompt.</p>
+<p>What I truly found that I needed to do is to <em>think</em>. Information about the subject is abundant but consuming it does not actually trigger understanding, it triggers memorization.</p>
+<p>Of course, I need to read the theory to know what I am supposed to learn, but I am taking no shortcut in skipping the thinking step. Thinking is understanding.</p>
+<p>And I am not saying thinking is just sitting there, staring at a problem. It is about <em>producing</em> thoughts. Produce something, draw connections and dig deep.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>why?</title>
+      <link>https://nils.me/notes/why</link>
+      <guid>https://nils.me/notes/why</guid>
+      <pubDate>Fri, 16 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Why I keep going]]></description>
+      <content:encoded><![CDATA[<p><img src="https://nils.me/images/posts/theodor-kittelsen.jpg" alt="Far, far away Soria Moria Palace shimmered like Gold - Theodor Kittelsen (1900)"></p>
+<p>I spent a long time thinking about this annoying word in the context of my life.</p>
+<p>Only my closest friends really know about my story but tl;dr I have had quite an unusual childhood. I grew up in a special boarding school where I have encountered many teachers and principals who doubted me throughout elementary and middle school. I was told I would never make it to a university, let alone an apprenticeship.</p>
+<p>It was at a time where the world didn’t know Minecraft yet. A friend showed me the game’s first beta version and I was hooked. It made me want to become an architect. As a child it was shattering when my then teacher told me I can’t reach that goal. The doubt of authority figures towards yourself quickly turn into self-doubt when you’re that young.</p>
+<p>Today I am really thankful for that doubt.</p>
+<p>All of this made me find the joy in being tenacious and having grit. From that point onward I was on a mission to disprove anyone whoever had doubted me. When I went into high-school I started grinding for good grades, even graduating at the top of my class. At 16, I landed a software-engineering apprenticeship at one of Switzerland’s biggest banks.</p>
+<p>But that self-doubt still stuck. It wasn’t about disproving my middle school teachers anymore, but rather about disproving my own self-image that has been altered by authority figures in my childhood.</p>
+<p>Yeah, I know, this all sounds bad. But it is really not. It makes me want to push myself to the absolute edge of my capabilities because I constantly want to show myself that I am not what I was framed to be.</p>
+<p>There is this interesting hypothesis called the “Simulation argument” by philosopher Nick Bostrom. It is quite believable and makes sense. He says that it is inevitable that we will one day reach a technological state in which we are able to simulate life to an extent it is indistinguishable from reality. The simulation can run anything we see in real life, even multiple simulations of our current universe at the same time. If we take this thought experiment further we can argue that we might already be in one of many simulations. In fact, it is more likely than not, because there are vastly more simulations that can recursively discover the technology needed to simulate reality.</p>
+<p>If this is true, then it means there are more versions of me that all have tiny nudges that are different. If someone watches my character in all these simulations I want to be the version of myself that tests the edge cases of the simulation. I live my life this way. Maybe the source code doesn’t have unit tests for a person who was put into special ed and made it to grad school. So here I am testing the boundaries. This is my absurdist reason of <em>why</em>. I want to see how far I can come with what I have been equipped.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>valuable ML resources</title>
+      <link>https://nils.me/notes/ml-resources</link>
+      <guid>https://nils.me/notes/ml-resources</guid>
+      <pubDate>Tue, 21 Jan 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Some resources I've gathered and found to be useful.]]></description>
+      <content:encoded><![CDATA[<p>Over the course of my Computer Science and Data Science studies, I’ve come across some really valuable resources I believe have high SNR. I thought I’d share my list with other people who are interested in becoming ML engineers or students who are also enrolled in some related program.</p>
+<p>Also, this list will stay updated so I’ll add new things I find helpful over time.</p>
+<h2>General/Basic Resources and Overwiews</h2>
+<ul>
+<li><a href="https://mlu-explain.github.io/">MLU Explain</a>: Nice high-level ML principles explained in a visual way.</li>
+<li><a href="https://databookuw.com/databook.pdf">Data Driven Science &amp; Engineering</a>: A book going over the most important principles of Algebra and Calculus for ML/DS.</li>
+<li><a href="https://www.statlearning.com/">An Introduction to Statistical Learning</a>: The holy grail of Statistical Learning. This book is really good for beginners since it covers almost all the basics that more complex types of models later build upon.
+<ul>
+<li><a href="https://web.stanford.edu/class/stats202/intro.html">Stanford STATS202</a>: Accompanying to the book, this syllabus covers the main topics with quick notes on how each algorithm works. Used this heavily when revising for the Statistical Learning class final.</li>
+</ul>
+</li>
+<li><a href="https://www.hlevkin.com/hlevkin/45MachineDeepLearning/ML/Foundations_of_Machine_Learning.pdf">Foundations of Machine Learning</a>: A lot of alpha in this one. Fairly similar to <a href="https://www.statlearning.com/">ISLP</a>. If you understand the concepts in here you can follow and understand <strong>every ML paper</strong>. Not kidding.</li>
+<li><a href="https://www.youtube.com/andrejkarpathy">Andrej Karpathy on YouTube</a>: You probably already know this one but I can’t stress it enough; Karpathy &amp; Chill is what gets you straight A’s.</li>
+<li><a href="https://www.youtube.com/watch?v=J7DzL2_Na80&amp;list=PL221E2BBF13BECF6C&amp;index=3">MIT 18.06 Linear Algebra</a>: This playlist is a gem for anyone who’s new to  university level algebra. The videos are a bit older but Gilbert Strang’s way of explaining concepts is second to none.</li>
+<li><a href="https://www.youtube.com/watch?v=MrLPzBxG95I&amp;list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">Cornell CS4780 ML</a>: This playlist also covers the same subjects as <a href="https://www.statlearning.com/">An Introduction to Statistical Learning</a>. I found Kilian Weinberger’s lectures really good; he often brings a different perspective to some of the algorithms.</li>
+</ul>
+<h2>More in-depth</h2>
+<ul>
+<li><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing Book</a>: If you’re new to natural language processing this is a good starting point. It covers pretty much everything up until Transformers.</li>
+<li><a href="https://pi-tau.github.io/posts/transformer/">An even more annotated Transformer</a>: Amazing post on how Transformer Architectures work.</li>
+<li><a href="https://bbycroft.net/llm">LLM Visualization</a>: An amazing 3D map of the GPT architectures, its subcomponents and how everything is connected together.</li>
+<li><a href="https://rentry.co/llm-training">The Novice’s LLM Training Guide</a>: Contains everything you need to know to train an LLM.</li>
+<li><a href="https://www.youtube.com/@YannicKilcher">Yannic Kilcher</a>: Yannic Kilcher posts videos on some larger and hot SOTA papers around every 2 weeks and it’s a joy watching those to stay up to date.</li>
+<li><a href="https://www.deeplearningbook.org/">Deep Learning: An MIT Press book</a>: This is also an MIT release which goes in depth on the math used in deep learning. I really like this one because it tries to be straightforward and on point, little to no noise.</li>
+<li><a href="https://udlbook.github.io/udlbook/">Understanding Deep Learning Book</a>: A buddy of mine recently told me about this. I love the way it illustrates the different principles and it really covers everything, from old Deep Learning principles to SOTA models. It gets updated frequently and is free.</li>
+</ul>
+<blockquote>
+<p>Finally, just looking at these resources won’t be enough. Build stuff, break things and learn.</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>my outlook on 2025</title>
+      <link>https://nils.me/notes/my%20outlook%20on%202025</link>
+      <guid>https://nils.me/notes/my%20outlook%20on%202025</guid>
+      <pubDate>Tue, 21 Jan 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Some notes for 2025]]></description>
+      <content:encoded><![CDATA[<p><img src="https://nils.me/images/posts/palm-gustaf.jpg" alt="View of the Riddarholmskanalen, Stockholm in 1835 - Gustaf Wilhelm Palm"></p>
+<p>On a rainy night in the spring of 2024, wondering where my journey soon will head, I landed on the page of a masters program in machine learning in Sweden. I was just curious what the opportunities in other countries would look like. Though, for me it was relatively clear that I wanted to pursue academics until a graduate degree, preferably at ETH.</p>
+<p>Ever since my childhood Sweden was a country I felt a strong connection to, even though I have grown up in Switzerland and visited Sweden only a handful of times. I believe this attachment stems from its nature with vast forests, lakes and archipelagoes as well as the many cultural facets like fika or midsommar. Maybe it also just runs in the family, my late grandfather was very much into Sweden from what I have learned.</p>
+<p>So as 2024 progressed, I more and more realized that maybe this is exactly what I need. A complete change of scenery, throwing myself into a foreign world for at least two years. I started to really work towards this goal and locked in. Last year has probably been my best year yet academically. I was finally able to specialize into computer vision and deep learning, two fields that I always have been extremely curious about.</p>
+<p>Now, as 2025 has started, I asked myself what is really important to me this year and I wanted to share some of my plans here.</p>
+<hr>
+<p>I am really excited about is my upcoming bachelor’s thesis. I will work on Neural Radiance Fields (NeRF) and Gaussian Splatting. Essentially, I am doing research on models that are able to produce a 3D-representation of a scene in which we just have a few input images.</p>
+<p>As already mentioned, I cannot wait until the day of admission results and to hopefully get admitted to one of the graduate schools I applied to. I would love to dive deeper into autonomous systems so my goal is to enter that world through an academic institution in Sweden. Though, I am not making this interest just dependent on the admission so I want to build my own SLAM system this year. I pretty much know of all principles used, it will just be a factor of fusing them together into a working system. The only thing missing is knowledge in hardware and electronics so I will most likely build it inside a videogame that features driving, like GTA.</p>
+<p>During the last semester I have also gotten the opportunity to build a real product with two friends at uni. We built a working MVP throughout the semester and got some positive resonance which affirmed that the idea has a market. This year we can make it work. We have more time at our hands than before and a clearer goal.</p>
+<p>I am writing this post right before finals week. It sort of fills me with dread and anxiety knowing next week I will have my finals in deep learning and advanced deep learning. I feel comfortable with my knowledge but I know there is always room to improve. These courses triggered an interest in me to understand machine learning from first principles. Thus, I have started to build my own autograd library, inspired by <a href="https://youtu.be/VMj-3S1tku0">Andrej Karpathy’s micrograd</a> and <a href="https://github.com/tinygrad/tinygrad">tinygrad</a>. I hope to gain more intuition with this side project.</p>
+<p>Outside of academia I am also really excited to spend the upcoming summer with my friends before leaving for some time. This year I will go to my first music festival which I am really excited for. In May I will attend my first running event at 16km (10mi) for which I need to get in shape. After my short-lived career in American Football I have only pursued weight lifting so getting my cardio in shape will be interesting.</p>
+<p>I sometimes get hesitant and uncomfortable before trying new things, but in 2024 I pushed myself a bit and got more open to trying new things. I want to continue doing that in 2025 and experience more <em>first time things</em>.</p>
+<h3>tl;dr</h3>
+<ul>
+<li>🎓 Finish my bachelors degree</li>
+<li>🇸🇪 <strong>Move to Sweden</strong> to pursue a <strong>MSc in Machine Learning</strong>!</li>
+<li>📅 Release my first product <strong>Sirius</strong> (my first startup 👀)</li>
+<li>🪶 Release my own autograd library</li>
+<li>🚗 Implement SLAM from scratch in GTA</li>
+<li>✍️ <strong>Write a post every month</strong> on here</li>
+<li>🕺 Going to my <strong>first festival</strong></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>you can learn anything</title>
+      <link>https://nils.me/notes/learn-anything</link>
+      <guid>https://nils.me/notes/learn-anything</guid>
+      <pubDate>Fri, 05 Jul 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Yes, literally anything.]]></description>
+      <content:encoded><![CDATA[<p><img src="https://nils.me/images/posts/setup.jpg" alt="Karpathy &amp; Chill"></p>
+<p>Yes, you can literally <strong>learn anything</strong>.</p>
+<p>Throughout middle school and high school, like many others, I’ve never really felt the need to put time into
+studying for exams to get good grades.</p>
+<p>Since studying at university though, the approach of just cramming a subject into memory the night before
+does not work anymore. Classes have become too complex. This is where I had to come up with a new approach.</p>
+<p>So here are my <strong>three rules</strong> of how I learn anything.</p>
+<h2>Understand Connectedness</h2>
+<p>The first rule and first step to getting into a new subject is to get an overview of all its components.
+I start at Google and Perplexity by asking them about the subject. The search results will contain terms that
+you don’t understand yet but that’s exactly what you want, this is where learning begins. The next task is
+to find out what these terms or sub-components are about. Try to get a quick summary on what each term you
+don’t understand is about. Now you can note it down into a “Map of Content” or “Mindmap”.</p>
+<p>You do that iteratively as long as you wish but the goal is to know what sub-branch belongs to what parent and
+how each of those is related to your main subject. If you already know about similar things try to map out
+these similarities to this new field. The human brain benefits tremendously from these connections.</p>
+<h2>Decompose to Principal Components</h2>
+<p>In Data Science Principal Component Analysis describes a method of decomposing high dimensional data into a
+lower-dimensional space by finding axes of the highest variance in the high-dimensional space and projecting
+every point onto these axes. We can do the very same thing to a new subject by decomposing it to its
+core elements - Drawing such connections to things you already know is really powerful but you will only fully
+understand a subject if you can decompose it to it’s very own elements it’s made up of. First principles
+thinking is often times most useful in the context of math, physics or other natural science subjects but it
+can be applied anywhere. For example, we want to learn about Trees. We can decompose trees into…</p>
+<ul>
+<li>Seed</li>
+<li>Soil</li>
+<li>Water</li>
+<li>Sunlight</li>
+</ul>
+<p>Each of these core elements can be decomposed even further. For example we can take the Seed and decompose it
+further into…</p>
+<ul>
+<li>Seed
+<ul>
+<li>DNA
+<ul>
+<li>Contains instructions for the plant’s development</li>
+<li>Composed of nucleotides (adenine, thymine, guanine, cytosine)</li>
+</ul>
+</li>
+<li>Seed coat
+<ul>
+<li>Outer protective layer</li>
+<li>Regulates water uptake and gas exchange
+…</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>You get what I mean. This is the exact extent of how you want to now upgrade your Map of Content or Mindmap or
+whatever notetaking tool you like to use. This second step should extend your overview iteratively from step one.</p>
+<h2>Discuss, Explain, Consume and let it dry</h2>
+<p>The last, perhaps most obvious, part is to live like someone who is an expert in the field. This step is easy if
+you’re genuinely interested but it becomes very hard if the subject at hand is a random class at school that
+you have to study for without much interest.</p>
+<p>Studying is hard and needs a lot of effort. Your brain is like a muscle that needs reinforcement to learn so
+studying should come close to the feeling of exhaustion in the gym and shouldn’t be a laid-back activity.</p>
+<p>But let’s get back to what to actually do.</p>
+<ol>
+<li>
+<p><strong>Find people within this field to talk to</strong>. This can be other students or it can be as simple as a forum or
+discord that might be about this subject. You wan’t to talk to both more educated people in the field but also
+novices. You will learn new things by talking to experts and consolidate that new knowledge by teaching the
+novices the same way the experts taught you.</p>
+</li>
+<li>
+<p><strong>Use your time wisely</strong>. Whenever you’re commuting (either by train, car or walking) you can listen to content.
+The content you consume will not be as effective of a source as the other points since its a rather passive task
+but it still gives you ideas on what experts in the field talk about or what the newest things are.
+This will give you different perspectives.</p>
+</li>
+<li>
+<p><strong>Rest up</strong>. The goal is not to pack your entire day with studying. Take a lot of breaks and do something else;
+Don’t hop over to another class’ subject - Actually do something different, get up, go for a walk and allow your
+brain to process what you just talked about or heard of.</p>
+</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>some notes on productivity</title>
+      <link>https://nils.me/notes/notes-on-productivity</link>
+      <guid>https://nils.me/notes/notes-on-productivity</guid>
+      <pubDate>Sat, 22 Jun 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[This is my collection of personal takes on optimizing productivity.]]></description>
+      <content:encoded><![CDATA[<p>This is my collection of personal takes on optimizing productivity. There are a lot of people with productivity notes on their personal websites - one of my favorite is that of
+<a href="https://notes.samaltman.com/productivity">Sam Altman</a>.</p>
+<p>The term <strong>productivity</strong> has, over the years, morphed into a buzzword that’s alluring and paradoxically misleading. As we’ve witnessed a surge in “lifestyle gurus” championing
+the cause of productivity, the essence of what it means to be genuinely productive has become muddled. I aim to peel back these layers, and share some straightforward, no-nonsense
+tips that have genuinely worked for me.</p>
+<h2>Stop reading news</h2>
+<p>Step back from the news cycle, particularly the <strong>political whirlwind</strong>. The truth is, the vast majority of it isn’t crucial to your daily life. If anything of real significance
+were to happen on the political front, trust me, you’ll find out one way or another without having to dig through the news yourself. There’s a widespread push by numerous powerful
+entities and systems to hook you on a constant stream of outrage or the <strong>illusion of being ‘up-to-date’ with the latest drama</strong>, especially in the U.S. context or the western
+world in general. It’s not to say that all news sources are cut from the same cloth — I’m specifically pointing fingers at some of the mainstream websites that many folks find
+themselves scrolling through, getting worked up over the day’s controversies. That said, there are countless specialized websites and online communities out there that are
+genuinely enriching and worth your time.</p>
+<h2>Avoid the Pitfalls of Diminishing Returns</h2>
+<p>Many activities become less rewarding the more you do them. For example, checking X (Twitter) or Reddit after not doing so for a while can be interesting, but if you keep checking
+them constantly, you’ll find less and less value each time. It’s important to notice when you’re spending too much time on something that’s <strong>no longer beneficial</strong> and think about
+switching to a different activity.</p>
+<p>It’s helpful to have a list of quick activities ready for short breaks throughout your day. People often turn to social media, email, or messaging apps during these times.
+A good alternative I’ve found is reviewing flashcards on my Anki deck. This activity is flexible because you can start and stop any time, and it’s still useful, even if you
+only have a few minutes.</p>
+<h2>To Optimize Sleep</h2>
+<p>I have encountered bedtime procrastination since middle-school until I started to notice how impactful it is <strong>to value sleep over extra work</strong> in the long run because the benefits of
+good sleep <strong>outweigh the time it takes</strong>.</p>
+<p>Investing time, effort, and possibly money into enhancing your sleep can have a very high return on investment. Making your sleeping environment quieter, darker, and a bit cooler
+can make a significant difference. Tracking your sleep with devices like an Oura ring can also be helpful if you want detailed insights. It’s best to avoid consuming alcoholic
+drinks or eating right before bed, as these can negatively affect your sleep: There is a great <a href="https://youtu.be/FFwA0QFmpQ4?si=1VJ88HNGO_tktN6h&amp;t=3734">podcast episode from Andrew Huberman</a>
+on this. In short: Drinking alcohol will prevent you from reaching REM state (deep sleep).</p>
+<h2>Drugs and Supplements</h2>
+<p>In this section I want to touch on how drugs like <strong>Caffeine</strong> can actually help you stay productive. Caffeine is well-known, so little needs to be said here about what it does
+or how it works. There are few downsides, many upsides, and it is legal and socially encouraged. It is still a drug, however, so side-effects and tolerance are possible. Generally, what
+your goal should be is to not let your consumption of such drugs/supplements creep up more. I personally drink one cup of coffee a day and it’s enough to feel the effects of caffeine
+for an entire afternoon. For the most effective and healthy consumption make sure to drink your first cup of coffee around <strong>90 minutes after waking up</strong>. Your last cup should be
+<strong>8 hours before bedtime</strong> to <strong>not interrupt your sleep</strong>.</p>
+<p>I hope you were able to take something out of these notes.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

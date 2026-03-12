@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowSquareOut, SpotifyLogo } from "@phosphor-icons/react"
+import { ArrowSquareOut, Rss, SpotifyLogo } from "@phosphor-icons/react"
 import { BlogList } from "components";
 import { MusicList } from "components";
 import { getAllPosts } from "pages/api/notes";
@@ -103,11 +103,18 @@ export default function Home({ allPosts, allProjects, post }) {
               Notes
             </h2>
             <Link
-              className="bg-transparent border-gray-200 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
+              className="ml-auto bg-transparent border-gray-200 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
               href="/notes"
             >
               View all notes →
             </Link>
+            <a
+              href="/feed.xml"
+              aria-label="Subscribe to Notes feed"
+              className="text-gray-500 transition-colors hover:text-black"
+            >
+              <Rss size={15} weight="bold" />
+            </a>
           </div>
           <BlogList data={allPosts?.slice(0, 6)} activeSlug={post?.slug} />
         </div>
@@ -143,6 +150,7 @@ export async function getStaticProps() {
   const allPosts = getAllPosts([
     "title",
     "date",
+    "dateRaw",
     "slug",
     "author",
     "image",
