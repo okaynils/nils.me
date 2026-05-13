@@ -3,7 +3,6 @@ module.exports = {
     //instagram: "okaynils",
     twitter: "okaynils",
   },
-  optimizeFonts: false,
   async headers() {
     return [
       {
