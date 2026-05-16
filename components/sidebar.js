@@ -55,11 +55,16 @@ export default function Sidebar() {
   );
 
   return (
-    <header className="mb-8 border-b border-gray-400 pb-2 text-sm">
-      <nav className="flex flex-col justify-between gap-1 md:flex-row md:items-baseline">
-        <RenderLinks items={LINKS} />
-        <RenderLinks items={SOCIAL_LINKS.map((link) => ({ ...link, external: true }))} />
-      </nav>
+    <header className="mb-3 border border-gray-500 bg-[#eeeeee] px-2 py-1 text-sm">
+      <div className="flex flex-col justify-between gap-1 md:flex-row md:items-baseline">
+        <Link href="/" className="font-bold text-black no-underline hover:underline">
+          nils.me
+        </Link>
+        <nav className="flex flex-col gap-1 md:flex-row md:gap-5">
+          <RenderLinks items={LINKS} />
+          <RenderLinks items={SOCIAL_LINKS.map((link) => ({ ...link, external: true }))} />
+        </nav>
+      </div>
     </header>
   );
 }

@@ -5,7 +5,7 @@ import { ContentWrapper } from "ui";
 export default function Home({ allProjects }) {
   return (
     <>
-      <ContentWrapper width="640px">
+      <ContentWrapper width="720px">
         <WorkList allPosts={allProjects} />
       </ContentWrapper>
     </>

@@ -5,18 +5,18 @@
 body {
   margin: 0;
   color: #111;
-  background: #fbfaf4;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 16px;
-  line-height: 1.55;
+  background: #fffff4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
   text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5 {
   color: #111;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 a {
@@ -65,10 +65,96 @@ img {
 .plain-meta {
   color: #555;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   line-height: 1.4;
 }
 
 .document-rule {
   border-top: 1px solid #b8b8b8;
+}
+
+.old-box {
+  border: 1px solid #a2a9b1;
+  background: #fff;
+}
+
+.old-box-title {
+  margin: 0;
+  border-bottom: 1px solid #a2a9b1;
+  background: #eaecf0;
+  padding: 0.25rem 0.45rem;
+  font-size: 0.92rem;
+}
+
+.old-box-title.page-title {
+  font-size: 1.2rem;
+}
+
+.old-box-body {
+  padding: 0.55rem 0.65rem;
+}
+
+.old-box-body > :first-child {
+  margin-top: 0;
+}
+
+.old-box-body > :last-child {
+  margin-bottom: 0;
+}
+
+.site-banner {
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  padding: 0.65rem 0.75rem;
+}
+
+.tiny-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #808080;
+  background: #ffffcc;
+  color: #111;
+  padding: 0 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.tiny-badge.alt {
+  background: #f3e8ff;
+  border-color: #8b5cf6;
+}
+
+.tiny-badge.hot {
+  background: #ffe4f2;
+  border-color: #db2777;
+}
+
+.link-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.link-table td,
+.link-table th {
+  border-top: 1px solid #d8d8d8;
+  padding: 0.22rem 0.35rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.link-table tr:first-child td,
+.link-table tr:first-child th {
+  border-top: 0;
+}
+
+.link-table th {
+  width: 7.5rem;
+  color: #555;
+  font-weight: 400;
+}
+
+.wiki-small {
+  color: #555;
+  font-size: 0.82rem;
 }

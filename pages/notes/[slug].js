@@ -8,18 +8,18 @@ export default function Post({ allPosts, post }) {
 
   return (
     <div className="w-full">
-      <ContentWrapper width="640px">
+      <ContentWrapper width="720px">
         <PostContent post={post} />
         {otherPosts.length > 0 && (
-          <div className="document-rule pt-4">
-            <h2 className="mb-2 text-xl">
+          <section className="old-box mt-3">
+            <h2 className="old-box-title">
               More notes
             </h2>
-          </div>
+            <div className="old-box-body">
+              <BlogList data={otherPosts.slice(0, 5)} />
+            </div>
+          </section>
         )}
-        <div className="mb-10">
-          <BlogList data={otherPosts.slice(0, 5)} />
-        </div>
       </ContentWrapper>
     </div>
   );

@@ -4,22 +4,29 @@ import clsx from "clsx";
 export default function WorkList({ allPosts, activeSlug }) {
   return (
     <div className="w-full">
-      <section>
-        <h1 className="mb-2 text-2xl">
-          Side projects
+      <section className="old-box">
+        <h1 className="old-box-title">
+          side projects
         </h1>
-        <ul className="space-y-2">
-          {allPosts?.map((post) => (
-            <li
-              key={post.slug}
-              className={clsx(activeSlug == post.slug && "font-bold")}
-            >
-              <Link href={`/projects/${post.slug}`}>
-                {post.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="old-box-body p-0">
+          <table className="link-table">
+            <tbody>
+              {allPosts?.map((post) => (
+                <tr
+                  key={post.slug}
+                  className={clsx(activeSlug == post.slug && "font-bold")}
+                >
+                  <th>project</th>
+                  <td>
+                    <Link href={`/projects/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
     </div>
   );

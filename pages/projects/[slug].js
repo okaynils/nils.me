@@ -6,7 +6,7 @@ import { ContentWrapper } from "ui";
 export default function Post({ post }) {
   return (
     <div className="w-full">
-      <ContentWrapper width="640px">
+      <ContentWrapper width="720px">
         <WorkContent post={post} />
       </ContentWrapper>
     </div>
