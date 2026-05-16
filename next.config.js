@@ -1,8 +1,4 @@
 module.exports = {
-  env: {
-    //instagram: "okaynils",
-    twitter: "okaynils",
-  },
   async headers() {
     return [
       {
@@ -20,4 +16,4 @@ module.exports = {
       },
     ];
   },
-}
+};

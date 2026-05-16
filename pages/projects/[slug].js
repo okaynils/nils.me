@@ -1,16 +1,9 @@
-import { useRouter } from "next/router";
-import { WorkList, WorkContent } from "components";
-import { getAllProjects, getPostBySlug } from "pages/api/projects";
-import md2html from "lib/md2html";
+import { WorkContent } from "components";
+import { getAllProjects, getProjectBySlug } from "lib/content.mjs";
+import { renderMarkdown } from "lib/markdown.mjs";
 import { ContentWrapper } from "ui";
 
-export default function Post({ allPosts, post }) {
-  const router = useRouter();
-
-  if (!router.isFallback && !post?.slug) {
-    return <div>Error</div>;
-  }
-
+export default function Post({ post }) {
   return (
     <div className="flex w-full md:pt-5">
       <ContentWrapper width="440px">
@@ -21,19 +14,7 @@ export default function Post({ allPosts, post }) {
 }
 
 export async function getStaticProps({ params }) {
-  const allPosts = getAllProjects([
-    "title",
-    "date",
-    "slug",
-    "author",
-    "image",
-    "excerpt",
-    "content",
-    "link",
-    "icon",
-  ]);
-
-  const post = getPostBySlug(params.slug, [
+  const post = getProjectBySlug(params.slug, [
     "title",
     "date",
     "slug",
@@ -47,11 +28,10 @@ export async function getStaticProps({ params }) {
     "icon",
   ]);
 
-  const content = await md2html(post.content || post.excerpt || "");
+  const content = renderMarkdown(post.content || post.excerpt || "");
 
   return {
     props: {
-      allPosts,
       post: {
         ...post,
         content,

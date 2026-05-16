@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { ArrowSquareOut, Rss, SpotifyLogo } from "@phosphor-icons/react"
 import { BlogList } from "components";
 import { MusicList } from "components";
-import { getAllPosts } from "pages/api/notes";
-import { getAllProjects } from "pages/api/projects";
-import { ContentWrapper, Button } from "ui";
+import { getAllPosts, getAllProjects } from "lib/content.mjs";
+import { ContentWrapper } from "ui";
 
 export default function Home({ allPosts, allProjects, post }) {
   return (

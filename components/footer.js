@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ContentWrapper } from "ui";
-import { getLastCommitDate } from "pages/api/github";
+import { getLastCommitDate } from "lib/github.mjs";
 
 export default function Footer() {
   const [lastCommitDate, setLastCommitDate] = useState(null);
@@ -45,4 +45,3 @@ export default function Footer() {
     </footer>
   );
 }
-

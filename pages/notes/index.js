@@ -1,5 +1,5 @@
 import { BlogList } from "components";
-import { getAllPosts } from "pages/api/notes";
+import { getAllPosts } from "lib/content.mjs";
 import { ContentWrapper } from "ui";
 import { Rss } from "@phosphor-icons/react";
 

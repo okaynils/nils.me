@@ -1,16 +1,11 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import MarkdownIt from "markdown-it";
+import { renderMarkdown } from "../lib/markdown.mjs";
 
 const SITE_URL = "https://nils.me";
 const notesDirectory = join(process.cwd(), "data/notes");
 const outputPath = join(process.cwd(), "public/feed.xml");
-const markdown = new MarkdownIt({
-  html: true,
-  linkify: true,
-  typographer: true,
-});
 
 function parseDate(value) {
   if (value instanceof Date) {
@@ -52,7 +47,7 @@ function getPosts() {
         excerpt: data.excerpt ?? "",
         slug,
         date: parseDate(data.date),
-        contentHtml: toAbsoluteUrls(markdown.render(content)),
+        contentHtml: toAbsoluteUrls(renderMarkdown(content)),
       };
     })
     .sort((left, right) => right.date - left.date);

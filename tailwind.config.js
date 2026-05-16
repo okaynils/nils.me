@@ -1,13 +1,12 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
-  content: ["pages/*.js", 
-            "pages/**/*.js", 
-            "components/*.js", 
-            'layouts/*.js', 
-            './pages/**/*.{js,ts,jsx,tsx}',
-            './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    "./components/**/*.{js,jsx}",
+    "./layouts/**/*.{js,jsx}",
+    "./pages/**/*.{js,jsx}",
+    "./ui/**/*.{js,jsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -18,9 +17,6 @@ module.exports = {
         serif: ['"Lora"', 'serif']
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };

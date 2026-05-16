@@ -1,23 +1,9 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
-import { getPostBySlug, getAllPosts } from "pages/api/notes";
+import { getPostBySlug, getAllPosts } from "lib/content.mjs";
+import { renderMarkdown } from "lib/markdown.mjs";
 import { BlogList, PostContent } from "components";
 import { ContentWrapper } from "ui";
 
 export default function Post({ allPosts, post }) {
-  const router = useRouter();
-
-  useEffect(() => {
-    const s = document.createElement("script");
-    s.setAttribute("src", "https://platform.twitter.com/widgets.js");
-    s.setAttribute("async", "true");
-    document.head.appendChild(s);
-  }, []);
-
-  if (!router.isFallback && !post?.slug) {
-    return <div>Error</div>;
-  }
-
   const otherPosts = allPosts.filter((p) => p.slug !== post.slug);
 
   return (
@@ -69,7 +55,10 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       allPosts,
-      post,
+      post: {
+        ...post,
+        content: renderMarkdown(post.content),
+      },
     },
   };
 }

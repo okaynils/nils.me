@@ -1,12 +1,7 @@
-import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import clsx from "clsx";
 import {
-  House,
-  Note,
-  BracketsCurly,
-  IdentificationCard,
   ArrowSquareOut,
   XLogo,
   LinkedinLogo,
@@ -55,9 +50,7 @@ export default function Sidebar() {
               : "text-gray-400 hover:text-black",
           )}
         >
-          <span className="flex items-center">
-            {typeof link.title === 'string' ? link.title : link.title}
-          </span>
+          <span className="flex items-center">{link.title}</span>
           {link.external && (
             <ArrowSquareOut size={14} className="ml-1 text-gray-400" />
           )}
