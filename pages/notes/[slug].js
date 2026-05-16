@@ -7,12 +7,12 @@ export default function Post({ allPosts, post }) {
   const otherPosts = allPosts.filter((p) => p.slug !== post.slug);
 
   return (
-    <div className="flex w-full md:pt-5 justify-center">
-      <ContentWrapper width="440px">
+    <div className="w-full">
+      <ContentWrapper width="640px">
         <PostContent post={post} />
         {otherPosts.length > 0 && (
-          <div className="border-t border-gray-200">
-            <h2 className="mb-2 mt-10 text-xl font-medium text-black">
+          <div className="document-rule pt-4">
+            <h2 className="mb-2 text-xl">
               More notes
             </h2>
           </div>

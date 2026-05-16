@@ -2,9 +2,9 @@ import { Sidebar, Footer } from "components";
 
 export default function MainLayout({ children }) {
   return (
-    <section className="flex flex-col items-center justify-start min-h-screen mx-4 px-4">
+    <section className="mx-auto flex min-h-screen w-full max-w-[720px] flex-col px-4 py-3 md:px-6 md:py-5">
       <Sidebar />
-      <main className="w-full flex justify-center">
+      <main className="w-full flex-1">
         {children}
       </main>
       <Footer />

@@ -5,8 +5,8 @@ import { ContentWrapper } from "ui";
 
 export default function Post({ post }) {
   return (
-    <div className="flex w-full md:pt-5">
-      <ContentWrapper width="440px">
+    <div className="w-full">
+      <ContentWrapper width="640px">
         <WorkContent post={post} />
       </ContentWrapper>
     </div>

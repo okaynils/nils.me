@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowSquareOut, Rss, SpotifyLogo } from "@phosphor-icons/react"
 import { BlogList } from "components";
 import { MusicList } from "components";
 import { getAllPosts, getAllProjects } from "lib/content.mjs";
@@ -7,138 +6,112 @@ import { ContentWrapper } from "ui";
 
 export default function Home({ allPosts, allProjects, post }) {
   return (
-    <div className="grid md:grid-cols-1 mt-0">
+    <div>
       <ContentWrapper
-        width="440px"
-        className="divide-y divide-gray-200 space-y-4"
+        width="640px"
+        className="space-y-8"
       >
-        <div className="">
-          <div className="relative group">
+        <section>
+          <div className="mb-4">
             <img src="/images/pages/home/arborelius.jpg"
               alt="Olof Arborelius — Lake view at Engelsberg, Västmanland (1893)"
-              className="rounded-sm mb-5 select-none user-select-none pointer-events-auto"
+              className="select-none border border-gray-400"
               draggable="false" />
+            <p className="plain-meta mt-1">
+              Olof Arborelius, Lake view at Engelsberg, Västmanland, 1893.
+            </p>
           </div>
-          <h2 className="mb-3 md:mb-4 text-4xl">
-            <span className="font-bold text-black inline-flex items-start gap-1">
+          <h1 className="mb-3 text-3xl">
+            <span className="inline-flex items-start gap-1 font-bold text-black">
               <span>nils fahrni</span>
-              <a href="/media/switzerland.mp4" target="_blank" title="Switzerland">
+              <a href="/media/switzerland.mp4" target="_blank" rel="noopener noreferrer" title="Switzerland">
                 <img
                   src="/images/pages/home/switzerland.png"
-                  className="w-3 h-3 mt-[4px]"
+                  alt="Switzerland"
+                  className="mt-[5px] h-3 w-3 border-0"
                 />
               </a>
             </span>
-          </h2>
-          <div className="text-sm">
-            I study Statistics and Machine Learning at <a href="https://liu.se/en" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">Linköping University</a>. I am part of the driverless team at <a href="https://liuformulastudent.se/" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">LiU Formula Student</a> where I work on <a href="https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping" target="_blank" className="hover:cursor-help">SLAM</a> and computer vision for the autonomous race car.
-          </div>
-        </div>
+          </h1>
+          <p>
+            I study Statistics and Machine Learning at <a href="https://liu.se/en" target="_blank" rel="noopener noreferrer">Linköping University</a>. I am part of the driverless team at <a href="https://liuformulastudent.se/" target="_blank" rel="noopener noreferrer">LiU Formula Student</a> where I work on <a href="https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping" target="_blank" rel="noopener noreferrer">SLAM</a> and computer vision for the autonomous race car.
+          </p>
+        </section>
 
         {/* Personal Projects */}
         {allProjects && allProjects.length > 0 && ( 
-          <div className="pt-6 pb-2">
-            <h2 className="text-xl font-medium text-black mb-4">
-              Personal Projects
+          <section className="document-rule pt-4">
+            <h2 className="mb-2 text-xl">
+              Personal projects
             </h2>
-            <ul className="mt-4 space-y-4">
+            <ul className="space-y-3">
               {allProjects.map((project) => (
-                <li key={project?.title} className="relative border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors duration-300 ease-in-out">
-                  <Link
-                    href={`/projects/${project?.slug}` || "/"}
-                    className="flex items-center justify-between px-4 py-3 w-full h-full"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <div className="flex-shrink-0">
-                        {project?.icon ? (
-                          <img
-                            className="w-[40px]"
-                            src={project?.icon}
-                            alt={project?.title}
-                          />
-                        ) : (
-                          <div className="flex items-center justify-center w-[42px] h-[42px] text-lg font-medium text-white bg-black border border-gray-100 rounded-full">
-                            {project?.title?.slice(0, 1)}
-                          </div>
-                        )}
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-[6px]">
-                          <h3 className="font-medium text-base">{project?.title}</h3>
-                          {project?.active && (
-                            <div
-                              className="w-[8px] h-[8px] rounded-full bg-green-500"
-                              title="Active"
-                            />
-                          )}
-                        </div>
-                        {project?.tagline && (
-                          <p className="text-sm opacity-80">{project?.tagline}</p>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                  {(project?.ios || project?.web) && (
-                    <Link
-                      href={project?.ios || project?.web}
-                      target="_blank"
-                      title={project?.title}
-                      className="absolute top-1/2 right-4 -translate-y-1/2 z-10 opacity-50 hover:opacity-100 hover:scale-[1.1] duration-100"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <ArrowSquareOut className="text-base" />
+                <li key={project?.title}>
+                  <div className="flex flex-wrap items-baseline gap-x-2">
+                    <Link href={`/projects/${project?.slug}` || "/"}>
+                      <strong>{project?.title}</strong>
                     </Link>
+                    {project?.active && (
+                      <span className="plain-meta">active</span>
+                    )}
+                    {(project?.ios || project?.web) && (
+                      <a href={project?.ios || project?.web} target="_blank" rel="noopener noreferrer">
+                        external
+                      </a>
+                    )}
+                  </div>
+                  {project?.tagline && (
+                    <p className="m-0 text-sm">{project?.tagline}</p>
                   )}
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
         )}
 
-        <div className="pt-8 pb-2">
-          <div className="flex items-center gap-3 pb-3">
-            <h2 className=" text-xl font-medium text-black">
+        <section className="document-rule pt-4">
+          <div className="mb-2 flex flex-wrap items-baseline gap-2">
+            <h2 className="text-xl">
               Notes
             </h2>
             <Link
-              className="ml-auto bg-transparent border-gray-200 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
+              className="ml-auto text-sm"
               href="/notes"
             >
-              View all notes →
+              view all notes
             </Link>
             <a
               href="/feed.xml"
               aria-label="Subscribe to Notes feed"
-              className="text-gray-500 transition-colors hover:text-black"
             >
-              <Rss size={15} weight="bold" />
+              rss
             </a>
           </div>
           <BlogList data={allPosts?.slice(0, 6)} activeSlug={post?.slug} />
-        </div>
+        </section>
 
-        <div>
-          <div className="flex items-center mt-10 gap-3">
-            <h2 className=" text-xl font-medium text-black">
+        <section className="document-rule pt-4">
+          <div className="mb-2 flex flex-wrap items-baseline gap-2">
+            <h2 className="text-xl">
               Music
             </h2>
             <Link
-              className="bg-transparent border-gray-200 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
+              className="text-sm"
               href="https://open.spotify.com/user/tofusandwich4"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <SpotifyLogo /> Spotify
-              <ArrowSquareOut />
+              spotify
             </Link>
           </div>
 
-          <div className="mt-2 mb-8">
+          <div>
             <p>
               Here are my top five artists of the last 30 days.
             </p>
             <MusicList />
           </div>
-        </div>
+        </section>
       </ContentWrapper>
     </div>
   );

@@ -1,20 +1,14 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import clsx from "clsx";
-import {
-  ArrowSquareOut,
-  XLogo,
-  LinkedinLogo,
-  GithubLogo,
-} from "@phosphor-icons/react";
 
 export default function Sidebar() {
   const { pathname } = useRouter();
 
   const SOCIAL_LINKS = [
-    { title: "X", url: "https://x.com/okaynils", icon: <XLogo size={16} /> },
-    { title: "LinkedIn", url: "https://linkedin.com/in/nilsfahrni/", icon: <LinkedinLogo size={16} /> },
-    { title: "GitHub", url: "https://github.com/okaynils", icon: <GithubLogo size={16} /> },
+    { title: "github", url: "https://github.com/okaynils" },
+    { title: "linkedin", url: "https://linkedin.com/in/nilsfahrni/" },
+    { title: "x", url: "https://x.com/okaynils" },
   ];
 
   const LINKS = [
@@ -29,6 +23,11 @@ export default function Sidebar() {
       active: pathname.includes("/notes"),
     },
     {
+      title: "projects",
+      url: "/projects",
+      active: pathname.includes("/projects"),
+    },
+    {
       title: "resume",
       url: "https://okaynils.github.io/resume/main.pdf",
       active: false,
@@ -37,42 +36,30 @@ export default function Sidebar() {
   ];
 
   const RenderLinks = ({ items }) => (
-    <div className="flex flex-row space-x-2 my-0 gap-2 text-sm">
+    <div className="flex flex-wrap items-center gap-x-1 gap-y-1">
       {items.map((link, idx) => (
-        <Link
-          key={idx}
-          href={link.url}
-          target={link.external ? "_blank" : undefined}
-          className={clsx(
-            "flex items-center py-[3px] transition-all duration-150 ease-in-out",
-            link.active
-              ? "font-bold text-black"
-              : "text-gray-400 hover:text-black",
-          )}
-        >
-          <span className="flex items-center">{link.title}</span>
-          {link.external && (
-            <ArrowSquareOut size={14} className="ml-1 text-gray-400" />
-          )}
-        </Link>
+        <span key={idx} className="inline-flex items-center gap-x-1">
+          {idx > 0 && <span className="text-gray-500">|</span>}
+          <Link
+            href={link.url}
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener noreferrer" : undefined}
+            aria-current={link.active ? "page" : undefined}
+            className={clsx(link.active && "font-bold text-black")}
+          >
+            {link.title}
+          </Link>
+        </span>
       ))}
     </div>
   );
 
   return (
-    <div className="w-full flex justify-center backdrop-blur-sm bg-cream/50">
-      <div className="max-w-[440px] w-full">
-        <aside className="flex justify-between items-center text-sm py-2 rounded-[12px] my-1 w-full relative">
-          <RenderLinks items={LINKS} />
-          <div className="flex items-center absolute right-0 gap-2">
-            {SOCIAL_LINKS.map((item, idx) => (
-              <Link key={idx} href={item.url} target="_blank" className="flex items-center py-[3px] text-lg opacity-50 hover:opacity-80 transition-all duration-150 ease-in-out rounded-lg">
-                {item.icon}
-              </Link>
-            ))}
-          </div>
-        </aside>
-      </div>
-    </div>
+    <header className="mb-8 border-b border-gray-400 pb-2 text-sm">
+      <nav className="flex flex-col justify-between gap-1 md:flex-row md:items-baseline">
+        <RenderLinks items={LINKS} />
+        <RenderLinks items={SOCIAL_LINKS.map((link) => ({ ...link, external: true }))} />
+      </nav>
+    </header>
   );
 }

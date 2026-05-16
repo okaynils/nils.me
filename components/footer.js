@@ -26,18 +26,18 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="w-full mt-auto flex justify-center">
+    <footer className="mt-10 w-full border-t border-gray-400 pt-2">
       <ContentWrapper
-        width="440px"
-        className="border-t border-gray-500/10 py-3 w-full"
+        width="100%"
+        className="w-full"
       >
-        <div className="flex items-center justify-between w-full">
+        <div className="plain-meta flex w-full items-center justify-between gap-4">
           <img
             src="/touch-icons/main-icon.png"
             alt="Icon"
-            className="w-4 h-4"
+            className="h-4 w-4 border border-gray-400"
           />
-          <p className="font-mono text-xs text-gray-400">
+          <p>
             {loading ? "" : `last update ${lastCommitDate}`}
           </p>
         </div>

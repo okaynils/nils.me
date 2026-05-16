@@ -1,6 +1,5 @@
 import Link from "next/link";
 import clsx from "clsx";
-import { PushPin } from "@phosphor-icons/react";
 
 export default function BlogList({ data, activeSlug }) {
   const sortedData = data?.sort((a, b) => {
@@ -17,60 +16,42 @@ export default function BlogList({ data, activeSlug }) {
         activeSlug != undefined && "hidden lg:flex flex-col"
       )}
     >
-      <div className="last:!border-b-0">
+      <ol className="space-y-1">
         {sortedData?.map((post) => (
-          <div key={post.slug} className="">
+          <li
+            key={post.slug}
+            className={clsx(
+              "grid gap-x-4 md:grid-cols-[1fr_auto]",
+              activeSlug === post.slug && "font-bold"
+            )}
+          >
             <Link href={`/notes/${post.slug}`}>
-              <article
-                className={clsx(
-                  "flex border-dashed font-medium w-full py-3 md:py-[8px] border-b border-gray-200 flex-col md:flex-row hover:border-gray-400",
-                  activeSlug == post.slug ? "text-black" : "text-gray-800"
-                )}
-              >
-                <p
-                  className={clsx(
-                    "inline-flex items-center",
-                    activeSlug === post.slug
-                      ? "text-black"
-                      : "text-gray-600"
-                  )}
-                >
-                  {post.pinned && (
-                    <span className="mr-1 flex items-center">
-                      <PushPin size={12} />
-                    </span>
-                  )}
-                  <span>{post?.title}</span>
-                </p>
-                <div
-                  className={clsx(
-                    "md:pl-2 md:ml-auto font-normal opacity-60"
-                  )}
-                >
-                  {post?.evergreen ? (
-                    `Last updated: ${post?.date instanceof Date
-                      ? new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })
-                      : post?.date
-                    }`
-                  ) : (
-                    post?.date instanceof Date
-                      ? new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })
-                      : post?.date
-                  )}
-                </div>
-              </article>
+              {post.pinned ? "[pinned] " : ""}
+              {post?.title}
             </Link>
-          </div>
+            <span className="plain-meta md:text-right">
+              {post?.evergreen ? (
+                `updated ${post?.date instanceof Date
+                  ? new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })
+                  : post?.date
+                }`
+              ) : (
+                post?.date instanceof Date
+                  ? new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })
+                  : post?.date
+              )}
+            </span>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .post-content {
   & > * {
-    @apply max-w-[580px] mx-auto;
+    @apply max-w-[640px] mx-auto;
   }
 
   h1,
@@ -10,7 +10,7 @@
   h5,
   h6 {
     @apply font-bold leading-tight text-black;
-    margin: 50px auto 20px;
+    margin: 2.5rem auto 0.75rem;
   }
 
   h1 {
@@ -26,11 +26,13 @@
   }
 
   p {
-    @apply mb-6 text-[1rem];
+    @apply mb-5 text-[1rem];
   }
 
   a {
-    @apply text-black underline underline-offset-[4px] decoration-[1px] hover:text-blue-700;
+    color: #0645ad;
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
   strong {
@@ -38,27 +40,27 @@
   }
 
   img {
-    @apply rounded-lg;
+    border: 1px solid #b8b8b8;
   }
 
   figure {
-    @apply mb-10;
+    @apply mb-8;
 
     img {
-      @apply mb-4;
+      @apply mb-2;
     }
 
     figcaption {
-      @apply text-center text-xs italic text-gray-500;
+      @apply text-center text-xs italic text-gray-600;
     }
   }
 
   blockquote {
-    @apply my-10 border-l-2 border-gray-300 pl-5;
+    @apply my-8 border-l-2 border-gray-400 pl-5;
   }
 
   pre {
-    @apply mb-10 w-full overflow-auto break-words rounded-lg border border-gray-200 bg-gray-100 p-5 text-sm;
+    @apply mb-8 w-full overflow-auto break-words border border-gray-400 bg-[#f2f2ea] p-4 text-sm;
 
     & > code {
       @apply whitespace-pre-wrap;
@@ -66,19 +68,19 @@
   }
 
   code {
-    @apply rounded-md border border-gray-200 px-1 py-px font-mono text-sm text-gray-600 shadow-[0_1px_2px_rgba(0,0,0,0.08)];
+    @apply border border-gray-300 bg-[#f2f2ea] px-1 py-px font-mono text-sm text-gray-700;
   }
 
   hr {
-    @apply mb-10;
+    @apply mb-8 border-gray-400;
   }
 
   ol,
   ul {
-    @apply mb-1;
+    @apply mb-5;
 
     li {
-      @apply mb-2 ml-5 list-outside text-[1rem];
+      @apply mb-1 ml-5 list-outside text-[1rem];
     }
   }
 
@@ -91,6 +93,6 @@
   }
 
   video {
-    @apply my-10 rounded-md;
+    @apply my-8 border border-gray-400;
   }
 }

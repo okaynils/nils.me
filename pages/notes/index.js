@@ -1,20 +1,19 @@
 import { BlogList } from "components";
 import { getAllPosts } from "lib/content.mjs";
 import { ContentWrapper } from "ui";
-import { Rss } from "@phosphor-icons/react";
 
 export default function Blog({ allPosts }) {
   return (
     <>
-      <ContentWrapper width="440px">
-        <div className="mt-4 flex items-center gap-2">
-          <h2 className="font-medium text-black text-2xl">Notes</h2>
+      <ContentWrapper width="640px">
+        <div className="mb-2 flex items-baseline gap-2">
+          <h1 className="text-2xl">Notes</h1>
           <a
             href="/feed.xml"
             aria-label="Subscribe to Notes feed"
-            className="ml-auto text-gray-500 transition-colors hover:text-black"
+            className="ml-auto text-sm"
           >
-            <Rss size={16} weight="bold" />
+            rss
           </a>
         </div>
         <p className="mb-4">

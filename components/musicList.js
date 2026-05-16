@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getArtists } from 'lib/music.mjs';
 import Link from "next/link";
-import clsx from "clsx";
-import { ArrowRight, Guitar, MicrophoneStage, PianoKeys, MusicNote, VinylRecord } from "@phosphor-icons/react";
+import { Guitar, MicrophoneStage, PianoKeys, MusicNote, VinylRecord } from "@phosphor-icons/react";
 
 const icons = [Guitar, MicrophoneStage, PianoKeys, MusicNote, VinylRecord];
 
@@ -27,31 +26,20 @@ export default function MusicList() {
     return (
         <div>
             {artists?.length > 0 ? (
-                <div className="mt-2">
+                <ol className="space-y-1">
                     {artists.map((artist) => (
-                        <Link href={artist.url} target="_blank" key={artist.name}>
-                            <article
-                                className={clsx(
-                                    "text-sm flex font-medium w-full py-3 md:py-[8px] items-center justify-between",
-                                    "transition duration-300 ease-in-out group"
-                                )}
-                            >
-                                <p className="inline-flex items-center">
-                                    <span>{artist.name}</span>
-                                    <ArrowRight 
-                                        size={16} 
-                                        className="ml-2 transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:translate-x-1" 
-                                    />
-                                </p>
-                                <div className="font-normal opacity-60">
-                                    {artist.playcount} plays
-                                </div>
-                            </article>
-                        </Link>
+                        <li className="grid text-sm md:grid-cols-[1fr_auto] md:gap-x-4" key={artist.name}>
+                            <Link href={artist.url} target="_blank" rel="noopener noreferrer">
+                                <span>{artist.name}</span>
+                            </Link>
+                            <span className="plain-meta">
+                                {artist.playcount} plays
+                            </span>
+                        </li>
                     ))}
-                </div>
+                </ol>
             ) : (
-                <div className="flex items-center my-3 text-gray-500">
+                <div className="plain-meta my-3 flex items-center">
                     <LoadingIcon size={18} className="mr-2" />
                     <p>Artists are loading<span className="animate-pulse">...</span></p>
                 </div>
