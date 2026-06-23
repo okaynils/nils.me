@@ -26,7 +26,7 @@
   }
 
   p {
-    @apply mb-6 text-[1rem];
+    @apply mb-6 text-base leading-7;
   }
 
   a {
@@ -37,14 +37,9 @@
     @apply font-semibold text-black;
   }
 
-<<<<<<< HEAD
-  p {
-    @apply text-base leading-7 mb-6;
-=======
   img {
     @apply rounded-lg;
   }
->>>>>>> origin/main
 
   figure {
     @apply mb-10;
@@ -60,6 +55,10 @@
 
   blockquote {
     @apply my-10 border-l-2 border-gray-300 pl-5;
+
+    p {
+      @apply mb-0;
+    }
   }
 
   pre {
@@ -70,21 +69,20 @@
     }
   }
 
-<<<<<<< HEAD
+  code {
+    @apply rounded-md border border-gray-200 px-1 py-px font-mono text-sm text-gray-600 shadow-[0_1px_2px_rgba(0,0,0,0.08)];
+  }
+
+  hr {
+    @apply mb-10;
+  }
+
   ol,
   ul {
     @apply my-6 pl-5 text-base leading-7;
 
     li {
       @apply mb-2 pl-1;
-
-      code {
-        @apply font-mono text-sm border border-gray-200 px-1 py-px rounded-md text-gray-600 shadow-[0_1px_2px_rgba(0,0,0,0.08)];
-      }
-
-      a {
-        @apply text-black underline-offset-[4px] decoration-[1px] underline hover:text-blue-700;
-      }
 
       p {
         @apply mb-2 text-base leading-7;
@@ -104,34 +102,8 @@
   ol {
     @apply list-decimal;
   }
-=======
-  code {
-    @apply rounded-md border border-gray-200 px-1 py-px font-mono text-sm text-gray-600 shadow-[0_1px_2px_rgba(0,0,0,0.08)];
-  }
-
-  hr {
-    @apply mb-10;
-  }
-
-  ol,
-  ul {
-    @apply mb-1;
-
-    li {
-      @apply mb-2 ml-5 list-outside text-[1rem];
-    }
-  }
-
-  ul li {
-    @apply list-disc;
-  }
-
-  ol li {
-    @apply list-decimal;
-  }
 
   video {
     @apply my-10 rounded-md;
   }
->>>>>>> origin/main
 }

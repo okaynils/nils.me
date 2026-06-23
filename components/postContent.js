@@ -2,6 +2,10 @@ import Head from "next/head";
 import { ArrowSquareOut } from "@phosphor-icons/react";
 
 export default function PostContent({ post }) {
+  const dateLabel = post?.date
+    ? `${post?.evergreen ? "Last updated: " : ""}${post.date}`
+    : null;
+
   return (
     <div>
       <Head>
@@ -17,99 +21,28 @@ export default function PostContent({ post }) {
             <img src={post.image} className="mb-4 rounded-lg" alt={post.title} />
           </div>
         ) : null}
-        <div className="text-center text-gray-400 text-sm">
-          {post?.evergreen ? "Last updated: " : ""}
-          {post?.date}
-        </div>
-<<<<<<< HEAD
-      ) : null}
-      <div className="mb-2 text-center text-gray-400 text-sm">
-        {post?.evergreen ? (
-          `Last updated: ${post?.date instanceof Date
-            ? new Date(post.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            : post?.date
-          }`
-        ) : (
-          post?.date instanceof Date
-            ? new Date(post.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            : post?.date
-        )}
-      </div>
-      <h1 className="text-4xl font-black md:text-4xl leading-tight text-center max-w-[440px] mx-auto">
-        {post.title}
-      </h1>
-      <div className="text-center mt-2 mb-12 text-gray-400 text-sm">
-        {post.readtime} min read
-      </div>
-      <div className="w-full mx-auto post-content max-w-[440px] mb-12 text-base leading-7">
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm, remarkMath]}
-          rehypePlugins={[rehypeKatex]}
-          components={{
-            p: ({ node, children }) => {
-              if (
-                node.children.length === 1 &&
-                node.children[0].tagName === 'img'
-              ) {
-                const { src, alt } = node.children[0].properties;
-                return (
-                  <figure className="highlight mb-10">
-                    <img src={src} alt={alt} className="rounded-lg mb-4" />
-                    {alt && (
-                      <figcaption className="text-center text-xs italic text-gray-500">
-                        {alt}
-                      </figcaption>
-                    )}
-                  </figure>
-                );
-              }
-
-              return <p>{children}</p>;
-            },
-            img: ({ src, alt }) => (
-              <img src={src} alt={alt} className="rounded-lg" />
-            ),
-          }}
-        >
-          {post.content}
-        </ReactMarkdown>
-      </div>
-      {post?.link ? (
-        <a
-          href={post?.link}
-          target="_blank"
-          className="w-full py-1 bg-black rounded-lg shadow-lg max-w-[440px] text-white text-lg text-center flex items-center justify-center"
-          rel="noopener noreferrer"
-        >
-          <span className="w-5 h-5 mr-2">{ExternalLinkIcon}</span>
-          <span>Visit Link</span>
-        </a>
-      ) : null}
-    </div>
-=======
-        <h1 className="text-4xl font-black md:text-4xl text-center max-w-[620px] mx-auto">
+        {dateLabel ? (
+          <div className="mb-2 text-center text-gray-400 text-sm">
+            {dateLabel}
+          </div>
+        ) : null}
+        <h1 className="text-4xl font-black md:text-4xl leading-tight text-center max-w-[440px] mx-auto">
           {post.title}
         </h1>
-        <div className="text-center mb-10 text-gray-400 text-sm">
-          {post.readtime} min read
-        </div>
+        {post?.readtime ? (
+          <div className="text-center mt-2 mb-12 text-gray-400 text-sm">
+            {post.readtime} min read
+          </div>
+        ) : null}
         <div
-          className="inline-block mx-auto post-content max-w-[620px] mb-10 leading-[1.4]"
+          className="w-full mx-auto post-content max-w-[440px] mb-12 text-base leading-7"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
         {post?.link ? (
           <a
             href={post.link}
             target="_blank"
-            className="w-full py-1 bg-black rounded-lg shadow-lg max-w-[620px] text-white text-lg text-center flex items-center justify-center"
+            className="w-full py-1 bg-black rounded-lg shadow-lg max-w-[440px] text-white text-lg text-center flex items-center justify-center"
             rel="noopener noreferrer"
           >
             <ArrowSquareOut className="w-5 h-5 mr-2" />
@@ -117,7 +50,6 @@ export default function PostContent({ post }) {
           </a>
         ) : null}
       </div>
->>>>>>> origin/main
     </div>
   );
 }
