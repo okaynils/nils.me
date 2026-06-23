@@ -27,7 +27,7 @@ $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
   }
 
   & > * {
-    @apply max-w-[580px] mx-auto;
+    @apply max-w-[440px] mx-auto;
   }
 
   & > figure:not(.highlight) {
@@ -193,7 +193,7 @@ $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
   }
 
   p {
-    @apply text-[1rem] md:text-[1rem] mb-6;
+    @apply text-base leading-7 mb-6;
 
     code {
       @apply font-mono text-sm border border-gray-200 px-1 py-px rounded-md text-gray-600 shadow-[0_1px_2px_rgba(0,0,0,0.08)];
@@ -242,11 +242,12 @@ $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
     }
   }
 
-  ol, ul {
-    @apply mb-1;
+  ol,
+  ul {
+    @apply my-6 pl-5 text-base leading-7;
 
     li {
-      @apply text-[1rem] md:text-[1.05rem] list-disc list-outside ml-5 mb-2;
+      @apply mb-2 pl-1;
 
       code {
         @apply font-mono text-sm border border-gray-200 px-1 py-px rounded-md text-gray-600 shadow-[0_1px_2px_rgba(0,0,0,0.08)];
@@ -255,6 +256,23 @@ $desktop: "screen and (min-width: 1200px)"; /* Only desktop */
       a {
         @apply text-black underline-offset-[4px] decoration-[1px] underline hover:text-blue-700;
       }
+
+      p {
+        @apply mb-2 text-base leading-7;
+      }
+
+      ul,
+      ol {
+        @apply my-2;
+      }
     }
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
   }
 }

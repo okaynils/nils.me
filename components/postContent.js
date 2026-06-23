@@ -23,7 +23,7 @@ export default function PostContent({ post }) {
           <img src={post.image} className="mb-4 rounded-lg" alt={post.title} />
         </div>
       ) : null}
-      <div className="text-center text-gray-400 text-sm">
+      <div className="mb-2 text-center text-gray-400 text-sm">
         {post?.evergreen ? (
           `Last updated: ${post?.date instanceof Date
             ? new Date(post.date).toLocaleDateString("en-US", {
@@ -43,13 +43,13 @@ export default function PostContent({ post }) {
             : post?.date
         )}
       </div>
-      <h1 className="text-4xl font-black md:text-4xl text-center max-w-[620px] mx-auto">
+      <h1 className="text-4xl font-black md:text-4xl leading-tight text-center max-w-[440px] mx-auto">
         {post.title}
       </h1>
-      <div className="text-center mb-10 text-gray-400 text-sm">
+      <div className="text-center mt-2 mb-12 text-gray-400 text-sm">
         {post.readtime} min read
       </div>
-      <div className="inline-block mx-auto post-content max-w-[620px] mb-10 leading-[1.4]">
+      <div className="w-full mx-auto post-content max-w-[440px] mb-12 text-base leading-7">
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex]}
@@ -72,7 +72,7 @@ export default function PostContent({ post }) {
                 );
               }
 
-              return <p className="text-sm">{children}</p>;
+              return <p>{children}</p>;
             },
             img: ({ src, alt }) => (
               <img src={src} alt={alt} className="rounded-lg" />
@@ -86,7 +86,7 @@ export default function PostContent({ post }) {
         <a
           href={post?.link}
           target="_blank"
-          className="w-full py-1 bg-black rounded-lg shadow-lg max-w-[620px] text-white text-lg text-center flex items-center justify-center"
+          className="w-full py-1 bg-black rounded-lg shadow-lg max-w-[440px] text-white text-lg text-center flex items-center justify-center"
           rel="noopener noreferrer"
         >
           <span className="w-5 h-5 mr-2">{ExternalLinkIcon}</span>
