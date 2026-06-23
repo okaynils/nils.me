@@ -1,5 +1,5 @@
 import { WorkList } from "components";
-import { getAllProjects } from "pages/api/projects";
+import { getAllProjects } from "lib/content.mjs";
 import { ContentWrapper } from "ui";
 
 export default function Home({ allProjects }) {

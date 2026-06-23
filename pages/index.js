@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { ArrowSquareOut, SpotifyLogo } from "@phosphor-icons/react"
+import { ArrowSquareOut, Rss, SpotifyLogo } from "@phosphor-icons/react"
 import { BlogList } from "components";
 import { MusicList } from "components";
-import { getAllPosts } from "pages/api/notes";
-import { getAllProjects } from "pages/api/projects";
-import { ContentWrapper, Button } from "ui";
+import { getAllPosts, getAllProjects } from "lib/content.mjs";
+import { ContentWrapper } from "ui";
 
 export default function Home({ allPosts, allProjects, post }) {
   return (
@@ -27,7 +25,6 @@ export default function Home({ allPosts, allProjects, post }) {
               <a href="/media/switzerland.mp4" target="_blank" title="Switzerland">
                 <img
                   src="/images/pages/home/switzerland.png"
-                  alt="Swiss flag"
                   className="w-3 h-3 mt-[4px]"
                 />
               </a>
@@ -104,11 +101,18 @@ export default function Home({ allPosts, allProjects, post }) {
               Notes
             </h2>
             <Link
-              className="bg-transparent border-gray-200 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
+              className="ml-auto bg-transparent border-gray-200 border text-sm px-2 py-px rounded-lg flex gap-1 items-center"
               href="/notes"
             >
               View all notes →
             </Link>
+            <a
+              href="/feed.xml"
+              aria-label="Subscribe to Notes feed"
+              className="text-gray-500 transition-colors hover:text-black"
+            >
+              <Rss size={15} weight="bold" />
+            </a>
           </div>
           <BlogList data={allPosts?.slice(0, 6)} activeSlug={post?.slug} />
         </div>
@@ -144,6 +148,7 @@ export async function getStaticProps() {
   const allPosts = getAllPosts([
     "title",
     "date",
+    "dateRaw",
     "slug",
     "author",
     "image",

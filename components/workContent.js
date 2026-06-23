@@ -1,4 +1,4 @@
-import { ExternalLinkIcon, AppleIcon } from "lib/icons";
+import { AppleLogo, ArrowSquareOut } from "@phosphor-icons/react";
 
 export default function WorkContent({ post }) {
   return (
@@ -10,6 +10,7 @@ export default function WorkContent({ post }) {
         <div className="w-12 h-12 mx-auto mb-5">
           <img
             src={post?.icon}
+            alt={post.title}
             className="mb-4 border border-gray-100 rounded-full shadow-lg"
           />
         </div>
@@ -40,7 +41,7 @@ export default function WorkContent({ post }) {
             target="_blank"
             className="flex items-center justify-center w-full px-4 py-1 text-base text-center text-white bg-black rounded-lg shadow-lg"
           >
-            <span className="w-5 h-5 mr-2">{ExternalLinkIcon}</span>
+            <ArrowSquareOut className="w-5 h-5 mr-2" />
             <span>Web App</span>
           </a>
         ) : (
@@ -52,7 +53,7 @@ export default function WorkContent({ post }) {
             target="_blank"
             className="flex items-center justify-center w-full px-4 py-1 text-base text-center text-white bg-black rounded-lg shadow-lg"
           >
-            <span className="w-5 h-5 mr-2">{AppleIcon}</span>
+            <AppleLogo className="w-5 h-5 mr-2" />
             <span>iOS App</span>
           </a>
         ) : (

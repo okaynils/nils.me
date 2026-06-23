@@ -7,7 +7,7 @@ export default function BlogList({ data, activeSlug }) {
     if (a.pinned && !b.pinned) return -1;
     if (!a.pinned && b.pinned) return 1;
 
-    return new Date(b.date) - new Date(a.date);
+    return new Date(b.dateRaw ?? b.date) - new Date(a.dateRaw ?? a.date);
   });
 
   return (

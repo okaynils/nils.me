@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getArtists } from '../pages/api/music';
+import { getArtists } from 'lib/music.mjs';
 import Link from "next/link";
 import clsx from "clsx";
 import { ArrowRight, Guitar, MicrophoneStage, PianoKeys, MusicNote, VinylRecord } from "@phosphor-icons/react";

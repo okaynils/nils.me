@@ -1,12 +1,7 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import clsx from "clsx";
 
 export default function WorkList({ allPosts, activeSlug }) {
-  const {
-    query: { slug },
-  } = useRouter();
-
   return (
     <div className="w-full">
       <div>
