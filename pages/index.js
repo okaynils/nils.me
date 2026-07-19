@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowSquareOut, Rss, SpotifyLogo } from "@phosphor-icons/react"
+import { ArrowRight } from "lucide-react";
+import { ArrowSquareOut, Rss, SpotifyLogo } from "@phosphor-icons/react";
 import { BlogList } from "components";
 import { MusicList } from "components";
 import { getAllPosts, getAllProjects } from "lib/content.mjs";
@@ -33,10 +34,39 @@ export default function Home({ allPosts, allProjects, post }) {
           <div className="text-sm">
             I study Statistics and Machine Learning at <a href="https://liu.se/en" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">Linköping University</a>. I am part of the driverless team at <a href="https://liuformulastudent.se/" target="_blank" className="text-zinc-400 underline underline-offset-[0.25em] decoration-dotted hover:bg-zinc-200">LiU Formula Student</a> where I work on <a href="https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping" target="_blank" className="hover:cursor-help">SLAM</a> and computer vision for the autonomous race car.
           </div>
+          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-sm border border-[#d9512f]/80 bg-[#d9512f]/70 px-2 py-1.5 text-xs text-white">
+            <p className="min-w-0 flex-1">
+              I'm building{" "}
+              <span className="whitespace-nowrap font-medium">
+                <img
+                  src="/images/turbine.svg"
+                  alt=""
+                  aria-hidden="true"
+                  className="mr-0.5 inline-block h-3 w-3 align-[-0.125em] brightness-0 invert"
+                />
+                Turbine
+              </span>
+              , the calendar system of the future.
+            </p>
+            <a
+              href="https://turbine.so/"
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex shrink-0 items-center gap-1 font-medium text-white underline decoration-white/50 underline-offset-[0.2em] transition-colors hover:decoration-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              Join the waitlist
+              <ArrowRight
+                size={13}
+                strokeWidth={2}
+                aria-hidden="true"
+                className="transition-transform group-hover:translate-x-0.5"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Personal Projects */}
-        {allProjects && allProjects.length > 0 && ( 
+        {allProjects && allProjects.length > 0 && (
           <div className="pt-6 pb-2">
             <h2 className="text-xl font-medium text-black mb-4">
               Personal Projects
