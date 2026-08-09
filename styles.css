@@ -1,3 +1,53 @@
 body {
     width: 40em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #FFFDFC;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Verdana
+}
+
+.nav img {
+    width:100px; /* you can use % */
+    height: auto;
+}
+
+.hero img {
+    border-radius: 1em;
+}
+
+.nav {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #D0D0D0;
+  margin-bottom: 8px;
+}
+
+.nav h3 {
+  margin: 4px 0;
+}
+
+.nav ul {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li {
+  cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    gap: 2px;
+}
+
+.logo img {
+    width: 2em;
 }
