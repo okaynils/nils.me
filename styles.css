@@ -107,3 +107,9 @@ h5 {
 .section {
     margin: 16px 0 4px 0;
 }
+
+.note img {
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+}
