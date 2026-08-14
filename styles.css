@@ -18,6 +18,10 @@ h5 {
     height: auto;
 }
 
+.logo a {
+    display: flex;
+}
+
 .hero img {
     border-radius: 1em;
 }
