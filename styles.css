@@ -1,5 +1,6 @@
 body {
     width: 40em;
+    max-width: calc(100% - 16px);
     font-family: "Times New Roman", Times, serif;
     background-color: #fffdfc;
 }
@@ -98,6 +99,7 @@ h5 {
 .moth {
     margin-top: 32px;
     font-size: 0.8em;
+    overflow-x: auto;
 }
 
 .mono {
@@ -116,4 +118,18 @@ h5 {
     border-radius: 4px;
     max-width: 70%;
     height: auto;
+}
+
+@media (max-width: 40em) {
+    body {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 8px;
+    }
+
+    .nav ul {
+        gap: 12px;
+    }
 }
