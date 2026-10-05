@@ -1,6 +1,7 @@
 body {
     width: 40em;
     max-width: calc(100% - 16px);
+    margin: 8px auto;
     font-family: "Times New Roman", Times, serif;
     background-color: #fffdfc;
 }
