@@ -1,4 +1,5 @@
-import { LocalTime } from "@nils/ui";
+import { useEffect, useState } from "react";
+import { Link, LocalTime } from "@nils/ui";
 import { Layout, Row, Section } from "../components/layout";
 import { notes } from "../notes";
 import { Moth } from "../components/moth";
@@ -24,6 +25,10 @@ export function Home() {
       <p className="text-sm leading-6 text-ink">
         master's student in statistics and machine learning at linköping university, sweden. i build the slam system
         and other computer vision for the liu formula student driverless team.
+      </p>
+      <p className="mt-2 text-sm leading-6 text-ink">
+        i want to spend my career teaching robots to see. right now i'm looking for a master's thesis on robot
+        perception at a company. if that's you, <SayHi />.
       </p>
       <LocalTime timeZone="Europe/Stockholm" label="linköping" showDifference className="mt-2 lowercase" />
 
@@ -62,4 +67,13 @@ export function Home() {
       <Moth />
     </Layout>
   );
+}
+
+// The address never appears whole in the prerendered HTML, so scrapers reading
+// the page don't find it; without JavaScript the link falls back to the about
+// page, where it's written out.
+function SayHi() {
+  const [href, setHref] = useState("/about#elsewhere");
+  useEffect(() => setHref(`mailto:${["nilsfahrni", "protonmail.com"].join("@")}`), []);
+  return <Link href={href}>say hi</Link>;
 }

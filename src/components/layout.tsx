@@ -22,8 +22,7 @@ export function Layout({ current, children }: { current: Current; children: Reac
       </header>
       <main className="mt-5 min-w-0 flex-1">{children}</main>
       <footer className="mt-10 flex items-end justify-between gap-4 font-mono text-xs text-ink-3">
-        <div className="flex min-w-0 flex-col gap-0.5">
-          <span>written in linköping, sweden</span>
+        <div className="min-w-0">
           <DeployStamp
             deployedAt={__DEPLOY__.deployedAt}
             commit={__DEPLOY__.commit}

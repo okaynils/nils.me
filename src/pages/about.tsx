@@ -5,7 +5,9 @@ const cornerstones = [
   { year: "2017", text: "apprenticeship as a software engineer at swiss post and postfinance" },
   { year: "2021", text: "high school diploma (matura)" },
   { year: "2022", text: "bachelor's in data science and ai (i wish it was less buzzwordy)" },
+  { year: "2024", text: "started building turbine, which will hopefully be out for everyone very soon" },
   { year: "2025", text: "moved to sweden for my master's in statistics and machine learning" },
+  { year: "2025", text: "joined the liu formula student driverless team" },
 ];
 
 const likes = [
@@ -13,19 +15,13 @@ const likes = [
   "robot perception", "architecture", "conservation", "birds", "moths",
 ];
 
-const values = [
-  "humans are fundamentally good",
-  "ai is not a bubble",
-  "free markets are the optimal solution",
-];
-
 const elsewhere = [
   { name: "github", href: "https://github.com/okaynils" },
   { name: "x", href: "https://x.com/okaynils" },
+  { name: "linkedin", href: "https://www.linkedin.com/in/nilsfahrni" },
   { name: "instagram", href: "https://instagram.com/okaynils" },
   { name: "strava", href: "https://www.strava.com/athletes/116522759" },
   { name: "letterboxd", href: "https://letterboxd.com/okaynils" },
-  { name: "goodreads", href: "https://www.goodreads.com/user/show/70064031-nils-fahrni" },
   { name: "spotify", href: "https://open.spotify.com/user/tofusandwich4" },
   { name: "resume", href: resume },
 ];
@@ -38,7 +34,7 @@ export function About() {
       <Section label="cornerstones">
         <ul>
           {cornerstones.map((c) => (
-            <Row key={c.year} lead={c.year} leadWidth="w-9">
+            <Row key={c.text} lead={c.year} leadWidth="w-9">
               <span className="text-ink">{c.text}</span>
             </Row>
           ))}
@@ -55,25 +51,18 @@ export function About() {
             </span>
           ))}
         </p>
-        <p className="mt-2 text-ui leading-6 text-ink-2">
+      </Section>
+
+      <Section label="values, for now">
+        <p className="text-ui leading-6 text-ink-2">
           i try to be as renaissance as possible. life feels pretty short, so becoming a polymath feels like the right
-          thing to do. that doesn't mean i don't let myself go deep: i pick a handful of things to dedicate real thought
-          to, ideally ones that become a career, and rotate new hobbies through the rest of the space.
+          thing to do: a handful of things i think hard about, ideally ones that become a career, and room for new
+          hobbies to rotate through the rest. underneath it sits the belief that people are fundamentally good, which
+          makes nearly everyone worth getting to know.
         </p>
       </Section>
 
-      <Section label="values">
-        <ul>
-          {values.map((value) => (
-            <Row key={value} lead="-" leadWidth="w-2">
-              <span className="text-ink">{value}</span>
-            </Row>
-          ))}
-        </ul>
-        <p className="mt-1.5 text-xs text-ink-3">happy to argue about these over a coffee.</p>
-      </Section>
-
-      <Section label="elsewhere">
+      <Section id="elsewhere" label="elsewhere">
         <ul>
           {elsewhere.map((place) => (
             <Row key={place.name} href={place.href} external>
@@ -81,6 +70,7 @@ export function About() {
             </Row>
           ))}
         </ul>
+        <p className="mt-1.5 text-xs text-ink-3">nilsfahrni [at] protonmail [dot] com, or reach me through mutuals</p>
       </Section>
 
       <Section label="this site">
