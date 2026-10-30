@@ -2,10 +2,12 @@ import { LocalTime } from "@nils/ui";
 import { Layout, Row, Section } from "../components/layout";
 import { notes } from "../notes";
 import { Moth } from "../components/moth";
+import { ListeningNow } from "../components/listening-now";
 
 const projects = [
   { name: "turbine", href: "https://turbine.so/", about: "agentic autopilot for your calendar, todos and email" },
   { name: "fs-cone-kit", href: "https://github.com/okaynils/fs-cone-kit", about: "computer vision pipeline for formula student teams" },
+  { name: "fs-openpilot", href: "https://github.com/okaynils/fs-openpilot", about: "camera-only formula student driving for everyone" },
   { name: "lil memory", href: "https://lilmemory.nils.me/", about: "local, markdown-based memory for agents" },
   { name: "nils/ui", href: "https://ui.nils.me/", about: "my ui kit, which this site is built with" },
 ];
@@ -46,6 +48,7 @@ export function Home() {
       </Section>
 
       <Section id="listening" label="listening">
+        <ListeningNow />
         <ul>
           {playlists.map((p) => (
             <Row key={p.name} href={p.href} external>

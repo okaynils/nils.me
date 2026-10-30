@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Button, Tooltip } from "@nils/ui";
+import { Button, DeployStamp, Tooltip } from "@nils/ui";
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 
 type Current = "home" | "about" | "note";
@@ -8,23 +8,35 @@ export const resume = "https://okaynils.github.io/resume/main.pdf";
 
 export function Layout({ current, children }: { current: Current; children: ReactNode }) {
   return (
-    <div className="mx-auto flex min-h-dvh max-w-[600px] flex-col px-4 pt-5 pb-6 sm:pt-8">
-      <header className="flex h-7 items-center justify-between font-mono text-xs">
-        <a href="/" className="flex items-center gap-1.5 rounded-ui font-medium text-ink outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
-          <span aria-hidden className="fern size-3.5" />
+    <div className="mx-auto flex min-h-dvh max-w-[600px] flex-col px-4 pt-3 pb-6 sm:pt-4">
+      <header className="flex h-8 items-center justify-between font-mono text-xs">
+        <a href="/" className="flex items-center gap-2 rounded-ui text-sm font-medium text-ink outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+          <span aria-hidden className="fern size-[18px]" />
           nils fahrni
         </a>
         <nav className="flex items-center gap-3">
           <NavLink href="/" active={current === "home"}>home</NavLink>
           <NavLink href="/about" active={current === "about"}>about</NavLink>
           <NavLink href={resume}>resume<span aria-hidden className="text-ink-3">↗</span></NavLink>
-          <ThemeToggle />
         </nav>
       </header>
-      <main className="mt-8 min-w-0 flex-1">{children}</main>
-      <footer className="mt-10 flex items-center justify-between font-mono text-xs text-ink-3">
-        <span>written in linköping, sweden</span>
-        <a href="/feed.xml" className="hover:text-ink">rss</a>
+      <main className="mt-5 min-w-0 flex-1">{children}</main>
+      <footer className="mt-10 flex items-end justify-between gap-4 font-mono text-xs text-ink-3">
+        <div className="flex min-w-0 flex-col gap-0.5">
+          <span>written in linköping, sweden</span>
+          <DeployStamp
+            deployedAt={__DEPLOY__.deployedAt}
+            commit={__DEPLOY__.commit}
+            commitHref={__DEPLOY__.commit && `https://github.com/okaynils/nils.me/commit/${__DEPLOY__.commit}`}
+            branch={__DEPLOY__.branch}
+            timeZone="Europe/Stockholm"
+            className="lowercase"
+          />
+        </div>
+        <div className="flex shrink-0 items-center gap-3">
+          <a href="/feed.xml" className="hover:text-ink">rss</a>
+          <ThemeToggle />
+        </div>
       </footer>
     </div>
   );
@@ -77,7 +89,7 @@ export function Section({ id, label, children }: { id?: string; label: string; c
 }
 
 /** One dense line: a mono lead (date, year, name), the text, and an optional ↗ for links that leave. */
-export function Row({ lead, leadWidth = "w-[5.5rem]", href, external, children }: {
+export function Row({ lead, leadWidth = "w-24", href, external, children }: {
   lead?: ReactNode;
   /** Wide enough for the longest lead in the list, so the text column lines up. */
   leadWidth?: string;

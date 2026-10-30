@@ -8,6 +8,8 @@ bun run dev      # http://localhost:5173
 bun run build    # static site in dist/
 ```
 
+The listening row reads Spotify's scrobbles from Last.fm (user `okaynils`) straight from the browser; the key in `src/components/listening-now.tsx` is Last.fm's public, read-only kind.
+
 ## Pages
 
 - `/`: intro, what I'm working on, writing, playlists (`src/pages/home.tsx`)
