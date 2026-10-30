@@ -1,0 +1,47 @@
+name: Site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # @nils/ui isn't on a registry yet, so check it out next to the site,
+      # where package.json's file:../ui/packages/ui expects it.
+      - uses: actions/checkout@v4
+        with:
+          path: nils.me
+      - uses: actions/checkout@v4
+        with:
+          repository: okaynils/ui
+          path: ui
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile && bun run --cwd packages/ui build
+        working-directory: ui
+      - run: bun install && bun run typecheck && bun run build
+        working-directory: nils.me
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: nils.me/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

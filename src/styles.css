@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "@nils/ui/styles.css";
+
+body {
+  background: var(--ui-surface);
+}
+
+/* The fern is a black-on-transparent PNG; used as a mask it takes the ink
+   colour, so it follows the theme instead of vanishing in dark mode. */
+@utility fern {
+  background-color: var(--ui-ink);
+  mask: url("/images/fern.png") center / contain no-repeat;
+}
+
+/* Notes and longer passages. Body size stays the library's 14px; the extra
+   line height is what makes a few paragraphs comfortable to read. */
+@utility prose {
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--ui-ink);
+
+  & > * + * {
+    margin-top: 1em;
+  }
+  & h2 {
+    margin-top: 1.75em;
+    font-weight: 600;
+  }
+  /* Headings get a dim markdown marker, like the site's // section labels. */
+  & h2::before {
+    content: "## ";
+    font-family: var(--font-mono);
+    font-weight: 400;
+    color: var(--ui-ink-3);
+  }
+  & h3 {
+    margin-top: 1.75em;
+    font-weight: 600;
+  }
+  & strong {
+    font-weight: 600;
+  }
+  & a {
+    color: var(--ui-accent);
+    text-decoration: underline 1px color-mix(in srgb, var(--ui-accent) 35%, transparent);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 120ms var(--ease-snap);
+  }
+  & a:hover {
+    text-decoration-color: var(--ui-accent);
+    text-decoration-thickness: 2px;
+  }
+  & ul,
+  & ol {
+    padding-left: 1.25em;
+  }
+  & ul {
+    list-style: disc;
+  }
+  & ol {
+    list-style: decimal;
+  }
+  & li + li,
+  & li > ul,
+  & li > ol {
+    margin-top: 0.35em;
+  }
+  & li::marker {
+    color: var(--ui-ink-3);
+  }
+  & blockquote {
+    border-left: 2px solid var(--ui-line-strong);
+    padding-left: 1em;
+    color: var(--ui-ink-2);
+  }
+  & code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--ui-panel);
+    border-radius: var(--radius-ui);
+    padding: 0.1em 0.3em;
+  }
+  & hr {
+    border-color: var(--ui-line);
+    margin-block: 2em;
+  }
+  & figure {
+    margin-block: 1.5em;
+  }
+  & figure img {
+    width: 100%;
+    border-radius: var(--radius-box);
+  }
+  & figcaption {
+    margin-top: 0.5em;
+    font-size: var(--text-xs);
+    color: var(--ui-ink-3);
+  }
+}
