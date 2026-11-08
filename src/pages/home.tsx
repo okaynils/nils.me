@@ -22,11 +22,11 @@ const playlists = [
 export function Home() {
   return (
     <Layout current="home">
-      <p className="text-sm leading-6 text-ink">
+      <p className="text-base leading-6 text-ink">
         master's student in statistics and machine learning at linköping university, sweden. i build the slam system
         and other computer vision for the liu formula student driverless team.
       </p>
-      <p className="mt-2 text-sm leading-6 text-ink">
+      <p className="mt-2 text-base leading-6 text-ink">
         i want to spend my career teaching robots to see. right now i'm looking for a master's thesis on robot
         perception at a company. if that's you, <SayHi />.
       </p>

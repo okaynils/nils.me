@@ -12,10 +12,10 @@ body {
   mask: url("/images/fern.png") center / contain no-repeat;
 }
 
-/* Notes and longer passages. Body size stays the library's 14px; the extra
-   line height is what makes a few paragraphs comfortable to read. */
+/* Notes and longer passages, at the library's long-form reading size (14px);
+   the extra line height is what makes a few paragraphs comfortable to read. */
 @utility prose {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   line-height: 1.65;
   color: var(--ui-ink);
 

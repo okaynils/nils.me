@@ -9,7 +9,7 @@ export const resume = "https://okaynils.github.io/resume/main.pdf";
 export function Layout({ current, children }: { current: Current; children: ReactNode }) {
   return (
     <div className="mx-auto flex min-h-dvh max-w-[600px] flex-col px-4 pt-3 pb-6 sm:pt-4">
-      <header className="flex h-8 items-center justify-between font-mono text-xs">
+      <header className="flex h-7 items-center justify-between font-mono text-xs">
         <a href="/" className="flex items-center gap-2 rounded-ui text-sm font-medium text-ink outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
           <span aria-hidden className="fern size-[18px]" />
           nils fahrni
@@ -67,7 +67,7 @@ function ThemeToggle() {
   // either theme before React has hydrated.
   return (
     <Tooltip content="switch theme">
-      <Button icon size="sm" variant="ghost" aria-label="Switch theme" onClick={toggle} className="-mr-1.5 size-6">
+      <Button icon size="sm" variant="ghost" aria-label="Switch theme" onClick={toggle} className="-mr-1.5">
         <MoonIcon className="size-3.5 dark:hidden" />
         <SunIcon className="hidden size-3.5 dark:block" />
       </Button>
@@ -98,12 +98,12 @@ export function Row({ lead, leadWidth = "w-24", href, external, children }: {
 }) {
   const body = (
     <>
-      {lead !== undefined ? <span className={`${leadWidth} shrink-0 font-mono text-xs leading-5 text-ink-3 tabular-nums`}>{lead}</span> : null}
+      {lead !== undefined ? <span className={`${leadWidth} shrink-0 font-mono text-xs leading-[18px] text-ink-3 tabular-nums`}>{lead}</span> : null}
       <span className="min-w-0 flex-1 truncate">{children}</span>
       {external ? <span aria-hidden className="font-mono text-xs text-ink-3">↗</span> : null}
     </>
   );
-  const row = "-mx-2 flex min-h-[26px] items-baseline gap-3 rounded-ui px-2 py-[3px] text-ui";
+  const row = "-mx-2 flex min-h-6 items-baseline gap-3 rounded-ui px-2 py-[3px] text-ui";
   return (
     <li>
       {href ? (

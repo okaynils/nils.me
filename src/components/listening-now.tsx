@@ -103,11 +103,11 @@ export function ListeningNow() {
   // Not playing: say so, and what played last. The component's own idle copy
   // is sentence case; the site speaks lowercase.
   return (
-    <div className="flex h-8 min-w-0 items-center gap-2 text-ui text-ink-3">
+    <div className="flex h-7 min-w-0 items-center gap-2 text-ui text-ink-3">
       {s?.artwork ? (
-        <img src={s.artwork} alt="" className="size-6 shrink-0 rounded-[3px] opacity-60 grayscale" />
+        <img src={s.artwork} alt="" className="size-5 shrink-0 rounded-[3px] opacity-60 grayscale" />
       ) : (
-        <span aria-hidden className="size-6 shrink-0 rounded-[3px] bg-panel" />
+        <span aria-hidden className="size-5 shrink-0 rounded-[3px] bg-panel" />
       )}
       <span className="min-w-0 flex-1 truncate">
         {status.kind === "offline" ? (

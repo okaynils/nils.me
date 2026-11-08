@@ -13,7 +13,7 @@ export function NotePage({ note, html, newer, older }: NotePageProps) {
     <Layout current="note">
       <article>
         <header className="flex items-baseline justify-between gap-4">
-          <h1 className="text-[17px] leading-6 font-semibold tracking-[-0.01em] text-ink">{note.title}</h1>
+          <h1 className="text-[20px] leading-7 font-semibold tracking-[-0.015em] text-ink">{note.title}</h1>
           <time dateTime={note.date} className="shrink-0 font-mono text-xs text-ink-3 tabular-nums">{note.date}</time>
         </header>
         <div className="prose mt-5" dangerouslySetInnerHTML={{ __html: html }} />
