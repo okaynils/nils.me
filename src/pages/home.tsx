@@ -28,8 +28,7 @@ export function Home() {
         and other computer vision for the liu formula student driverless team.
       </p>
       <p className="mt-2 text-base leading-6 text-ink">
-        i want to spend my career teaching robots to see. right now i'm looking for a master's thesis on robot
-        perception at a company. if that's you, <SayHi />.
+        i want to spend my career teaching machines to understand the physical world. right now i'm looking for a master's thesis on learning, perceiving or predicting physical systems at a company or research institute. if that's you, <SayHi />.
       </p>
       <LocalTime timeZone="Europe/Stockholm" label="linköping" showDifference className="mt-2 lowercase" />
 
